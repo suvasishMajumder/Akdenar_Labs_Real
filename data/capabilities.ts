@@ -38,33 +38,24 @@ export const capabilitiesData = [
     sections: [
       {
         id: 1,
-        image: "/capabilities/cloud1.png",
+        image: "/capabilities/cybersecurity1.png",
         title: "Protecting What Matters Most — Your Business and Data",
         description:
           "At Akdenar Labs, we ensure digital safety across every endpoint. Our cybersecurity solutions proactively identify threats, implement real-time monitoring, and safeguard critical information. We help organizations prevent cyber attacks, protect customer trust, and ensure business continuity.",
       },
       {
         id: 2,
-        image: "/capabilities/cyber-approach.png",
+        image: "/capabilities/cybersecurity2.png",
         title: "Our Approach",
         description:
           "Our cybersecurity framework combines AI-driven threat analytics, vulnerability testing, and rapid incident response to maintain a secure environment. We assess risks, build protection strategies, and develop scalable security models for growing businesses. Our goal is to prevent, detect, and mitigate attacks with precision.",
       },
       {
         id: 3,
-        image: "/capabilities/cyber-impact.png",
+        image: "/capabilities/cybersecurity3.png",
         title: "Impact We Deliver",
         description:
           "With Akdenar Labs, clients achieve stronger resilience, improved risk control, compliance readiness, and secure operations. Our solutions enable safe digital transformations, reduce vulnerabilities, and enhance protection for mission-critical systems.",
-      },
-      {
-        id: 4,
-        image: "/capabilities/cyber-careers.png",
-        title: "Cybersecurity Careers",
-        description:
-          "Join our cloud and security teams on exciting journeys from high-tech to high-impact. Be part of the next generation of innovators building a safer digital future.",
-        buttonLabel: "Search open roles",
-        buttonLink: "/careers",
       },
     ],
   },
@@ -186,7 +177,7 @@ export const capabilitiesData = [
     ],
   },
   {
-    slug: "marketing and experience",
+    slug: "marketing-and-experience",
     title: "Marketing and Experience",
     tagline:
       "We create intelligent marketing experiences that drive engagement, growth, and brand impact.",
@@ -216,7 +207,7 @@ export const capabilitiesData = [
     ],
   },
   {
-    slug: "managed services",
+    slug: "managed-services",
     title: "Managed Services",
     tagline:
       "Delivering reliable, secure, and scalable managed services that keep your business running seamlessly.",
@@ -224,21 +215,21 @@ export const capabilitiesData = [
     sections: [
       {
         id: 1,
-        image: "/capabilities/managed1.png",
+        image: "/capabilities/managedService1.png",
         title: "Simplifying Operations, Maximizing Efficiency",
         description:
           "At Akdenar Labs, our Managed Services enable organizations to focus on their core business while we take care of the technology backbone. We deliver proactive monitoring, 24/7 support, and performance optimization across IT systems, applications, and infrastructure.",
       },
       {
         id: 2,
-        image: "/capabilities/managed2.png",
+        image: "/capabilities/managedService2.png",
         title: "Our Approach",
         description:
           "We combine automation, AI, and cloud management to create intelligent service frameworks. Our experts monitor and manage systems in real time, reducing downtime and enhancing reliability. From DevOps pipelines to SaaS platforms, we ensure seamless performance and cost efficiency.",
       },
       {
         id: 3,
-        image: "/capabilities/managed3.png",
+        image: "/capabilities/managedService3.png",
         title: "Impact We Deliver",
         description:
           "Clients experience reduced operational costs, faster issue resolution, and improved service continuity. With Akdenar Labs, you gain a trusted partner that ensures your digital ecosystem runs securely and efficiently, every second of every day.",
