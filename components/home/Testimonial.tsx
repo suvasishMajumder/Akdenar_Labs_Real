@@ -7,70 +7,54 @@ import Image from "next/image";
 const testimonials = [
     {
         image: "/client1.jpg",
-        text: "I am incredibly impressed with the transformative technology solutions provided by FutureSphere. Their cutting-edge innovations have revolutionized our business operations, streamlining processes and boosting productivity. The seamless connectivity and intuitive user interface have made a significant impact on our team’s efficiency. Thanks to their advanced data analytics capabilities, we now make data-driven decisions with confidence. I highly recommend FutureSphere to any organization seeking to stay ahead in the digital era.",
-        name: "Nitesh Mishra",
-        company: "Deshmitra"
+        text: "Akdenar helped transform our operations with fast and reliable tech solutions. The workflow improvements were immediate, and our team became far more efficient in day-to-day tasks.",
+        name: "Lily scherbatsky",
     },
     {
         image: "/client2.jpg",
-        text: "FutureSphere’s cloud modernization and DevOps automation have been game-changing for us. Deployment times dropped drastically, and system reliability improved beyond expectations. Their team’s professionalism and deep expertise truly set them apart.",
+        text: "Thanks to Akdenar’s DevOps automation and cloud modernization, our deployment process became incredibly fast and stable. System reliability improved far beyond our expectations.",
         name: "Sarah Jones",
-        company: "BlueStone Retail"
     },
     {
         image: "/client3.jpg",
-        text: "Partnering with FutureSphere allowed us to scale our SaaS platform seamlessly. Their engineering team built a secure, high-performance backend, resulting in a 40% improvement in user experience.",
-        name: "Rohan Patel",
-        company: "TechNova Labs"
+        text: "Partnering with Akdenar made scaling our SaaS platform effortless. The backend is now secure, optimized, and capable of delivering a noticeably better user experience.",
+        name: "Roshni Patel",
     },
     {
         image: "/client4.jpg",
-        text: "The UI/UX redesign crafted by FutureSphere transformed our product entirely. User engagement and conversions improved significantly thanks to their world-class design thinking.",
+        text: "Akdenar’s UI/UX expertise completely elevated our product’s design. The interface feels smoother, more intuitive, and significantly more engaging for our users.",
         name: "Emily Walker",
-        company: "BrightPixel Studios"
     },
     {
         image: "/client5.jpg",
-        text: "FutureSphere automated our critical workflows and integrated AI-driven analytics. Our decision-making is now faster, smarter, and based on reliable insights.",
+        text: "Akdenar automated our key workflows and introduced AI-driven insights that improved our decision-making process. We now operate faster and with far more clarity.",
         name: "Jatin Verma",
-        company: "Quantify Global"
     },
     {
         image: "/client6.jpg",
-        text: "I am incredibly impressed with the transformative technology solutions provided by FutureSphere. Their cutting-edge innovations have revolutionized our business operations, streamlining processes and boosting productivity. The seamless connectivity and intuitive user interface have made a significant impact on our team’s efficiency. Thanks to their advanced data analytics capabilities, we now make data-driven decisions with confidence. I highly recommend FutureSphere to any organization seeking to stay ahead in the digital era.",
-        name: "Nitesh Mishra",
-        company: "Deshmitra"
+        text: "The solutions delivered by Akdenar were practical, modern, and perfectly aligned with our goals. We experienced a clear boost in both performance and productivity.",
+        name: "Phuwin Tangsakyuen",
     },
     {
         image: "/client7.jpg",
-        text: "FutureSphere’s cloud modernization and DevOps automation have been game-changing for us. Deployment times dropped drastically, and system reliability improved beyond expectations. Their team’s professionalism and deep expertise truly set them apart.",
-        name: "Sarah Jones",
-        company: "BlueStone Retail"
+        text: "Akdenar optimized our system architecture and greatly improved performance. Managing higher traffic loads has become much easier, and the speed improvements are clearly visible.",
+        name: "Depali Singh",
     },
     {
         image: "/client8.jpg",
-        text: "Partnering with FutureSphere allowed us to scale our SaaS platform seamlessly. Their engineering team built a secure, high-performance backend, resulting in a 40% improvement in user experience.",
-        name: "Rohan Patel",
-        company: "TechNova Labs"
+        text: "Akdenar optimized our system architecture and greatly improved performance. Managing higher traffic loads has become much easier, and the speed improvements are clearly visible.",
+        name: "Park Bo Gum",
     },
     {
         image: "/client9.jpg",
-        text: "The UI/UX redesign crafted by FutureSphere transformed our product entirely. User engagement and conversions improved significantly thanks to their world-class design thinking.",
-        name: "Emily Walker",
-        company: "BrightPixel Studios"
+        text: "The redesign by Akdenar received amazing feedback from our users. The new flows are clean, the visuals are premium, and overall usability is significantly better.",
+        name: "Michael Smith",
     },
     {
-        image: "/client10.jpg",
-        text: "FutureSphere automated our critical workflows and integrated AI-driven analytics. Our decision-making is now faster, smarter, and based on reliable insights.",
-        name: "Jatin Verma",
-        company: "Quantify Global"
+        image: "/client11.jpg",
+        text: "Akdenar’s AI-driven reporting and automation brought accuracy and speed to our operations. We can now make decisions with stronger insights and far more confidence.",
+        name: "Fahad Al Kubaisi",
     },
-    // {
-    //     image: "/client6.jpg",
-    //     text: "From strategy to execution, FutureSphere exceeded expectations. They modernized our legacy systems, enhanced security, and stabilized our enterprise operations.",
-    //     name: "Laura Smith",
-    //     company: "FinEdge Solutions"
-    // }
 ];
 
 export default function TestimonialsSection() {
@@ -135,9 +119,6 @@ export default function TestimonialsSection() {
                                 <h4 className="font-semibold text-lg text-gray-900">
                                     {testimonials[index].name}
                                 </h4>
-                                <p className="text-sm text-neutral-500">
-                                    {testimonials[index].company}
-                                </p>
                             </div>
 
                             {/* Navigation Buttons */}
