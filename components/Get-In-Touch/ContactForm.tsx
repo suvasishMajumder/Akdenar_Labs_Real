@@ -206,7 +206,7 @@ export default function ContactForm() {
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
           <Image
-            src="/get-in-touch/heroImg.svg"
+            src="/get-in-touch/heroimg.svg"
             alt="Get in touch illustration"
             width={315}
             height={400}
@@ -221,19 +221,19 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8">
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/Icon1.svg" width={40} height={40} alt="" />
+              <Image src="/get-in-touch/icon1.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Sales and Business</h3>
               <p className="text-sm text-gray-600">akdenarlabs@gmail.com</p>
             </div>
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/Icon2.svg" width={40} height={40} alt="" />
+              <Image src="/get-in-touch/icon2.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Partners</h3>
               <p className="text-sm text-gray-600">partners1234@gmail.com</p>
             </div>
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/Icon3.svg" width={40} height={40} alt="" />
+              <Image src="/get-in-touch/icon3.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Customer Support</h3>
               <p className="text-sm text-gray-600">support1234@gmail.com</p>
             </div>
