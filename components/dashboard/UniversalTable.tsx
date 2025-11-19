@@ -71,7 +71,18 @@ export default function UniversalTable({ formType }: { formType: string }) {
     "newsletter": [
       "email",
       "createdAt",
-    ]
+    ],
+    "job-application": [
+      "jobTitle",
+      "fullName",
+      "email",
+      "phoneNumber",
+      "linkedin",
+      "portfolio",
+      "coverLetter",
+      "resumeUrl",
+      "createdAt",
+    ],
   };
 
   const readableLabels: Record<string, string> = {
@@ -89,6 +100,12 @@ export default function UniversalTable({ formType }: { formType: string }) {
     packageName: "Package Name",
     packagePrice: "Price",
     createdAt: "Submitted On",
+    jobTitle: "Job Title",
+    linkedin: "LinkedIn",
+    portfolio: "Portfolio",
+    coverLetter: "Cover Letter",
+    phoneNumber: "Phone Number",
+    resumeUrl: "Resume URL",
   };
 
   const convertRow = (row: any) => {
@@ -115,10 +132,14 @@ export default function UniversalTable({ formType }: { formType: string }) {
     if (search.trim()) params.append("search", search.trim());
 
     try {
-      // Simulate API call to /api/enquiry
-      const res = await fetch(`/api/enquiry?${params.toString()}`);
-      if (!res.ok) throw new Error("Failed to fetch data");
 
+      let res = null;
+      if (formType === "job-application") {
+        res = await fetch(`/api/jobs`);
+      } else {
+        res = await fetch(`/api/enquiry?${params.toString()}`);
+      }
+      if (!res.ok) throw new Error("Failed to fetch data");
       const result = await res.json();
       console.log(result);
       // Apply row transformation (e.g., extracting package info)
@@ -214,14 +235,37 @@ export default function UniversalTable({ formType }: { formType: string }) {
             ) : (
               data.map((row, idx) => (
                 <TableRow key={idx} className="border-gray-300 hover:bg-gray-50">
-                  {columns.map((col) => (
-                    <TableCell key={col} className="border-gray-300">
-                      {
-                        ["createdAt"].includes(col)
-                          ? formatDate(row[col])
-                          : row[col] || "---"}
-                    </TableCell>
-                  ))}
+                  {columns.map((col) => {
+                    const value = row[col];
+                    const isLinkColumn = [
+                      "linkedin",
+                      "portfolio",
+                      "resumeUrl",
+                      "website",
+                      "attachmentUrl",
+                    ].includes(col);
+
+                    return (
+                      <TableCell key={col} className="border-gray-300 overflow-hidden max-w-[300px] text-ellipsis word-wrap">
+                        {isLinkColumn &&
+                          typeof value === "string" &&
+                          value.startsWith("http") ? (
+                          <a
+                            href={value}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            Link
+                          </a>
+                        ) : ["createdAt"].includes(col) ? (
+                          formatDate(value)
+                        ) : (
+                          value || "---"
+                        )}
+                      </TableCell>
+                    );
+                  })}
                 </TableRow>
               ))
             )}

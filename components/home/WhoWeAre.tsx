@@ -31,7 +31,7 @@ export default function WhoWeAre() {
             x: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut", // ✅ FIXED
+                ease: "easeOut",
             },
         },
     };
@@ -50,7 +50,7 @@ export default function WhoWeAre() {
 
     return (
         <motion.section
-            className="relative container mx-auto w-full py-10 px-6 md:px-10 lg:px-20 bg-white text-[#0F172A]"
+            className="relative sm:container mx-auto w-full py-10 px-2 md:px-10 lg:px-20 bg-white text-[#0F172A]"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

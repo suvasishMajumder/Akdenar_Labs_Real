@@ -1,7 +1,5 @@
 'use client'
 
-import Image from "next/image";
-import { Button } from "../ui/button";
 import ServiceCard from "../ServiceCard";
 import { usePathname, useRouter } from "next/navigation";
 import { services } from "@/data/services";
@@ -45,7 +43,7 @@ export default function ServicesSection() {
 
     return (
         <motion.section
-            className="w-full py-10 px-6 md:px-10 lg:px-20"
+            className="w-full container mx-auto py-10 px-6 md:px-10 lg:px-20"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

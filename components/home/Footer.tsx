@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="border-t border-white/20 pt-6">
 
                 {/* Main Row */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6  pb-6">
 
                     {/* Logo */}
                     <div className="flex items-center gap-3">

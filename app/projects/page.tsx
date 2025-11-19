@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="w-full py-20 mt-10 px-6 md:px-10 lg:px-20">
+      <section className="w-full py-20 mt-10 container mx-auto px-6 md:px-10 lg:px-20">
 
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-5xl  tracking-tight text-gray-900 mb-3">

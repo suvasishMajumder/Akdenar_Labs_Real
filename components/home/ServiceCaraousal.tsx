@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -74,12 +75,19 @@ export default function ServiceCarousel() {
 
     const [index, setIndex] = useState(0);
 
+    useEffect(() => {
+        slides.forEach(slide => {
+            const img = new window.Image();
+            img.src = slide.image;
+        });
+    }, []);
+
     const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
     const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
         <motion.section
-            className="w-full py-10 px-6 md:px-10 lg:px-20"
+            className="w-full py-10 px-6 md:px-10 container mx-auto lg:px-20"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -130,15 +138,24 @@ export default function ServiceCarousel() {
 
                             {/* RIGHT SIDE IMAGE */}
                             <div className="flex justify-center md:justify-end">
-                                <div className="relative w-[240px] md:w-[400px] h-[240px] md:h-[350px] rounded-2xl overflow-hidden">
+                                <motion.div
+                                    key={index} // animate on slide change
+                                    initial={{ opacity: 0, scale: 0.9, x: 40 }}
+                                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                                    exit={{ opacity: 0, scale: 0.9, x: -40 }}
+                                    transition={{ duration: 0.5, ease: "easeOut" }}
+                                    className="relative w-[240px] md:w-[400px] h-[240px] md:h-[350px] rounded-2xl overflow-hidden"
+                                >
                                     <Image
                                         src={slides[index].image}
                                         alt={slides[index].title}
                                         fill
+                                        loading="eager"
                                         className="object-contain"
                                     />
-                                </div>
+                                </motion.div>
                             </div>
+
                         </motion.div>
                     </AnimatePresence>
 

@@ -5,15 +5,16 @@ import { motion } from "framer-motion";
 
 export default function CareerHero() {
   return (
-    <>
+    <div className="bg-bg-primary py-10 pt-28 px-6 md:px-10 lg:px-20 text-center">
       {/* HERO SECTION */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-bg-primary py-20 mt-16 px-6 md:px-10 lg:px-20 text-center"
+        className=" container mx-auto"
       >
+
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -55,6 +56,7 @@ export default function CareerHero() {
             className="object-cover w-full h-full"
           />
         </motion.div>
+
       </motion.section>
 
       {/* PERKS SECTION */}
@@ -63,7 +65,7 @@ export default function CareerHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="bg-bg-primary py-5 px-6 md:px-10 lg:px-24"
+        className="bg-bg-primary py-5 px-6 md:px-10 lg:px-24 container mx-auto mt-10"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -113,6 +115,6 @@ export default function CareerHero() {
           </motion.div>
         </div>
       </motion.section>
-    </>
+    </div>
   );
 }

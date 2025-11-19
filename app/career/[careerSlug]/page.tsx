@@ -52,11 +52,11 @@ export default function page({ params }: paramsProps) {
 
   return (
     <>
-      <div className="min-h-screen  p-6 bg-bg-primary flex justify-center">
+      <div className="min-h-screen p-6 bg-bg-primary flex justify-center">
         <div className="w-full container mx-auto border-none">
-          <div className="p-8 w-full relative space-y-8">
+          <div className="md:p-8 w-full relative space-y-8">
             {/* Header */}
-            <div className="flex justify-between px-10 mt-16 bg-white rounded-xl min-h-[330px] items-center gap-10 md:gap-6 flex-col md:flex-row">
+            <div className="flex justify-between p-4 md:py-0 md:px-10 mt-16 bg-white rounded-xl min-h-[330px] items-start md:items-center gap-10 md:gap-6 flex-col md:flex-row">
 
               <div className="flex-[1.2]">
                 {job.tags && (

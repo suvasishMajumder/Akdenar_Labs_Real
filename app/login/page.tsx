@@ -30,7 +30,7 @@ export default function LoginPage() {
   // On Submit Handler
   const onSubmit = async (data: AdminLoginType) => {
     try {
-      const res = await fetch("/api/admin", {
+      const res = await fetch("/api/admin/login", {
         method: "POST",
         body: JSON.stringify(data),
       });
@@ -82,16 +82,9 @@ export default function LoginPage() {
                   <Input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
-                    className="interactive-input pr-10"
+                    className="interactive-input"
                     {...register("password")}
                   />
-                  <button
-                    type="button"
-                    className="absolute right-3 top-1.5 text-gray-500 hover:text-gray-700"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {showPassword ? <EyeClosedIcon /> : <EyeIcon />}
-                  </button>
                 </div>
 
                 {errors.password && (

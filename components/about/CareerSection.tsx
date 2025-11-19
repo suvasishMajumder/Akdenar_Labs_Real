@@ -70,7 +70,7 @@ export default function CareersSection() {
             whileHover={{ y: -6, boxShadow: "0 10px 24px rgba(127,86,217,0.15)" }}
             transition={{ type: "spring", stiffness: 180, damping: 14 }}
             className="bg-white rounded-xl shadow-sm border border-gray-200 px-6 py-6 
-                       flex justify-between items-center cursor-pointer 
+                       flex justify-between items-center gap-3 cursor-pointer 
                        hover:border-[#D9CEFF] transition-all duration-300"
           >
             {/* Left Side */}
@@ -91,8 +91,8 @@ export default function CareersSection() {
             <motion.button
               whileHover={{ x: 4 }}
               transition={{ duration: 0.2 }}
-              className="w-10 h-10 flex items-center justify-center rounded-full 
-                         border border-[#E0D9FF] text-[#7F56D9] 
+              className="size-10 flex items-center justify-center rounded-full 
+                         md:border border-[#E0D9FF] text-[#7F56D9] 
                          hover:bg-[#F4F0FF] transition"
             >
               <ArrowRight size={18} />

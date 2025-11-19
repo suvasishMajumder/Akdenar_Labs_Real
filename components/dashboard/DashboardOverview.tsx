@@ -32,7 +32,7 @@ export default function DashboardOverview() {
       const all = data.recent;
       console.log(data);
       setStats({
-        total: all.length,
+        total: all?.length,
         project: data.stats.projectInquiry,
         service: data.stats.packageInquiry,
         contact: data.stats.getInTouch,

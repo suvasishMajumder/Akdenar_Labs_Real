@@ -34,7 +34,7 @@ export default function ProjectsSection() {
 
     return (
         <motion.section
-            className="w-full py-10 px-6 md:px-10 lg:px-20"
+            className="w-full py-10 px-6 md:px-10 lg:px-20 container mx-auto"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

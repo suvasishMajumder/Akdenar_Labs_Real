@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -14,7 +14,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { navigationData } from "@/data/navigationData";
 
 export default function Navbar() {
@@ -65,6 +65,7 @@ export default function Navbar() {
             <div className="md:hidden">
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
+                  {/* menu icon */}
                   <button
                     aria-label="Open menu"
                     className="p-2 rounded-md hover:bg-gray-100 bg-white/0 shadow-sm"
@@ -96,14 +97,6 @@ export default function Navbar() {
                     <Link href="/" onClick={() => setIsSheetOpen(false)}>
                       <Image src="/logo.svg" alt="Logo" width={140} height={36} />
                     </Link>
-
-                    <button
-                      onClick={() => setIsSheetOpen(false)}
-                      aria-label="Close"
-                      className="p-2 rounded-md hover:bg-gray-100 transition"
-                    >
-                      ✕
-                    </button>
                   </div>
 
                   {/* Menu */}
@@ -237,7 +230,7 @@ export default function Navbar() {
                   <div className="grid grid-cols-2 gap-6"> {/* Changed from grid-cols-2 to grid-cols-1 */}
                     <div>
                       <h4 className="font-semibold mb-3 text-black">Capabilities</h4>
-                      <ul className="grid grid-cols-2 gap-y-2 text-sm"> {/* Changed from grid-cols-2 to grid-cols-1 */}
+                      <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-sm"> {/* Changed from grid-cols-2 to grid-cols-1 */}
                         {navigationData.capabilities.map((c) => (
                           <li key={c}>
                             <Link href={`/capabilities/${slugify(c)}`} className="hover:underline text-gray-700 hover:text-gray-900">
