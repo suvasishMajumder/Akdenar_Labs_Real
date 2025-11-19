@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="flex items-center gap-3">
                         {/* Replace with your image */}
                         <Image
-                            src="/home/logoInWhite.svg"     // ⭐ Insert your logo here
+                            src="/home/whitelogo.svg"     // ⭐ Insert your logo here
                             alt="Akdenar Labs Logo"
                             width={160}
                             height={50}
