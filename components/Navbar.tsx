@@ -45,7 +45,7 @@ export default function Navbar() {
     <header
       className={` ${pathname.split("/").includes("dashboard") && "hidden"} w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
     >
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full container px-4 sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-between h-16">
           {/* Logo + mobile menu trigger */}
           <div className="flex w-full md:w-auto items-center gap-4">
