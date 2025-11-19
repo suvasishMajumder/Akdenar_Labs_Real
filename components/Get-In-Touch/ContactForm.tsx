@@ -206,7 +206,7 @@ export default function ContactForm() {
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end">
           <Image
-            src="/get-in-touch/heroimg.svg"
+            src="/getintouch/heroimg.svg"
             alt="Get in touch illustration"
             width={315}
             height={400}
@@ -216,7 +216,7 @@ export default function ContactForm() {
       </div>
 
       {/* Footer Blocks */}
-      {pathname === "/get-in-touch" && (
+      {pathname === "/getintouch" && (
         <div className="mt-10 bg-white border border-gray-200 shadow-sm rounded-2xl py-8 px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8">
 
@@ -227,7 +227,7 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/icon2.svg" width={40} height={40} alt="" />
+              <Image src="/getintouch/icon2.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Partners</h3>
               <p className="text-sm text-gray-600">partners1234@gmail.com</p>
             </div>
