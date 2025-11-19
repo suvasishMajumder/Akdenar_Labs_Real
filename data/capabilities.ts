@@ -31,6 +31,7 @@ export const capabilitiesData = [
   },
   {
     slug: "cybersecurity",
+
     title: "Cybersecurity",
     tagline:
       "We design and deploy AI technologies that make your business smarter, faster, and more efficient",

@@ -8,6 +8,7 @@ import Footer from "@/components/home/Footer";
 export default function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
 
+
   const data = capabilitiesData.find((item) => item.slug === slug);
 
   if (!data) return notFound();
