@@ -8,9 +8,11 @@ import {
   FileText,
   Layers,
   Zap,
+  SettingsIcon,
   Contact,
   Menu,
   X,
+  File,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useSidebar } from "@/context/SidebarContext";
@@ -30,6 +32,8 @@ export default function Sidebar() {
     { name: "Service Inquiry", key: "service", icon: Layers },
     { name: "Project Inquiry", key: "project", icon: FileText },
     { name: "Newsletter", key: "newsletter", icon: Mail },
+    { name: "Job Applications", key: "job-application", icon: File },
+    { name: "Settings", key: "settings", icon: SettingsIcon },
   ];
 
   const goTo = (key: string) => {
@@ -79,14 +83,6 @@ export default function Sidebar() {
           transition={{ duration: 0.25 }}
           className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl border-r p-6"
         >
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-800">Admin</h2>
-
-            <button onClick={closeSidebar} className="p-2">
-              <X size={22} />
-            </button>
-          </div>
-
           <ul className="space-y-2">
             {menu.map((item) => {
               const Icon = item.icon;

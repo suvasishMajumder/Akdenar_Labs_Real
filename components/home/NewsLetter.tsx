@@ -41,7 +41,7 @@ export default function NewsletterSection() {
     };
 
     return (
-        <section className="w-full py-10 px-6 md:px-10 lg:px-20 z-40">
+        <section className="w-full py-10 px-6 md:px-10 lg:px-20 z-40 container mx-auto">
             <div className="relative w-full rounded-3xl overflow-hidden shadow-md border border-[#dfe3ff]">
 
                 {/* Background Image */}

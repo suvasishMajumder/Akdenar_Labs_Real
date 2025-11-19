@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { connectDB } from "@/lib/db";
 import { Admin } from "@/models/Admin";
 import { AdminLoginSchema } from "@/validations/admin";
+import crypto from "crypto";
 
 export async function POST(req: Request) {
   try {
@@ -35,9 +36,22 @@ export async function POST(req: Request) {
       );
     }
 
-    // Create simple session cookie
+    // --- CREATE SECURE TOKEN ---
+    const token = crypto.randomBytes(32).toString("hex");
+
+    // --- CREATE COOKIE (1 hour expiry) ---
     const res = NextResponse.json({
       message: "Login successful",
+    });
+
+    res.cookies.set({
+      name: "admin_token",
+      value: token,
+      httpOnly: true, // cannot be accessed via JS
+      secure: true, // only HTTPS (prod safe)
+      sameSite: "strict", // CSRF protection
+      path: "/", // available everywhere
+      maxAge: 60 * 60, // 1 hour
     });
 
     return res;

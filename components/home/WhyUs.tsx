@@ -41,10 +41,9 @@ export default function WhyUsSection() {
         >
 
             <motion.div
-                className="border bg-bg-primary border-box-border rounded-3xl shadow-sm p-6 md:p-12 flex flex-col md:flex-row gap-10 md:gap-14 items-center"
+                className="border container mx-auto bg-bg-primary border-box-border rounded-3xl shadow-sm p-6 md:p-12 flex flex-col md:flex-row gap-10 md:gap-14 items-center"
                 variants={containerVariants}
             >
-
                 {/* LEFT SIDE CONTENT */}
                 <motion.div className="flex-1" variants={containerVariants}>
                     {/* Pill */}

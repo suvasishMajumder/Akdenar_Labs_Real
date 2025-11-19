@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
 
     return (
         <motion.section
-            className="w-full py-20 px-6 md:px-10 lg:px-20"
+            className="w-full py-20 px-6 md:px-10 lg:px-20 container mx-auto    "
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}

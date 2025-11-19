@@ -546,4 +546,34 @@ export const capabilitiesData = [
       },
     ],
   },
+  {
+    slug: "technology-transformation",
+    title: "Technology Transformation",
+    tagline:
+      "We enable organizations to modernize their technology landscape with scalable systems, automation, and future-ready digital architecture.",
+
+    sections: [
+      {
+        id: 1,
+        image: "/capabilities/technology1.png",
+        title: "Reimagining Business Through Digital Innovation",
+        description:
+          "Akdenar Labs drives enterprise-wide technology transformation that unlocks agility, efficiency, and scalable growth. We help organizations adopt next-generation platforms that power connected, resilient businesses.",
+      },
+      {
+        id: 2,
+        image: "/capabilities/technology2.png",
+        title: "Our Approach",
+        description:
+          "We combine cloud modernization, DevOps automation, AI integration, and secure system architecture to redesign IT foundations. Our frameworks ensure seamless adoption, reduced disruption, and measurable transformation outcomes.",
+      },
+      {
+        id: 3,
+        image: "/capabilities/technology3.png",
+        title: "Impact We Deliver",
+        description:
+          "Clients achieve faster innovation cycles, reduced operational costs, and improved business flexibility. With Akdenar Labs, technology becomes a strategic advantage — fueling long-term digital success.",
+      },
+    ],
+  },
 ];

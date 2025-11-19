@@ -42,6 +42,8 @@ export async function GET(req: Request) {
 
     const { searchParams } = new URL(req.url);
 
+    console.log("hello");
+
     const type = searchParams.get("type"); // form type filter
     const search = searchParams.get("search"); // search by name
     const order = searchParams.get("order") || "desc"; // asc | desc
@@ -65,8 +67,8 @@ export async function GET(req: Request) {
         type === "contact"
           ? "get-in-touch"
           : type === "project"
-            ? "project-inquiry"
-            : "quick-contact";
+          ? "project-inquiry"
+          : "quick-contact";
 
     // Search filter
     if (search) {

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OurStorySection() {
     return (
-        <section className="w-full py-20 px-6 md:px-10 lg:px-20">
+        <section className="w-full py-20 container mx-auto px-6 md:px-10 lg:px-20">
             <div className="bg-bg-primary rounded-3xl border border-box-border shadow-sm p-6 md:p-12">
 
                 {/* Pill */}

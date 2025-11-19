@@ -44,6 +44,8 @@ export const infoAboutJobs = [
     location: "On site",
     tags: ["HR"],
     city: "Delhi",
+    address: "Mumbai Avenue",
+    phone: "(555) 123-4567",
     description:
       "FutureSphere is looking for an HR specialist with strong communication and hiring management skills.",
     sections: {
@@ -74,6 +76,8 @@ export const infoAboutJobs = [
     location: "Remote",
     tags: ["Design"],
     city: "Remote",
+    address: "Main Street",
+    phone: "(555) 123-4567",
     description:
       "We are hiring a UI/UX Designer with strong design thinking capabilities and prototyping experience.",
     sections: {

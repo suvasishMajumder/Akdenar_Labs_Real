@@ -18,7 +18,7 @@ export default function DevelopmentLifeCycle() {
     const x = useTransform(scrollYProgress, [0, 1], ["20%", "-90%"]);
 
     return (
-        <section ref={targetRef} className="relative bg-gradient-to-b from-white to-[#F7F3FF] py-20">
+        <section ref={targetRef} className="relative py-20 sm:container mx-auto px-2 md:px-10 lg:px-20">
 
             {/* 🌟 Section Heading */}
             <motion.h2
@@ -53,7 +53,7 @@ export default function DevelopmentLifeCycle() {
                         className="relative pl-12"
                     >
                         {/* Node Number */}
-                        <div className="absolute left-2 top-0 h-10 w-10 rounded-full bg-gradient-to-br from-[#7F56D9] to-[#6B4CC4] border-2 border-white text-white flex items-center justify-center shadow-lg font-bold">
+                        <div className="absolute -left-5 top-0 h-10 w-10 rounded-full bg-gradient-to-br from-[#7F56D9] to-[#6B4CC4] border-2 border-white text-white flex items-center justify-center shadow-lg font-bold">
                             {item.id}
                         </div>
 
