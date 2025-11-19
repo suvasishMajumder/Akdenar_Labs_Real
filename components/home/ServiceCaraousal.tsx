@@ -33,7 +33,7 @@ export default function ServiceCarousel() {
             title: "AI & Automation",
             description:
                 "We build intelligent automation workflows and AI-powered solutions using LLMs, NLP, and machine learning. Our systems reduce manual work, improve efficiency, and enable smart data-driven decision-making.",
-            image: "/home/aiTool.png",
+            image: "/home/aitool.png",
         },
         {
             pill: "Services",

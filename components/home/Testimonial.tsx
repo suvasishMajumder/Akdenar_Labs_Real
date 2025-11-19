@@ -6,41 +6,71 @@ import Image from "next/image";
 
 const testimonials = [
     {
-        image: "/home/testimonial1.svg",
+        image: "/client1.jpg",
         text: "I am incredibly impressed with the transformative technology solutions provided by FutureSphere. Their cutting-edge innovations have revolutionized our business operations, streamlining processes and boosting productivity. The seamless connectivity and intuitive user interface have made a significant impact on our team’s efficiency. Thanks to their advanced data analytics capabilities, we now make data-driven decisions with confidence. I highly recommend FutureSphere to any organization seeking to stay ahead in the digital era.",
         name: "Nitesh Mishra",
         company: "Deshmitra"
     },
     {
-        image: "/testimonials/sarah-jones.webp",
+        image: "/client2.jpg",
         text: "FutureSphere’s cloud modernization and DevOps automation have been game-changing for us. Deployment times dropped drastically, and system reliability improved beyond expectations. Their team’s professionalism and deep expertise truly set them apart.",
         name: "Sarah Jones",
         company: "BlueStone Retail"
     },
     {
-        image: "/testimonials/rohan-patel.webp",
+        image: "/client3.jpg",
         text: "Partnering with FutureSphere allowed us to scale our SaaS platform seamlessly. Their engineering team built a secure, high-performance backend, resulting in a 40% improvement in user experience.",
         name: "Rohan Patel",
         company: "TechNova Labs"
     },
     {
-        image: "/testimonials/emily-walker.webp",
+        image: "/client4.jpg",
         text: "The UI/UX redesign crafted by FutureSphere transformed our product entirely. User engagement and conversions improved significantly thanks to their world-class design thinking.",
         name: "Emily Walker",
         company: "BrightPixel Studios"
     },
     {
-        image: "/testimonials/jatin-verma.webp",
+        image: "/client5.jpg",
         text: "FutureSphere automated our critical workflows and integrated AI-driven analytics. Our decision-making is now faster, smarter, and based on reliable insights.",
         name: "Jatin Verma",
         company: "Quantify Global"
     },
     {
-        image: "/testimonials/laura-smith.webp",
-        text: "From strategy to execution, FutureSphere exceeded expectations. They modernized our legacy systems, enhanced security, and stabilized our enterprise operations.",
-        name: "Laura Smith",
-        company: "FinEdge Solutions"
-    }
+        image: "/client6.jpg",
+        text: "I am incredibly impressed with the transformative technology solutions provided by FutureSphere. Their cutting-edge innovations have revolutionized our business operations, streamlining processes and boosting productivity. The seamless connectivity and intuitive user interface have made a significant impact on our team’s efficiency. Thanks to their advanced data analytics capabilities, we now make data-driven decisions with confidence. I highly recommend FutureSphere to any organization seeking to stay ahead in the digital era.",
+        name: "Nitesh Mishra",
+        company: "Deshmitra"
+    },
+    {
+        image: "/client7.jpg",
+        text: "FutureSphere’s cloud modernization and DevOps automation have been game-changing for us. Deployment times dropped drastically, and system reliability improved beyond expectations. Their team’s professionalism and deep expertise truly set them apart.",
+        name: "Sarah Jones",
+        company: "BlueStone Retail"
+    },
+    {
+        image: "/client8.jpg",
+        text: "Partnering with FutureSphere allowed us to scale our SaaS platform seamlessly. Their engineering team built a secure, high-performance backend, resulting in a 40% improvement in user experience.",
+        name: "Rohan Patel",
+        company: "TechNova Labs"
+    },
+    {
+        image: "/client9.jpg",
+        text: "The UI/UX redesign crafted by FutureSphere transformed our product entirely. User engagement and conversions improved significantly thanks to their world-class design thinking.",
+        name: "Emily Walker",
+        company: "BrightPixel Studios"
+    },
+    {
+        image: "/client10.jpg",
+        text: "FutureSphere automated our critical workflows and integrated AI-driven analytics. Our decision-making is now faster, smarter, and based on reliable insights.",
+        name: "Jatin Verma",
+        company: "Quantify Global"
+    },
+    // {
+    //     image: "/client6.jpg",
+    //     text: "From strategy to execution, FutureSphere exceeded expectations. They modernized our legacy systems, enhanced security, and stabilized our enterprise operations.",
+    //     name: "Laura Smith",
+    //     company: "FinEdge Solutions"
+    // }
 ];
 
 export default function TestimonialsSection() {
@@ -87,11 +117,12 @@ export default function TestimonialsSection() {
                     >
 
                         {/* LEFT IMAGE */}
-                        <div className="relative w-full h-[260px] md:h-[350px] rounded-xl overflow-hidden border">
+                        <div className="relative w-full h-[260px] md:h-[350px] rounded-xl overflow-hidden border border-box-border">
                             <Image
                                 src={testimonials[index].image}
                                 alt={testimonials[index].name}
                                 fill
+                                loading="eager"
                                 className="object-cover"
                             />
                         </div>
