@@ -216,12 +216,12 @@ export default function ContactForm() {
       </div>
 
       {/* Footer Blocks */}
-      {pathname === "/getintouch" && (
+      {pathname === "/get-in-touch" && (
         <div className="mt-10 bg-white border border-gray-200 shadow-sm rounded-2xl py-8 px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8">
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/icon1.svg" width={40} height={40} alt="" />
+              <Image src="/getintouch/icon1.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Sales and Business</h3>
               <p className="text-sm text-gray-600">akdenarlabs@gmail.com</p>
             </div>
@@ -233,7 +233,7 @@ export default function ContactForm() {
             </div>
 
             <div className="flex flex-col items-center">
-              <Image src="/get-in-touch/icon3.svg" width={40} height={40} alt="" />
+              <Image src="/getintouch/icon3.svg" width={40} height={40} alt="" />
               <h3 className="mt-3 font-medium text-gray-900">Customer Support</h3>
               <p className="text-sm text-gray-600">support1234@gmail.com</p>
             </div>
