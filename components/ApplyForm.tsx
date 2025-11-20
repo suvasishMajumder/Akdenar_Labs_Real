@@ -160,7 +160,7 @@ export default function ApplyForm({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-xl bg-white">
+      <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           {/* DialogTitle visible so screen readers and users see the context */}
           <DialogTitle className="text-xl font-semibold">
@@ -169,7 +169,7 @@ export default function ApplyForm({
         </DialogHeader>
 
         {/* Live region for server response (accessibility) */}
-        <div aria-live="polite" className="min-h-[1.5rem] mt-2">
+        <div aria-live="polite" className="mt-2">
           {responseMessage && (
             <p
               className={`text-sm ${responseError ? "text-red-600" : "text-green-600"}`}
@@ -179,7 +179,7 @@ export default function ApplyForm({
           )}
         </div>
 
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 mt-3">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 mt-0">
           <div className="flex justify-center gap-3 md:flex-row flex-col">
             {/* Full Name */}
             <div className="flex-1 flex flex-col gap-2">

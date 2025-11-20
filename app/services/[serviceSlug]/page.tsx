@@ -25,8 +25,8 @@ export default function page({ params }: paramsProps) {
 
   return (
     < section className="pt-20 bg-bg-primary min-h-screen" >
-      <div className="p-6 max-w-6xl mx-auto ">
-        <div className="flex items-center gap-6 bg-white p-8 rounded-xl shadow-sm ">
+      <div className="p-3 md:p-6 max-w-6xl mx-auto ">
+        <div className="flex items-center justify-between flex-col md:flex-row gap-6 bg-white p-8 rounded-xl shadow-sm ">
 
           {/* Left */}
           <div className="flex-1">
@@ -45,7 +45,7 @@ export default function page({ params }: paramsProps) {
           <img
             src={service.img}
             alt={service.title}
-            className="w-[420px] h-auto"
+            className="w-[420px] md:block hidden h-auto"
           />
         </div>
 
