@@ -43,13 +43,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {project.description}
       </p>
 
-      {/* Read More */}
+      {/* Read More
       <a
         href={project.link}
         className="text-sm font-medium text-[#7F56D9] hover:underline"
       >
         Read more.
-      </a>
+      </a> */}
 
     </div>
   )

@@ -67,7 +67,7 @@ export default function Page() {
                   {projects[index].description}
                 </p>
 
-                {/* Read More Link */}
+                {/* Read More Link
                 <div className="pt-2">
                   <a
                     href={projects[index].link}
@@ -75,7 +75,7 @@ export default function Page() {
                   >
                     Read more →
                   </a>
-                </div>
+                </div> */}
 
                 {/* Navigation Buttons */}
                 <div className="flex gap-3 pt-6">
