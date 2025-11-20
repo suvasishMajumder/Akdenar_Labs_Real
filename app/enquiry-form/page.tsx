@@ -14,7 +14,7 @@ import Footer from "@/components/home/Footer";
 import { Button } from "@/components/ui/button";
 
 // React Hook Form + Zod
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   ProjectEnquirySchema,
@@ -27,11 +27,23 @@ export default function EnquiryPage() {
   const {
     register,
     handleSubmit,
-    setValue,
+    control,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ProjectEnquiryType>({
     resolver: zodResolver(ProjectEnquirySchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      company: "",
+      website: "",
+      projectType: "",
+      estimatedBudget: "",
+      timeline: "",
+      description: "",
+      expectedOutcome: "",
+    },
   });
 
   // Final Submit Handler
@@ -126,59 +138,78 @@ export default function EnquiryPage() {
 
                 {/* Project Type */}
                 <FormField label="Project Type *" error={errors.projectType?.message}>
-                  <Select onValueChange={(v) => setValue("projectType", v)}>
-                    <SelectTrigger
-                      className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none"
-                    >
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
-                    <SelectContent className="w-full bg-white">
-                      <SelectItem value="web">Website</SelectItem>
-                      <SelectItem value="app">App</SelectItem>
-                      <SelectItem value="uiux">UI/UX</SelectItem>
-                      <SelectItem value="ai">AI Automation</SelectItem>
-                      <SelectItem value="devops">Cloud & DevOps</SelectItem>
-                      <SelectItem value="marketing">Digital Marketing</SelectItem>
-                      <SelectItem value="custom">Custom Software</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="projectType"
+                    control={control}
+                    render={({ field }) => (
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <SelectTrigger
+                          className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none"
+                        >
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                        <SelectContent className="w-full bg-white">
+                          <SelectItem value="web">Website</SelectItem>
+                          <SelectItem value="app">App</SelectItem>
+                          <SelectItem value="uiux">UI/UX</SelectItem>
+                          <SelectItem value="ai">AI Automation</SelectItem>
+                          <SelectItem value="devops">Cloud & DevOps</SelectItem>
+                          <SelectItem value="marketing">Digital Marketing</SelectItem>
+                          <SelectItem value="custom">Custom Software</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </FormField>
 
                 {/* Budget */}
                 <FormField label="Estimated Budget *" error={errors.estimatedBudget?.message}>
-                  <Select onValueChange={(v) => setValue("estimatedBudget", v)}>
-                    <SelectTrigger
-                      className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none"
-                    >
-                      <SelectValue placeholder="Select budget" />
-                    </SelectTrigger>
-                    <SelectContent className="w-full bg-white">
-                      <SelectItem value="10-50k">10k–50k</SelectItem>
-                      <SelectItem value="50k-2l">50k–2L</SelectItem>
-                      <SelectItem value="2-10l">2L–10L</SelectItem>
-                      <SelectItem value="10-50l">10L–50L</SelectItem>
-                      <SelectItem value="50l-1cr">50L–1CR</SelectItem>
-                      <SelectItem value="1cr+">1CR+</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="estimatedBudget"
+                    control={control}
+                    render={({ field }) => (
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <SelectTrigger
+                          className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none"
+                        >
+                          <SelectValue placeholder="Select budget" />
+                        </SelectTrigger>
+                        <SelectContent className="w-full bg-white">
+                          <SelectItem value="10-50k">10k–50k</SelectItem>
+                          <SelectItem value="50k-2l">50k–2L</SelectItem>
+                          <SelectItem value="2-10l">2L–10L</SelectItem>
+                          <SelectItem value="10-50l">10L–50L</SelectItem>
+                          <SelectItem value="50l-1cr">50L–1CR</SelectItem>
+                          <SelectItem value="1cr+">1CR+</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </FormField>
+
 
                 {/* Timeline */}
                 <FormField label="Timeline *" error={errors.timeline?.message}>
-                  <Select onValueChange={(v) => setValue("timeline", v)}>
-                    <SelectTrigger
-                      className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none">
-                      <SelectValue placeholder="Select timeline" />
-                    </SelectTrigger>
-                    <SelectContent className="w-full bg-white">
-                      <SelectItem value="1-week">1 Week</SelectItem>
-                      <SelectItem value="2-3-week">2-3 Weeks</SelectItem>
-                      <SelectItem value="1-month">1 Month</SelectItem>
-                      <SelectItem value="2-month">2-3 Months</SelectItem>
-                      <SelectItem value="flexible">Flexible</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="timeline"
+                    control={control}
+                    render={({ field }) => (
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <SelectTrigger
+                          className="mt-2 w-full px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7F56D9] resize-none">
+                          <SelectValue placeholder="Select timeline" />
+                        </SelectTrigger>
+                        <SelectContent className="w-full bg-white">
+                          <SelectItem value="1-week">1 Week</SelectItem>
+                          <SelectItem value="2-3-week">2-3 Weeks</SelectItem>
+                          <SelectItem value="1-month">1 Month</SelectItem>
+                          <SelectItem value="2-month">2-3 Months</SelectItem>
+                          <SelectItem value="flexible">Flexible</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </FormField>
               </div>
 

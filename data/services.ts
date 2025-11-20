@@ -18,7 +18,7 @@ export const services = [
   {
     title: "UI/UX & Branding",
     description:
-      "We design intuitive, visually striking interfaces that inspire trust and elevate brands. From wireframes to full design systems, our UI/UX experts craft seamless, engaging user experiences.",
+      "We design intuitive, visually striking interfaces that inspire trust and elevate brands. From wireframes to full design systems, our UI/UX experts craft seamless, engaging, and truly memorable user experiences that drive impact.",
     path: "/home/UIUX.svg",
     alt: "ui ux design",
     link: "/services/ui-ux",

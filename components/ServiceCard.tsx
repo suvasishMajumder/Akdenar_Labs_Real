@@ -23,7 +23,7 @@ export default function ServiceCard({ service, i }: ServiceCardProps) {
       key={i}
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="group relative rounded-2xl p-8 bg-white border border-gray-200
+      className="group relative p-4 xl:h-88 lg:h-96 rounded-2xl md:p-3 lg:p-3 xl:p-8 bg-white border border-gray-200
                  shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
 
@@ -56,21 +56,12 @@ export default function ServiceCard({ service, i }: ServiceCardProps) {
         {/* ✅ Read More Button (always visible) */}
         <button
           onClick={() => router.push(service.link)}
-          className="mt-2 px-4 py-2 rounded-full bg-[#F4F1FF] text-[#7F56D9] 
+          className="  mt-2 px-4 py-2 rounded-full bg-[#F4F1FF] text-[#7F56D9] 
                      text-sm font-semibold hover:bg-[#E9E3FF] transition-colors"
         >
           Read More →
         </button>
 
-        {/* Mobile View More Button */}
-        <div
-          onClick={() => router.push(service.link)}
-          className="mt-4 text-center md:hidden"
-        >
-          <Button className="bg-[#7F56D9] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-[#6941C6] transition-colors">
-            View More
-          </Button>
-        </div>
       </div>
 
       {/* Desktop Hover Overlay */}

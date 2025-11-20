@@ -3,7 +3,10 @@ import { z } from "zod";
 export const ProjectEnquirySchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
   email: z.string().email("Invalid email"),
-  phone: z.string().min(8, "Phone number is required"),
+  phone: z
+    .string()
+    .min(8, "Phone number is required")
+    .regex(/^\+?[0-9]+$/, "Only numbers and + are allowed"),
   company: z.string().optional(),
   website: z.string().optional(),
   projectType: z.string().min(1, "Please select a project type"),

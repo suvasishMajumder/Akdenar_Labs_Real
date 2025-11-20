@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { LetterText, LetterTextIcon, Send } from "lucide-react";
 
 export default function NewsletterSection() {
     const [email, setEmail] = useState("");
@@ -79,7 +80,7 @@ export default function NewsletterSection() {
                     </p>
 
                     {/* Input + Button */}
-                    <div className="flex w-full max-w-lg bg-white rounded-md overflow-hidden p-1 shadow-sm">
+                    <div className="flex justify-between items-center w-full max-w-lg bg-white rounded-md overflow-hidden p-1 shadow-sm">
                         <input
                             type="email"
                             value={email}
@@ -91,10 +92,14 @@ export default function NewsletterSection() {
                         <button
                             onClick={handleSubscribe}
                             disabled={loading}
-                            className="px-5 py-3 bg-[#7F56D9] text-white text-sm font-medium hover:bg-[#6b45cc] transition rounded-md flex"
+                            className=" px-4 md:px-5 py-3 bg-[#7F56D9] text-white text-sm font-medium  hover:bg-[#6b45cc] transition rounded-md "
                         >
-                            {loading ? "Please wait..." : "Subscribe"}
+                            <span className="hidden md:flex">
+                                {loading ? "Please wait..." : "Subscribe"}
+                            </span>
+                            <Send />
                         </button>
+
                     </div>
 
                     {/* Message */}
