@@ -52,7 +52,7 @@ export default function HeroSection() {
 
             {/* HERO SECTION */}
             <motion.div
-                className="z-20 mt-20 flex flex-col items-center text-center px-4"
+                className="z-20 mt-12 md:mt-20 flex flex-col items-center text-center px-4"
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 variants={containerVariants}

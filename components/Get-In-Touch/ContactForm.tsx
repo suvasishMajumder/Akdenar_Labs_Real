@@ -230,7 +230,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="hidden nd:flex justify-center lg:justify-end">
           <Image
             src="/getintouch/heroimg.svg"
             alt="Get in touch illustration"

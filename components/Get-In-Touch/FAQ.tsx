@@ -98,7 +98,7 @@ export default function FAQSection() {
         ))}
       </motion.div>
 
-      {/* View All */}
+      {/* View All
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function FAQSection() {
         <button className="flex items-center gap-2 text-[#7F56D9] text-sm font-medium hover:opacity-80">
           View All <span>⌄</span>
         </button>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 }
