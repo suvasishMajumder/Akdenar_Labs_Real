@@ -100,7 +100,7 @@ export default function ServicesSection() {
                     >
                         <button
                             onClick={() => router.push("/services")}
-                            className="flex items-center gap-2 text-[#7F56D9] font-medium hover:opacity-80 transition"
+                            className="flex items-center gap-2 text-[#7F56D9] font-medium hover:opacity-80 border-transparent hover:border-[#7F56D9] border-2  rounded-full px-6 py-2 cursor-pointer transition"
                         >
                             View All
                             <span className="text-lg">→</span>
