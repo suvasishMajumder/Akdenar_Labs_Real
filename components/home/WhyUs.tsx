@@ -82,7 +82,7 @@ export default function WhyUsSection() {
 
                 {/* RIGHT SIDE IMAGE */}
                 <motion.div className="flex-1 flex justify-center" variants={imageVariants}>
-                    <div className="relative w-full max-w-sm md:max-w-md min-h-[260px] h-[260px] md:h-48 rounded-2xl overflow-hidden">
+                    <div className="relative min-w-68 w-full h-[260px] md:h-48 rounded-2xl overflow-hidden shrink-0">
                         <Image
                             src="/home/whyus.svg"
                             alt="Why Us"
@@ -90,6 +90,7 @@ export default function WhyUsSection() {
                             className="object-cover"
                         />
                     </div>
+
                 </motion.div>
             </motion.div>
 
