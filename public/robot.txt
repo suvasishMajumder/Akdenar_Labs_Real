@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Block internal tech folders (SEO ke liye koi value nahi)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /middlewares/
+Disallow: /models/
+Disallow: /context/
+Disallow: /lib/
+Disallow: /utils/
+Disallow: /validation/
+Disallow: /data/
+
+# Block unwanted Next.js internal files
+Disallow: /*?*
+Disallow: /*&*
+
+# Sitemap
+Sitemap: https://www.labs.akdenar.com/sitemap.xml
