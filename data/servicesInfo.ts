@@ -427,19 +427,19 @@ export const servicesInfo = [
       {
         packageName: "SEO Content Pack",
         packageDesc: "SEO blogs, keyword research, landing page content",
-        price: "₹30K – ₹1L",
+        price: "₹30K – ₹60K",
       },
       {
         packageName: "Authority Builder",
         packageDesc:
           "Long-form articles, technical content, research-driven writing",
-        price: "₹1L – ₹4L",
+        price: "₹60K – ₹1L",
       },
       {
         packageName: "Enterprise Content Suite",
         packageDesc:
           "Full-scale content operations: blogs, web copy, content strategy",
-        price: "₹4L – ₹30L+",
+        price: "₹1L – ₹2L+",
       },
     ],
   },

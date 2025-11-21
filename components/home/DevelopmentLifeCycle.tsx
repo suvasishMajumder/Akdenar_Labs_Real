@@ -15,7 +15,7 @@ const developmentLifeCycleData = [
 export default function DevelopmentLifeCycle() {
     const targetRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({ target: targetRef });
-    const x = useTransform(scrollYProgress, [0, 1], ["20%", "-90%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-80%"]);
 
     return (
         <section ref={targetRef} className="relative py-20 sm:container mx-auto px-2 md:px-10 lg:px-20">

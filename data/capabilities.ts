@@ -58,15 +58,6 @@ export const capabilitiesData = [
         description:
           "With Akdenar Labs, clients achieve stronger resilience, improved risk control, compliance readiness, and secure operations. Our solutions enable safe digital transformations, reduce vulnerabilities, and enhance protection for mission-critical systems.",
       },
-      {
-        id: 4,
-        image: "/capabilities/cyber-careers.png",
-        title: "Cybersecurity Careers",
-        description:
-          "Join our cloud and security teams on exciting journeys from high-tech to high-impact. Be part of the next generation of innovators building a safer digital future.",
-        buttonLabel: "Search open roles",
-        buttonLink: "/careers",
-      },
     ],
   },
   {

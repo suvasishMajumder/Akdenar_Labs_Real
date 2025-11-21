@@ -97,7 +97,7 @@ export default function NewsletterSection() {
                             <span className="hidden md:flex">
                                 {loading ? "Please wait..." : "Subscribe"}
                             </span>
-                            <Send />
+                            <Send className="md:hidden " />
                         </button>
 
                     </div>

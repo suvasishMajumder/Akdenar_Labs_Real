@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Akdenar Labs",
   description: "Akdenar Labs - Innovative Solutions for a Digital World",
+  icons: {
+    icon: "/favicon.svg",
+  }
 };
 
 export default function RootLayout({
