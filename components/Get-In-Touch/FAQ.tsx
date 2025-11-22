@@ -85,8 +85,8 @@ export default function FAQSection() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            whileHover={{ y: -5, boxShadow: "0 12px 30px rgba(127,86,217,0.12)" }}
-            transition={{ type: "spring", stiffness: 180, damping: 14 }}
+            whileHover={{ boxShadow: "0 12px 30px rgba(127,86,217,0.12)" }}
+            // transition={{ type: "spring", stiffness: 180, damping: 14 }}
             className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 cursor-pointer hover:border-[#D8CBFF] transition"
           >
             <h3 className="text-[#7F56D9] font-semibold mb-3">{item.q}</h3>

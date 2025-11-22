@@ -23,7 +23,7 @@ export default function ServicesSection() {
 
     // Item animation (for text, pills, etc.)
     const itemVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 15 },
         visible: {
             opacity: 1,
             y: 0,
@@ -33,7 +33,7 @@ export default function ServicesSection() {
 
     // Card animation
     const cardVariants: Variants = {
-        hidden: { opacity: 0, y: 40 },
+        hidden: { opacity: 0, y: 10 },
         visible: {
             opacity: 1,
             y: 0,
@@ -43,11 +43,13 @@ export default function ServicesSection() {
 
     return (
         <motion.section
-            className="w-full container mx-auto py-10 px-6 md:px-10 lg:px-20"
+            className="w-full container mx-auto sm:pt-4 py-10 px-6 md:px-10 lg:px-20"
             variants={containerVariants}
+
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+
+            viewport={{ once: true, amount: 0.1 }}
         >
             <motion.div
                 className={`${pathname != "/" && "hidden"}`}
