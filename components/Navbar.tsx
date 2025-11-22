@@ -45,7 +45,7 @@ export default function Navbar() {
     <header
       className={` ${pathname.split("/").includes("dashboard") && "hidden"} w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
     >
-      <div className="mx-auto w-full container px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full container px-4  sm:px-6  lg:px-8">
         <div className="flex w-full items-center justify-between h-16">
           {/* Logo + mobile menu trigger */}
           <div className="flex w-full md:w-auto items-center gap-4">
@@ -89,13 +89,13 @@ export default function Navbar() {
 
                 <SheetContent
                   side="left"
-                  className="w-[320px] h-full overflow-y-auto bg-white p-6 shadow-xl 
+                  className="w-[280px] h-full overflow-y-auto bg-white p-6 shadow-xl 
              animate-[slideIn_0.35s_ease-out]"
                 >
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4 animate-fadeIn">
+                  <div className="flex items-center justify-between mb-3 animate-fadeIn">
                     <Link href="/" onClick={() => setIsSheetOpen(false)}>
-                      <Image src="/logo.svg" alt="Logo" width={140} height={36} />
+                      <Image src="/logo.svg" alt="Logo" width={130} height={40} />
                     </Link>
                   </div>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
                               <summary className="font-medium text-gray-700 cursor-pointer">
                                 Capabilities
                               </summary>
-                              <ul className="mt-2 ml-4 list-disc text-sm space-y-1 animate-fadeIn">
+                              <ul className="mt-2 ml-4 list-disc text-sm space-y-2 animate-fadeIn">
                                 {navigationData.capabilities.map((c, i) => (
                                   <li key={i}>
                                     <Link
@@ -192,7 +192,7 @@ export default function Navbar() {
                     </Link>
 
                     <div className="pt-4 animate-stagger-delayed">
-                      <Button onClick={() => router.push("/enquiry-form")} className="w-full">Enquire Now</Button>
+                      <Button onClick={() => {setIsSheetOpen(false); router.push("/enquiry-form")}} className="w-full">Enquire Now</Button>
                     </div>
                   </nav>
                 </SheetContent>
@@ -202,7 +202,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6" onClick={() =>
+          <nav className="hidden md:flex items-center md:gap-4 lg:gap-6" onClick={() =>
             setMegaOpen(false)
           }>
             <div className="relative">
@@ -211,7 +211,7 @@ export default function Navbar() {
                   setMegaOpen((s) => !s);
                   e.stopPropagation();
                 }}
-                className={`flex items-center gap-2 py-2 px-3 rounded-md ${megaOpen ? "bg-gray-100" : "hover:bg-gray-50"}`}
+                className={`flex items-center gap-2 py-2 px-3  rounded-md ${megaOpen ? "bg-gray-100" : "hover:bg-gray-50"}`}
                 aria-expanded={megaOpen}
               >
                 <span className={`text-sm ${isActive("/services") ? "font-semibold" : "font-medium"}`}>
@@ -226,8 +226,12 @@ export default function Navbar() {
 
               {megaOpen && (
                 <div
-                  className={`absolute bg-white p-4 -left-100 2xl:-left-50 w-[80vw] 2xl:w-[60vw] mt-3 shadow-lg z-50 animate-dropdown `}>
-                  <div className="grid grid-cols-2 gap-6"> {/* Changed from grid-cols-2 to grid-cols-1 */}
+                  className={`absolute top-full 
+      left-0 md:left-1/2 md:ml-6 
+      md:-translate-x-1/2
+      w-[90vw] md:w-[75vw] lg:w-[60vw] xl:w-[50vw]
+      bg-white p-6 mt-3 shadow-lg z-50 animate-dropdown rounded-b-md`}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8"> {/* Changed from grid-cols-2 to grid-cols-1 */}
                     <div>
                       <h4 className="font-semibold mb-3 text-black">Capabilities</h4>
                       <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-sm"> {/* Changed from grid-cols-2 to grid-cols-1 */}
@@ -265,7 +269,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA on right */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center md:ml-4">
             <Button onClick={() => router.push("/enquiry-form")} className="text-white">Enquire Now</Button>
           </div>
         </div>

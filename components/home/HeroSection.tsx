@@ -81,7 +81,7 @@ export default function HeroSection() {
                     className="mt-8"
                     variants={itemVariants}
                 >
-                    <Button onClick={() => router.push("/get-in-touch")} className="rounded-md px-8 py-4 text-xl text-white bg-[#7F56D9] hover:bg-[#6c41cc]">
+                    <Button onClick={() => router.push("/get-in-touch")} className="rounded-md px-8 py-5 text-xl text-white bg-[#7F56D9] hover:bg-[#6c41cc] cursor-pointer">
                         Contact Us
                     </Button>
                 </motion.div>

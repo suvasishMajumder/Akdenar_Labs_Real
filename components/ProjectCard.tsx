@@ -15,7 +15,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <div
       key={index}
-      className="bg-white border border-[#e6e9ff] rounded-2xl shadow-sm p-4 pb-6 hover:shadow-md transition"
+      className="bg-white border border-[#e6e9ff] rounded-2xl shadow-sm p-4 pb-6 hover:shadow-md transition h-full"
     >
 
       {/* Image */}
