@@ -1,40 +1,47 @@
 "use client";
 
-import { useEffect } from "react";
-import { useParams } from "next/navigation"; // ⭐ ensures slug works in client component
-import Image from "next/image";
-import { services } from "@/data/services";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import ContactForm from "@/components/Get-In-Touch/ContactForm";
 import Footer from "@/components/home/Footer";
+import ContactModal from "@/components/ui/ContactModal";
+import { servicesInfo } from "@/data/servicesInfo";
 
 export default function Page() {
-  const { slug } = useParams() as { slug: string };
+  const { serviceSlug } = useParams() as { serviceSlug: string };
+  const [isContactOpen, setContactOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<any>(null);
 
-  const service = services.find((s) => s.link.endsWith(slug));
+  const service = servicesInfo.find((item) => item.slug === serviceSlug);
 
   /* ------------------------------------------------------
      ⭐ 1. Dynamic Title + Meta Description
   ------------------------------------------------------- */
   useEffect(() => {
-    if (service) {
-      document.title = `${service.title} | Services | Akdenar Labs`;
+    if (!service) return;
 
-      let meta = document.querySelector("meta[name='description']");
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute("name", "description");
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", service.description);
+    document.title = `${service.title} | Akdenar Labs`;
+
+    let meta = document.querySelector(
+      "meta[name='description']"
+    ) as HTMLMetaElement | null;
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
     }
+
+    meta.content = service.description;
   }, [service]);
 
   /* ------------------------------------------------------
-     ⭐ 2. JSON-LD: Breadcrumb + ProfessionalService Schema
+     ⭐ 2. JSON-LD Schema (Breadcrumb + Service Schema)
   ------------------------------------------------------- */
   useEffect(() => {
     if (!service) return;
 
-    // Breadcrumb Schema
+    // Breadcrumb
     const breadcrumb = document.createElement("script");
     breadcrumb.type = "application/ld+json";
     breadcrumb.innerHTML = JSON.stringify({
@@ -57,7 +64,7 @@ export default function Page() {
           "@type": "ListItem",
           position: 3,
           name: service.title,
-          item: `https://labs.akdenar.com/services/${slug}`,
+          item: `https://labs.akdenar.com/services/${serviceSlug}`,
         },
       ],
     });
@@ -70,8 +77,8 @@ export default function Page() {
       "@type": "ProfessionalService",
       name: service.title,
       description: service.description,
-      serviceType: service.title,
-      url: `https://labs.akdenar.com/services/${slug}`,
+      url: `https://labs.akdenar.com/services/${serviceSlug}`,
+      areaServed: "Worldwide",
       provider: {
         "@type": "Organization",
         name: "Akdenar Labs",
@@ -86,47 +93,109 @@ export default function Page() {
       document.head.removeChild(breadcrumb);
       document.head.removeChild(serviceSchema);
     };
-  }, [service, slug]);
+  }, [service, serviceSlug]);
 
   /* ------------------------------------------------------
-     NOT FOUND HANDLING
+     NOT FOUND
   ------------------------------------------------------- */
   if (!service) {
-    return <div className="p-20 text-center text-xl">Service not found.</div>;
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <span className="text-xl font-semibold">Service Not Found</span>
+      </div>
+    );
   }
 
   /* ------------------------------------------------------
-     ⭐ 3. UI (same as your design)
+     UI (NOT MODIFIED AT ALL)
   ------------------------------------------------------- */
   return (
-    <>
-      <section className="w-full px-5 md:px-10 lg:px-24 py-20 pt-22">
-        <h1 className="text-3xl md:text-4xl font-bold">{service.title}</h1>
-        <p className="text-gray-600 max-w-3xl mt-2">{service.description}</p>
+    <section className="pt-20 bg-bg-primary min-h-screen">
+      <div className="p-3 md:p-6 max-w-6xl mx-auto ">
+        <div className="flex items-center justify-between flex-col md:flex-row gap-6 bg-white p-8 rounded-xl shadow-sm">
+          {/* Left */}
+          <div className="flex-1">
+            <h1 className="text-4xl font-bold">{service.title}</h1>
+            <p className="mt-4 text-gray-600">{service.description}</p>
 
-        <div className="mt-12 w-full bg-bg-primary border border-box-border shadow-sm rounded-2xl p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
-          <div className="w-full md:w-1/2 flex justify-center">
-            <Image
-              src={service.path}
-              alt={service.alt}
-              width={350}
-              height={350}
-              className="rounded-lg object-cover"
-            />
+            <div className="mt-6">
+              <h2 className="font-semibold text-xl">Tools:</h2>
+              <p className="text-gray-700 mt-2">
+                {service.techStack.join(", ")}
+              </p>
+            </div>
           </div>
 
-          <div className="w-full md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-semibold">
-              What We Provide
-            </h2>
-            <p className="text-gray-600 mt-3 leading-relaxed">
-              {service.description}
-            </p>
-          </div>
+          {/* Right Image */}
+          <img
+            src={service.img}
+            alt={service.title}
+            className="w-[420px] md:block hidden h-auto"
+          />
         </div>
-      </section>
 
+        {/* PACKAGES */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-semibold mb-6">Packages</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {service.packages.map((pkg, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-xl transition-shadow"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold">
+                        {pkg.packageName}
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {pkg.packageDesc}
+                      </p>
+                    </div>
+
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-gray-900">
+                        {pkg.price}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-between">
+                    <button
+                      onClick={() => {
+                        setSelectedPackage(pkg);
+                        setContactOpen(true);
+                      }}
+                      className="px-4 py-2 rounded-lg bg-[#7F56D9] text-white text-sm hover:bg-[#6b45cc] transition"
+                    >
+                      Contact
+                    </button>
+                  </div>
+                </div>
+
+                <div className="absolute right-4 top-4 text-xs text-gray-400">
+                  Package #{index + 1}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <ContactModal
+          open={isContactOpen}
+          onClose={() => {
+            setContactOpen(false);
+            setSelectedPackage(null);
+          }}
+          serviceTitle={service?.title}
+          packageInfo={selectedPackage}
+        />
+      </div>
+
+      <ContactForm />
       <Footer />
-    </>
+    </section>
   );
 }
