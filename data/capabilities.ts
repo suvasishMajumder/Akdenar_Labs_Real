@@ -3,7 +3,7 @@ export const capabilitiesData = [
     slug: "cloud",
     title: "Cloud",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient | ingMyUrls is a simple online tool that “pings” your website URLs to multiple search engines and indexing services, telling them that your website has been updated or a new page has been published. In other words, it sends a signal to these services saying: “hey, this page is new or changed — come crawl it.” This can sometimes help search engines discover your pages slightly faster, especially for new websites with low authority or limited backlinks. However, it does not improve rankings, does not guarantee indexing, and does not replace proper SEO practices like having a sitemap, good internal linking, quality content, and structured metadata. It’s mainly useful as a small extra push to speed up discovery — not a core SEO solution.",
+      "We design and deploy AI technologies that make your business smarter, faster, and more efficient",
 
     sections: [
       {
@@ -56,7 +56,7 @@ export const capabilitiesData = [
         image: "/capabilities/cybersecurity3.png",
         title: "Impact We Deliver",
         description:
-          "With Akdenar Labs, clients achieve stronger resilience, improved risk control, compliance readiness, and secure operations. Our solutions enable safe digital transformations, reduce vulnerabilities, and enhance protection for mission-critical systems and data. ",
+          "With Akdenar Labs, clients achieve stronger resilience, improved risk control, compliance readiness, and secure operations. Our solutions enable safe digital transformations, reduce vulnerabilities, and enhance protection for mission-critical systems.",
       },
     ],
   },
