@@ -1,12 +1,13 @@
 export const services = [
   {
-    title: "Web & app Development",
+    title: "Web & App Development",
     description:
       "At Akdenar Labs, we build scalable mobile and web apps that combine sleek design with powerful performance. Our solutions help businesses engage users, streamline operations, and drive measurable growth.",
     path: "/services/web.svg",
     alt: "web development",
     link: "/services/web-development",
   },
+
   {
     title: "Cloud & DevOps",
     description:
@@ -15,6 +16,7 @@ export const services = [
     alt: "cloud development",
     link: "/services/cloud-devops",
   },
+
   {
     title: "UI/UX & Branding",
     description:
@@ -27,11 +29,12 @@ export const services = [
   {
     title: "AI & Automation",
     description:
-      "Akdanar Labs integrates artificial intelligence and automation to help businesses make smarter, data-driven decisions. We develop machine learning models, predictive analytics tools, and automation systems that simplify operations and increase productivity.",
+      "Akdenar Labs integrates artificial intelligence and automation to help businesses make smarter, data-driven decisions. We develop machine learning models, predictive analytics tools, and automation systems that simplify operations and increase productivity.",
     path: "/services/ai.png",
     alt: "ai",
     link: "/services/ai-automation",
   },
+
   {
     title: "Digital Marketing & SEO",
     description:
@@ -40,6 +43,7 @@ export const services = [
     alt: "digital marketing",
     link: "/services/digital-marketing-seo",
   },
+
   {
     title: "Video Editing & Animation",
     description:
@@ -48,6 +52,7 @@ export const services = [
     alt: "video editing",
     link: "/services/video-editing-animation",
   },
+
   {
     title: "QA & Testing",
     description:
@@ -56,6 +61,7 @@ export const services = [
     alt: "testing",
     link: "/services/qa-testing",
   },
+
   {
     title: "Graphic Designing",
     description:
@@ -64,6 +70,7 @@ export const services = [
     alt: "graphic designing",
     link: "/services/graphic-designing",
   },
+
   {
     title: "Content Writing",
     description:

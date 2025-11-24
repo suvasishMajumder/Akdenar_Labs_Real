@@ -5,7 +5,6 @@ import path from "path";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.labs.akdenar.com";
 
-  // Helper: recursively read app folder for route folders/files
   function getRoutes(dir: string, parentRoute = ""): string[] {
     const fullPath = path.join(process.cwd(), dir);
 
@@ -13,27 +12,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const entries = fs.readdirSync(fullPath, { withFileTypes: true });
 
+    // eslint-disable-next-line prefer-const
     let routes: string[] = [];
 
     for (const entry of entries) {
       if (entry.name.startsWith("_") || entry.name.startsWith(".")) continue;
+
+      // Skip folders that are NOT route folders
       if (
-        entry.name === "components" ||
-        entry.name === "lib" ||
-        entry.name === "context" ||
-        entry.name === "styles" ||
-        entry.name === "hooks" ||
-        entry.name === "utils" ||
-        entry.name === "models" ||
-        entry.name === "validations" ||
-        entry.name === "data" ||
-        entry.name === "public"
-      )
+        [
+          "components",
+          "lib",
+          "context",
+          "styles",
+          "hooks",
+          "utils",
+          "models",
+          "validations",
+          "data",
+          "public",
+        ].includes(entry.name)
+      ) {
         continue;
+      }
 
       const entryPath = path.join(dir, entry.name);
 
-      // Folder → may contain subroutes
       if (entry.isDirectory()) {
         const folderRoute =
           entry.name === "(routes)"
@@ -43,21 +47,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
         routes.push(...getRoutes(entryPath, parentRoute + folderRoute));
       }
 
-      // File → consider only page.tsx
       if (entry.isFile() && entry.name === "page.tsx") {
         const route = parentRoute === "" ? "/" : parentRoute;
-
         routes.push(route);
       }
     }
 
-    // Remove duplicates
     return [...new Set(routes)];
   }
 
   const staticRoutes = getRoutes("app");
 
-  const sitemapData: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+  /* ⭐ Remove Capabilities & Industries from sitemap */
+  const filteredRoutes = staticRoutes.filter(
+    (route) =>
+      !route.startsWith("/capabilities") && !route.startsWith("/industries")
+  );
+
+  const sitemapData: MetadataRoute.Sitemap = filteredRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "weekly",

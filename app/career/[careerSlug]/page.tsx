@@ -1,26 +1,6 @@
-'use client'
-export interface JobSection {
-  education_experience: string[];
-  technical_skills: string[];
-  core_competencies: string[];
-  desired_qualities: string[];
-  [key: string]: string[];
-}
+"use client";
 
-export interface JobType {
-  id: string;
-  title: string;
-  type: string;
-  location: string;
-  tags?: string[];
-  city: string;
-  address?: string;
-  phone?: string;
-  description: string;
-  sections: JobSection;
-}
-
-import React, { use, useState } from "react";
+import React, { useEffect, useState, use } from "react";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { infoAboutJobs } from "@/data/infoAboutJobs";
@@ -28,28 +8,108 @@ import Footer from "@/components/home/Footer";
 import ApplyForm from "@/components/ApplyForm";
 import Image from "next/image";
 
-
 type paramsProps = {
   params: Promise<{
     careerSlug: string;
   }>;
 };
 
-
-export default function page({ params }: paramsProps) {
+export default function Page({ params }: paramsProps) {
+  // ---------------------------------------------
+  // 1️⃣ Read params & job FIRST (allowed)
+  // ---------------------------------------------
   const { careerSlug } = use(params);
-  const job = infoAboutJobs.find((job) => {
-    console.log(job.slug, careerSlug)
-    return job.slug == careerSlug;
-  });
+  const job = infoAboutJobs.find((job) => job.slug === careerSlug);
 
-  // not found page
-  if (!job) return <div className="h-screen flex items-center justify-center">
-    <span className="text-xl font-semibold">Service Not Found</span>
-  </div>;
+  // ---------------------------------------------
+  // 2️⃣ Hooks ALWAYS run, even if job = undefined
+  // ---------------------------------------------
+  const [open, setOpen] = useState(false);
 
-  const [open, setOpen] = useState(false)
+  useEffect(() => {
+    if (!job) return; // ❗ Allowed — inside hook, not outside
+    document.title = `${job.title} | Careers | Akdenar Labs`;
+  }, [job]);
 
+  useEffect(() => {
+    if (!job) return;
+
+    const breadcrumb = document.createElement("script");
+    breadcrumb.type = "application/ld+json";
+    breadcrumb.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://labs.akdenar.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Careers",
+          item: "https://labs.akdenar.com/career",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: job.title,
+          item: `https://labs.akdenar.com/career/${job.slug}`,
+        },
+      ],
+    });
+
+    const jobPosting = document.createElement("script");
+    jobPosting.type = "application/ld+json";
+    jobPosting.innerHTML = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      title: job.title,
+      description: job.description,
+      employmentType: job.type,
+      hiringOrganization: {
+        "@type": "Organization",
+        name: "Akdenar Labs",
+        sameAs: "https://labs.akdenar.com",
+        logo: "https://labs.akdenar.com/logo.svg",
+      },
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: job.city,
+          addressCountry: "IN",
+        },
+      },
+      validThrough: "2025-12-31",
+    });
+
+    document.head.appendChild(breadcrumb);
+    document.head.appendChild(jobPosting);
+
+    return () => {
+      document.head.removeChild(breadcrumb);
+      document.head.removeChild(jobPosting);
+    };
+  }, [job]);
+
+  // ---------------------------------------------
+  // 3️⃣ CONDITIONAL RETURN must be here
+  // AFTER hooks
+  // ---------------------------------------------
+  if (!job) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <span className="text-xl font-semibold">Job Not Found</span>
+      </div>
+    );
+  }
+
+  // ---------------------------------------------
+  // 4️⃣ Real UI (unchanged)
+  // ---------------------------------------------
   return (
     <>
       <div className="min-h-screen p-6 bg-bg-primary flex justify-center">
@@ -57,7 +117,6 @@ export default function page({ params }: paramsProps) {
           <div className="md:p-8 w-full relative space-y-8">
             {/* Header */}
             <div className="flex justify-between p-4 md:py-0 md:px-10 mt-16 bg-white rounded-xl min-h-[330px] items-start md:items-center gap-10 md:gap-6 flex-col md:flex-row">
-
               <div className="flex-[1.2]">
                 {job.tags && (
                   <span className="inline-block bg-purple-100 text-purple-700 text-sm px-4 py-1 rounded-full mb-4">
@@ -76,7 +135,9 @@ export default function page({ params }: paramsProps) {
                   <p>{job.city}</p>
                 </div>
 
-                {job.address && <p className="text-gray-500 mt-1">{job.address}</p>}
+                {job.address && (
+                  <p className="text-gray-500 mt-1">{job.address}</p>
+                )}
                 {job.phone && <p className="text-gray-500">{job.phone}</p>}
               </div>
 
@@ -89,14 +150,11 @@ export default function page({ params }: paramsProps) {
                   className="object-contain"
                 />
               </div>
-
             </div>
-
 
             {/* Description */}
             <p className="text-gray-700 leading-relaxed">{job.description}</p>
 
-            {/* Dynamic Sections */}
             {Object.entries(job.sections).map(([key, list]) => (
               <Section key={key} title={formatTitle(key)}>
                 {list.map((item: string, i: number) => (
@@ -106,22 +164,31 @@ export default function page({ params }: paramsProps) {
             ))}
 
             <div className="pt-6">
-              <Button className="bg-primary text-white hover:bg-primary/90" onClick={() => setOpen(true)}>
+              <Button
+                className="bg-primary text-white hover:bg-primary/90"
+                onClick={() => setOpen(true)}
+              >
                 Apply Now
               </Button>
             </div>
           </div>
         </div>
       </div>
+
       <Footer />
 
-      {/* Apply Form Modal */}
       <ApplyForm jobTitle={job.title} open={open} setOpen={setOpen} />
     </>
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="space-y-4">
       <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
@@ -132,7 +199,5 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 }
 
 function formatTitle(key: string) {
-  return key
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
+  return key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
 }
