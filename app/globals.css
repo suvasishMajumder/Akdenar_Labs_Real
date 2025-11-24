@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #6D83FF;
-  --color-bg-primary:#F8F8FF;  
-  --color-box-border:#ECECEC;  
+:root {
+  --color-primary: #6d83ff;
+  --color-bg-primary: #f8f8ff;
+  --color-box-border: #ececec;
   --animate-dropdown: dropdown 0.25s ease-out forwards;
 }
-
 
 @keyframes dropdown {
   0% {
@@ -19,7 +18,6 @@
   }
 }
 
-
 .spread-glow {
   position: relative;
 }
@@ -29,68 +27,64 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;      /* how large glow appears */
+  width: 150px; /* how large glow appears */
   height: 150px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(
     circle,
     rgba(127, 86, 217, 0.45) 0%,
-    rgba(127, 86, 217, 0.20) 40%,
-    rgba(127, 86, 217, 0.10) 60%,
+    rgba(127, 86, 217, 0.2) 40%,
+    rgba(127, 86, 217, 0.1) 60%,
     transparent 100%
   );
   filter: blur(35px);
 }
 
-
-.swiper{
-  width:100%;
-  padding:50px 0;
+.swiper {
+  width: 100%;
+  padding: 50px 0;
 }
 
-
-.swiper-slide{
-  position:relative;
-  width:320px;
+.swiper-slide {
+  position: relative;
+  width: 320px;
   aspect-ratio: 3/4;
   border-radius: 14px;
-  border:1px solid rgba(177,177,177,0.4);
+  border: 1px solid rgba(177, 177, 177, 0.4);
 }
 
-.swiper-slide img{
-  display:block;
+.swiper-slide img {
+  display: block;
   width: 100%;
-  height:100%;
+  height: 100%;
   object-fit: cover;
   border-radius: inherit;
   user-select: none;
 }
 
-.title{
+.title {
   position: absolute;
-  bottom:5px;
-  left:50%;
-  transform:translate(-50%,-20%);
-  -ms-trnsform:translate(-50%,-20%);
-  width:max-content;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  -ms-trnsform: translate(-50%, -20%);
+  width: max-content;
   text-align: center;
-  padding:10px 18px;
-  background:rgba(46,39,39,0.3);
+  padding: 10px 18px;
+  background: rgba(46, 39, 39, 0.3);
   border-radius: 8px;
-  border:2px solid rgba(177,177,177,0.2);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  border: 2px solid rgba(177, 177, 177, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.5s linear;
 }
 
-.title span{
+.title span {
   font-size: 1.2rem;
-  font-weight :600;
+  font-weight: 600;
 }
-
-
 
 /* enquiry form */
 .interactive-input {
@@ -104,6 +98,17 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.5s ease-out;
 }

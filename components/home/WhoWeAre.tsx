@@ -92,7 +92,7 @@ export default function WhoWeAre() {
                         digital transformation.
                     </h3>
 
-                    <p className="text-neutral-700 leading-relaxed text-sm md:text-base">
+                    <p className="text-neutral-500 leading-relaxed text-sm md:text-base">
                         Akdenar Labs is a global technology company focused on SaaS, cloud
                         solutions, full-stack development, and digital innovation. Their
                         goal is to help businesses scale and automate using next-generation
@@ -106,13 +106,13 @@ export default function WhoWeAre() {
 
                 {/* Right Image */}
                 <motion.div className="flex-1 flex justify-center" variants={imageVariants}>
-                    <div className="rounded-2xl overflow-hidden shadow-lg max-w-xs md:max-w-sm lg:max-w-md">
+                    <div className="rounded-2xl overflow-hidden shadow-lg max-w-xs md:max-w-sm lg:max-w-md h-[400px]">
                         <Image
                             src="/home/whoweare.webp" // Change as needed
                             alt="Cloud Technology"
                             width={500}
-                            height={350}
-                            className="object-cover rounded-2xl"
+                            height={400}
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
                 </motion.div>

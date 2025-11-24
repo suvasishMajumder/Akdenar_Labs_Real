@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -26,26 +26,13 @@ export default function Navbar() {
   const isActive = (href: string) =>
     pathname === href || pathname?.startsWith(href + "/");
 
-  const [showNavbar, setShowNavbar] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <header
-      className={` ${pathname.split("/").includes("dashboard") && "hidden"} w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
+      className={` ${
+        pathname.split("/").includes("dashboard") && "hidden"
+      } w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
     >
-      <div className="mx-auto w-full container px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full container px-4  sm:px-6  lg:px-8">
         <div className="flex w-full items-center justify-between h-16">
           {/* Logo + mobile menu trigger */}
           <div className="flex w-full md:w-auto items-center gap-4">
@@ -89,19 +76,23 @@ export default function Navbar() {
 
                 <SheetContent
                   side="left"
-                  className="w-[320px] h-full overflow-y-auto bg-white p-6 shadow-xl 
+                  className="w-[280px] h-full overflow-y-auto bg-white p-6 shadow-xl 
              animate-[slideIn_0.35s_ease-out]"
                 >
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4 animate-fadeIn">
+                  <div className="flex items-center justify-between mb-3 animate-fadeIn">
                     <Link href="/" onClick={() => setIsSheetOpen(false)}>
-                      <Image src="/logo.svg" alt="Logo" width={140} height={36} />
+                      <Image
+                        src="/logo.svg"
+                        alt="Logo"
+                        width={130}
+                        height={40}
+                      />
                     </Link>
                   </div>
 
                   {/* Menu */}
                   <nav className="space-y-4">
-
                     {/* WHAT WE DO */}
                     <Accordion type="single" collapsible>
                       <AccordionItem value="what-we-do">
@@ -111,13 +102,12 @@ export default function Navbar() {
 
                         <AccordionContent className="animate-slideDown">
                           <div className="space-y-3">
-
                             {/* Capabilities */}
                             <details>
                               <summary className="font-medium text-gray-700 cursor-pointer">
                                 Capabilities
                               </summary>
-                              <ul className="mt-2 ml-4 list-disc text-sm space-y-1 animate-fadeIn">
+                              <ul className="mt-2 ml-4 list-disc text-sm space-y-2 animate-fadeIn">
                                 {navigationData.capabilities.map((c, i) => (
                                   <li key={i}>
                                     <Link
@@ -151,14 +141,12 @@ export default function Navbar() {
                                 ))}
                               </ul>
                             </details>
-
                           </div>
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
 
                     {/* Normal Links */}
-
 
                     <Link
                       href="/services"
@@ -192,61 +180,94 @@ export default function Navbar() {
                     </Link>
 
                     <div className="pt-4 animate-stagger-delayed">
-                      <Button onClick={() => router.push("/enquiry-form")} className="w-full">Enquire Now</Button>
+                      <Button
+                        onClick={() => {
+                          setIsSheetOpen(false);
+                          router.push("/enquiry-form");
+                        }}
+                        className="w-full"
+                      >
+                        Enquire Now
+                      </Button>
                     </div>
                   </nav>
                 </SheetContent>
-
               </Sheet>
             </div>
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6" onClick={() =>
-            setMegaOpen(false)
-          }>
+          <nav
+            className="hidden md:flex items-center md:gap-4 lg:gap-6"
+            onClick={() => setMegaOpen(false)}
+          >
             <div className="relative">
               <button
                 onClick={(e) => {
                   setMegaOpen((s) => !s);
                   e.stopPropagation();
                 }}
-                className={`flex items-center gap-2 py-2 px-3 rounded-md ${megaOpen ? "bg-gray-100" : "hover:bg-gray-50"}`}
+                className={`flex items-center gap-2 py-2 px-3  rounded-md ${
+                  megaOpen ? "bg-gray-100" : "hover:bg-gray-50"
+                }`}
                 aria-expanded={megaOpen}
               >
-                <span className={`text-sm ${isActive("/services") ? "font-semibold" : "font-medium"}`}>
+                <span
+                  className={`text-sm ${
+                    isActive("/services") ? "font-semibold" : "font-medium"
+                  }`}
+                >
                   What We Do
                 </span>
 
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-300 ${megaOpen ? "rotate-180" : "rotate-0"
-                    }`}
+                  className={`h-4 w-4 transition-transform duration-300 ${
+                    megaOpen ? "rotate-180" : "rotate-0"
+                  }`}
                 />
               </button>
 
               {megaOpen && (
                 <div
-                  className={`absolute bg-white p-4 -left-100 2xl:-left-50 w-[80vw] 2xl:w-[60vw] mt-3 shadow-lg z-50 animate-dropdown `}>
-                  <div className="grid grid-cols-2 gap-6"> {/* Changed from grid-cols-2 to grid-cols-1 */}
+                  className={`absolute top-full 
+      left-0 md:left-1/2 md:ml-6 
+      md:-translate-x-1/2
+      w-[90vw] md:w-[75vw] lg:w-[60vw] xl:w-[50vw]
+      bg-white p-6 mt-3 shadow-lg z-50 animate-dropdown rounded-b-md`}
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    {" "}
+                    {/* Changed from grid-cols-2 to grid-cols-1 */}
                     <div>
-                      <h4 className="font-semibold mb-3 text-black">Capabilities</h4>
-                      <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-sm"> {/* Changed from grid-cols-2 to grid-cols-1 */}
+                      <h4 className="font-semibold mb-3 text-black">
+                        Capabilities
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
+                        {" "}
+                        {/* Changed from grid-cols-2 to grid-cols-1 */}
                         {navigationData.capabilities.map((c) => (
                           <li key={c}>
-                            <Link href={`/capabilities/${slugify(c)}`} className="hover:underline text-gray-700 hover:text-gray-900">
+                            <Link
+                              href={`/capabilities/${slugify(c)}`}
+                              className="hover:underline text-gray-700 hover:text-gray-900"
+                            >
                               {c}
                             </Link>
                           </li>
                         ))}
                       </ul>
                     </div>
-
                     <div>
-                      <h4 className="font-semibold mb-3 text-black">Industries</h4>
+                      <h4 className="font-semibold mb-3 text-black">
+                        Industries
+                      </h4>
                       <ul className="grid grid-cols-2 gap-y-2 text-sm">
                         {navigationData.industries.map((i) => (
                           <li key={i}>
-                            <Link href={`/industries/${slugify(i)}`} className="hover:underline text-gray-700 hover:text-gray-900">
+                            <Link
+                              href={`/industries/${slugify(i)}`}
+                              className="hover:underline text-gray-700 hover:text-gray-900"
+                            >
                               {i}
                             </Link>
                           </li>
@@ -258,19 +279,60 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/services" className={isActive("/services") ? "font-semibold text-primary" : "text-md text-gray-700 hover:text-gray-900"}>Services</Link>
-            <Link href="/about" className={isActive("/about") ? "font-semibold text-primary" : "text-md text-gray-700 hover:text-gray-900"}>About</Link>
-            <Link href="/projects" className={isActive("/projects") ? "font-semibold text-primary" : "text-md text-gray-700 hover:text-gray-900"}>Projects</Link>
-            <Link href="/career" className={isActive("/career") ? "font-semibold text-primary" : "text-md text-gray-700 hover:text-gray-900"}>Careers</Link>
+            <Link
+              href="/services"
+              className={
+                isActive("/services")
+                  ? "font-semibold text-primary"
+                  : "text-md text-gray-700 hover:text-gray-900"
+              }
+            >
+              Services
+            </Link>
+            <Link
+              href="/about"
+              className={
+                isActive("/about")
+                  ? "font-semibold text-primary"
+                  : "text-md text-gray-700 hover:text-gray-900"
+              }
+            >
+              About
+            </Link>
+            <Link
+              href="/projects"
+              className={
+                isActive("/projects")
+                  ? "font-semibold text-primary"
+                  : "text-md text-gray-700 hover:text-gray-900"
+              }
+            >
+              Projects
+            </Link>
+            <Link
+              href="/career"
+              className={
+                isActive("/career")
+                  ? "font-semibold text-primary"
+                  : "text-md text-gray-700 hover:text-gray-900"
+              }
+            >
+              Careers
+            </Link>
           </nav>
 
           {/* CTA on right */}
-          <div className="hidden md:flex items-center">
-            <Button onClick={() => router.push("/enquiry-form")} className="text-white">Enquire Now</Button>
+          <div className="hidden md:flex items-center md:ml-4">
+            <Button
+              onClick={() => router.push("/enquiry-form")}
+              className="text-white"
+            >
+              Enquire Now
+            </Button>
           </div>
         </div>
-      </div >
-    </header >
+      </div>
+    </header>
   );
 }
 

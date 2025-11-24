@@ -18,7 +18,7 @@ export default function DevelopmentLifeCycle() {
     const x = useTransform(scrollYProgress, [0, 1], ["10%", "-80%"]);
 
     return (
-        <section ref={targetRef} className="relative py-20 sm:container mx-auto px-2 md:px-10 lg:px-20">
+        <section ref={targetRef} className="relative py-18 sm:container mx-auto px-[2px]">
 
             {/* 🌟 Section Heading */}
             <motion.h2
@@ -104,7 +104,7 @@ export default function DevelopmentLifeCycle() {
                                     initial={{ opacity: 0, y: index % 2 === 0 ? 100 : -100 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ amount: 0.4 }}
-                                    transition={{ duration: 0.6, ease: "easeOut" }}
+                                    transition={{ duration: 0.7, ease: "easeOut" }}
                                     className={`absolute left-1/2 w-80 -translate-x-1/2 
     ${index % 2 === 0 ? "top-[calc(50%+50px)]" : "top-[calc(50%-220px)]"}`}
                                 >
