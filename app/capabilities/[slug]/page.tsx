@@ -45,7 +45,10 @@ export default function Page({ params }: { params: Promise<{ slug: string }> }) 
                   alt={section.title}
                   width={350}
                   height={350}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover opacity-95 transition-all duration-300 ease-in-out"
+                  loading="eager"
+                  priority={true}
+                  
                 />
               </div>
 

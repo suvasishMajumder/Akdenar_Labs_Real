@@ -21,7 +21,7 @@ const testimonials = [
         name: "Roshni Patel",
     },
     {
-        image: "/client4.jpg",
+        image: "/client4.webp",
         text: "Akdenar’s UI/UX expertise completely elevated our product’s design. The interface feels smoother, more intuitive, and significantly more engaging for our users.",
         name: "Emily Walker",
     },
@@ -101,13 +101,14 @@ export default function TestimonialsSection() {
                     >
 
                         {/* LEFT IMAGE */}
-                        <div className="relative w-full h-[260px] md:h-[350px] rounded-xl overflow-hidden border border-box-border">
+                        <div className="relative w-full h-[280px] md:h-[350px] rounded-xl overflow-hidden border border-box-border">
                             <Image
                                 src={testimonials[index].image}
                                 alt={testimonials[index].name}
                                 fill
                                 loading="eager"
-                                className="object-cover"
+                                className="object-cover object-top scale-105"
+                                // sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
 

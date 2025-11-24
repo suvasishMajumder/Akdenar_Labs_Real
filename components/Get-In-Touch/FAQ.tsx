@@ -61,7 +61,7 @@ export default function FAQSection() {
       >
         Don't find the answers you were looking for? Contact us at{" "}
         <span className="text-[#7F56D9] font-medium cursor-pointer">
-          akdenarlabs@gmail.com
+          support@akdenar.com
         </span>
       </motion.p>
 

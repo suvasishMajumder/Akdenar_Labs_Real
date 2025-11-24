@@ -63,9 +63,7 @@ export default function ContactModal({
         method: "POST",
         body: JSON.stringify(payload),
       });
-
       const data = await res.json();
-
       if (!res.ok) {
         setResponse(data.message || "Failed to send message");
         return;
