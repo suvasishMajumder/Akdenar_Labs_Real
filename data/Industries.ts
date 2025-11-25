@@ -1,631 +1,802 @@
+// 🚀 UPDATED: industriesData (full file)
+// All taglines + section descriptions rewritten for balanced SEO,
+// staying close to original meaning while adding relevant keyword phrases.
+
 export const industriesData = [
   {
     slug: "chemicals",
     title: "Chemicals",
     tagline:
-      "We help chemical manufacturers modernize operations with intelligent automation, safety optimization, and real-time digital insights.",
-
+      "Modernizing chemical manufacturing with IoT-driven process control, predictive maintenance, and safety-first automation to boost efficiency and compliance.",
+    frequentlySearched: [
+      "chemical manufacturing automation",
+      "process safety consulting for chemical plants",
+      "predictive maintenance chemical industry",
+      "laboratory data management solutions",
+      "chemical plant optimization services",
+      "chemical plant IoT monitoring",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/chemical1.png",
         title: "Reinventing Chemical Manufacturing Through Digital Innovation",
         description:
-          "At Akdenar Labs, we help chemical companies optimize production, enhance safety, and achieve sustainability goals using intelligent automation and predictive insights.",
+          "Akdenar Labs helps chemical manufacturers modernize production with IoT sensors, real-time process analytics, and automated control. We capture live plant telemetry and turn it into actionable insights to improve throughput, reduce waste, and keep operations within strict safety and environmental limits.",
       },
       {
         id: 2,
         image: "/industries/chemical2.png",
         title: "Our Approach",
         description:
-          "We integrate IoT sensors, process analytics, and cloud platforms for real-time monitoring and energy efficiency. Our digital twin solutions improve plant performance and resource management.",
+          "We deploy digital twins, edge analytics, and integrated MES/SCADA solutions for end-to-end process visibility. By combining predictive maintenance, advanced process control, and energy optimization, we reduce downtime and extend asset life while improving compliance.",
       },
       {
         id: 3,
         image: "/industries/chemical3.png",
         title: "Impact We Deliver",
         description:
-          "Chemical manufacturers achieve safer operations, reduced costs, and enhanced sustainability — shaping a more efficient and eco-conscious industry.",
+          "Customers see higher yield consistency, lower operating costs, and improved safety. Our solutions produce measurable outcomes: fewer incidents, reduced emissions, and faster operational decisions driven by accurate, timely data.",
       },
     ],
   },
+
   {
     slug: "capital-markets",
     title: "Capital Markets",
     tagline:
-      "We empower capital market firms with intelligent automation, real-time insights, and secure digital platforms for the future of finance.",
-
+      "Data-driven trading and risk solutions for capital markets — from algorithmic analytics to regulatory reporting and resilient platform engineering.",
+    frequentlySearched: [
+      "capital markets analytics",
+      "trading system integration services",
+      "regulatory reporting automation",
+      "quantitative analytics for funds",
+      "market risk management solutions",
+      "capital markets technology consulting",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/capital1.png",
         title: "Accelerating Growth with Data and Digital Intelligence",
         description:
-          "Akdenar Labs equips capital market firms with smart, scalable solutions to enhance trading performance and regulatory compliance.",
+          "We empower trading firms, asset managers, and exchanges with analytics platforms and automated pipelines that improve trade performance, execution, and operational resilience. Our systems surface signals faster and more reliably for competitive advantage.",
       },
       {
         id: 2,
         image: "/industries/capital2.png",
         title: "Our Approach",
         description:
-          "Through advanced analytics, blockchain, and AI-driven forecasting, we streamline operations and ensure transparency. Our tools improve data accuracy and enable faster, more informed investment decisions.",
+          "We combine low-latency engineering, data warehousing, and AI-driven forecasting to automate reporting, pricing models, and risk controls. Our architecture supports compliance, auditability, and scale across front-to-back workflows.",
       },
       {
         id: 3,
         image: "/industries/capital3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain better portfolio visibility, reduced operational risk, and improved ROI — building trust and agility in a rapidly evolving financial landscape.",
+          "Clients achieve improved portfolio visibility, reduced operational risk, and faster time-to-insight. We help firms reduce manual reconciliation, streamline regulatory reports, and make data-driven investment decisions.",
       },
     ],
   },
+
   {
     slug: "banking",
     title: "Banking",
     tagline:
-      "We help banks modernize securely with intelligent automation, digital customer experiences, and next-generation financial systems.",
-
+      "Secure digital banking solutions — core modernization, automated onboarding, AI-driven customer experiences, and compliance-ready platforms.",
+    frequentlySearched: [
+      "banking digital transformation services",
+      "core banking modernization",
+      "banking automation solutions",
+      "customer onboarding automation for banks",
+      "banking cybersecurity services",
+      "digital banking platform provider",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/banking1.png",
         title: "Transforming Banking Through Trust and Technology",
         description:
-          "At Akdenar Labs, we empower banks to reimagine customer engagement, enhance security, and simplify operations through digital innovation.",
+          "Akdenar Labs helps banks deliver modern, secure digital services with cloud-native architectures, frictionless customer journeys, and intelligent automation that reduce cost-to-serve and increase engagement.",
       },
       {
         id: 2,
         image: "/industries/banking2.png",
         title: "Our Approach",
         description:
-          "We design secure cloud architectures, AI chatbots, and automated workflows that modernize traditional banking. Our analytics-driven insights help banks personalize customer experiences and improve financial performance.",
+          "We design secure platforms combining core system modernization, API-first integrations, and AI chatbots to streamline customer onboarding, personalize services, and strengthen fraud detection and compliance monitoring.",
       },
       {
         id: 3,
         image: "/industries/banking3.png",
         title: "Impact We Deliver",
         description:
-          "Banks achieve higher efficiency, better risk management, and stronger customer loyalty — enabling a more agile, digital-first financial future.",
+          "Banks working with us see faster product launches, improved operational efficiency, stronger risk controls, and higher customer satisfaction through data-driven personalization and automation.",
       },
     ],
   },
+
   {
     slug: "automotive",
     title: "Automotive",
     tagline:
-      "We accelerate the automotive industry with intelligent automation, connected solutions, and digital transformation.",
-
+      "Connected vehicle platforms, predictive maintenance, and smart manufacturing solutions that accelerate mobility innovation and product delivery.",
+    frequentlySearched: [
+      "automotive IoT solutions",
+      "predictive maintenance for vehicles",
+      "connected car platform development",
+      "smart manufacturing for auto plants",
+      "autonomous vehicle software partner",
+      "automotive digital transformation services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/automotive1.png",
         title: "Driving the Future of Mobility",
         description:
-          "Akdenar Labs partners with automotive innovators to accelerate the shift toward smart, connected, and sustainable vehicles. We help brands adopt digital ecosystems that redefine mobility and customer experiences.",
+          "We partner with OEMs and suppliers to build connected vehicle services, telematics platforms, and smart factory solutions that improve uptime, safety, and customer experience across the vehicle lifecycle.",
       },
       {
         id: 2,
         image: "/industries/automotive2.png",
         title: "Our Approach",
         description:
-          "Using IoT, AI, digital twins, and automation, we enable predictive maintenance, autonomous system development, and next-gen user interfaces. Our cloud-based data solutions improve manufacturing, safety, and vehicle performance.",
+          "Combining IoT, digital twins, and cloud analytics, we deliver predictive maintenance, fleet optimization, and software-first product development to reduce warranty costs and accelerate feature delivery.",
       },
       {
         id: 3,
         image: "/industries/automotive3.png",
         title: "Impact We Deliver",
         description:
-          "Automotive companies powered by Akdenar Labs gain agility, data-driven insights, and faster go-to-market strategies — driving the evolution of intelligent mobility.",
+          "Automotive clients gain improved reliability, faster time-to-market, and data-driven product roadmaps — enabling safer vehicles and better ownership experiences.",
       },
     ],
   },
+
   {
     slug: "aerospace-and-defense",
     title: "Aerospace and Defense",
     tagline:
-      "We support aerospace and defense innovation with secure digital systems, automation, and real-time intelligence.",
-
+      "Secure mission-critical systems, predictive maintenance, and simulation platforms for aerospace and defense organizations seeking operational excellence.",
+    frequentlySearched: [
+      "aerospace predictive maintenance",
+      "defense systems cybersecurity",
+      "digital twin aerospace",
+      "aircraft maintenance analytics",
+      "secure mission-critical software",
+      "simulation and modeling services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/aerospace1.png",
         title: "Innovating for Precision, Safety, and Performance",
         description:
-          "At Akdenar Labs, we help aerospace and defense organizations embrace digital transformation to enhance efficiency, reliability, and mission readiness. Our technology-driven solutions modernize operations, streamline engineering, and strengthen supply chain resilience.",
+          "Akdenar Labs helps aerospace and defense teams modernize engineering and maintenance processes with secure analytics, simulation, and asset-monitoring platforms that improve mission readiness and reduce downtime.",
       },
       {
         id: 2,
         image: "/industries/aerospace2.png",
         title: "Our Approach",
         description:
-          "We combine AI, data analytics, IoT, and cloud systems to optimize aircraft maintenance, improve simulation accuracy, and enhance defense readiness. Our secure, scalable platforms support real-time decision-making and ensure compliance with strict regulatory standards.",
+          "We combine rigorous security, digital twins, and AI-based diagnostics to optimize flight operations, maintenance planning, and logistics while ensuring compliance with strict regulatory standards.",
       },
       {
         id: 3,
         image: "/industries/aerospace3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve faster innovation cycles, reduced downtime, and improved mission efficiency — all while maintaining uncompromised security and performance across their operations.",
+          "Clients achieve higher availability, improved safety margins, faster engineering cycles, and cost savings through predictive analytics and secure, auditable systems.",
       },
     ],
   },
+
   {
     slug: "technology-transformation",
     title: "Technology Transformation",
     tagline:
-      "We help organizations modernize technology landscapes and accelerate digital maturity with automation, cloud, and scalable systems.",
-
+      "End-to-end modernization: cloud-native design, DevOps automation, API-first architectures, and AI integration to future-proof enterprises.",
+    frequentlySearched: [
+      "digital transformation consulting",
+      "legacy system modernization",
+      "cloud modernization services",
+      "devops transformation partner",
+      "enterprise automation consulting",
+      "platform re-engineering services",
+    ],
     sections: [
       {
         id: 1,
         image: "/capabilities/technologytransformation1.png",
         title: "Reimagining Business Through Digital Innovation",
         description:
-          "Akdenar Labs drives large-scale technology transformation that modernizes operations, enhances agility, and fuels growth. We help enterprises adopt next-gen technologies to build smarter, connected, and resilient businesses.",
+          "We guide organizations through technology modernization programs that replace brittle legacy systems with scalable, cloud-native platforms designed for speed, resilience, and continuous delivery.",
       },
       {
         id: 2,
         image: "/capabilities/technologytransformation2.png",
         title: "Our Approach",
         description:
-          "We combine cloud, AI, DevOps, and automation to redesign IT landscapes for speed and scalability. Our frameworks ensure seamless integration, minimal disruption, and measurable transformation.",
+          "Our teams combine cloud architecture, microservices, DevOps automation, and data-led strategy to deliver measurable improvements in time-to-market, reliability, and operational cost.",
       },
       {
         id: 3,
         image: "/capabilities/technologytransformation3.png",
         title: "Impact We Deliver",
         description:
-          "Clients benefit from accelerated innovation, reduced costs, and improved operational flexibility. With Akdenar Labs, technology becomes the foundation for lasting business success.",
+          "Enterprises gain faster innovation cycles, reduced technical debt, and stronger delivery pipelines — turning technology into a scalable business enabler.",
       },
     ],
   },
+
   {
     slug: "communications-and-media",
     title: "Communications and Media",
     tagline:
-      "We help media and telecom organizations accelerate digital innovation with intelligent platforms, automation, and customer-centric experiences.",
-
+      "Platform engineering, audience personalization, and 5G-ready solutions for media and telecommunications companies seeking scale and engagement.",
+    frequentlySearched: [
+      "telecom analytics solutions",
+      "media personalization platform",
+      "5g network optimization services",
+      "adtech integration services",
+      "streaming platform development",
+      "customer experience telecom",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/communication1.png",
         title: "Empowering the Connected World",
         description:
-          "Akdenar Labs helps communication and media companies reimagine connectivity, content, and customer experiences in the digital age.",
+          "We help media and telecom firms deliver reliable, personalized digital experiences by combining network analytics, content personalization, and cloud-native streaming infrastructure.",
       },
       {
         id: 2,
         image: "/industries/communication2.png",
         title: "Our Approach",
         description:
-          "We leverage AI, 5G, and data analytics to enhance network performance, personalize media delivery, and optimize advertising strategies. Our automation frameworks accelerate innovation and operational efficiency.",
+          "Using AI, edge computing, and automation, we optimize network performance, tailor content delivery, and integrate adtech and monetization platforms to maximize revenue and engagement.",
       },
       {
         id: 3,
         image: "/industries/communication3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain higher engagement, reduced churn, and stronger monetization — building stronger connections in a connected world.",
+          "Clients see lower churn, improved QoS, faster content distribution, and better ad yield through data-driven personalization and streamlined platform operations.",
       },
     ],
   },
+
   {
     slug: "consumer-goods-and-services",
     title: "Consumer Goods and Services",
     tagline:
-      "We help brands transform consumer engagement with intelligent digital ecosystems, automation, and personalized experiences.",
-
+      "Omnichannel commerce, personalization, and supply chain analytics to help consumer brands grow, engage customers, and optimize operations.",
+    frequentlySearched: [
+      "ecommerce personalization services",
+      "retail analytics for consumer brands",
+      "supply chain optimization for FMCG",
+      "consumer insights platform",
+      "omnichannel retail solutions",
+      "product lifecycle management services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/consumer1.png",
-        title: "Empowering Businesses Through Cloud Innovation",
+        title: "Empowering Consumer Brands with Data and Digital Commerce",
         description:
-          "At Akdenar Labs, we help consumer brands modernize supply chains, enhance marketing, and build personalized shopping experiences that drive loyalty.",
+          "We assist consumer brands in modernizing commerce and operations with personalized storefronts, demand forecasting, and loyalty systems that increase lifetime value and reduce friction.",
       },
       {
         id: 2,
         image: "/industries/consumer2.png",
         title: "Our Approach",
         description:
-          "We combine AI, e-commerce platforms, and analytics to manage demand, pricing, and consumer insights. Our digital ecosystems bridge the gap between brands and customers.",
+          "By combining AI-driven segmentation, headless commerce, and inventory optimization, we create connected experiences across web, mobile, and physical channels to maximize conversion and retention.",
       },
       {
         id: 3,
         image: "/industries/consumer3.png",
         title: "Delivering Smarter Experiences for the Modern Consumer",
         description:
-          "Businesses achieve higher profitability, faster market adaptation, and stronger brand engagement in an ever-changing consumer landscape.",
+          "Businesses achieve faster market adaptation, improved margins, and stronger brand loyalty through data-led merchandising, targeted campaigns, and streamlined fulfillment.",
       },
     ],
   },
+
   {
     slug: "energy",
     title: "Energy",
     tagline:
-      "We help energy enterprises modernize operations with intelligent automation, predictive insights, and resilient digital systems.",
-
+      "Smart grid analytics, renewable integration, and predictive operations to modernize energy generation, distribution, and management.",
+    frequentlySearched: [
+      "energy analytics solutions",
+      "grid monitoring IoT",
+      "predictive maintenance energy sector",
+      "renewable integration analytics",
+      "smart grid software providers",
+      "power plant digital transformation",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/Energy1.png",
         title: "Powering a Sustainable and Connected Future",
         description:
-          "At Akdenar Labs, we help organizations harness the full potential of the cloud to achieve agility, scalability, and cost efficiency. The modern energy enterprise demands flexibility, and our cloud-first approach enables seamless migration, modernization, and optimization across public, private, and hybrid environments.",
+          "We help energy providers optimize generation and distribution with IoT-enabled monitoring, real-time analytics, and asset performance management to reduce outages and improve efficiency.",
       },
       {
         id: 2,
         image: "/industries/Energy2.png",
         title: "Our Approach",
         description:
-          "We implement IoT-based grid monitoring, predictive maintenance, and energy analytics to optimize generation and distribution. Our cloud and AI tools drive smarter energy management.",
+          "Our solutions include grid telemetry, predictive maintenance, and renewable integration platforms that balance supply and demand while improving asset utilization and lowering carbon footprint.",
       },
       {
         id: 3,
         image: "/industries/Energy3.png",
         title: "Impact We Deliver",
         description:
-          "Energy enterprises reduce waste, lower costs, and transition seamlessly toward cleaner, data-driven energy systems.",
+          "Operators experience fewer disruptions, lower operational costs, and better renewable penetration thanks to smarter forecasting, monitoring, and automated control systems.",
       },
     ],
   },
+
   {
     slug: "health",
     title: "Health",
     tagline:
-      "We empower healthcare organizations with intelligent digital systems that improve patient care, operational efficiency, and medical outcomes.",
-
+      "AI-enabled clinical systems, telehealth platforms, and data-driven care management that improve outcomes and operational efficiency.",
+    frequentlySearched: [
+      "healthcare digital transformation",
+      "telemedicine platform development",
+      "medical data analytics",
+      "hospital automation solutions",
+      "patient engagement software",
+      "ai diagnostics platform",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/health1.png",
         title: "Advancing Healthcare Through Digital Intelligence",
         description:
-          "At Akdenar Labs, we combine technology and compassion to modernize patient care, streamline health operations, and enable smarter decision-making across the healthcare ecosystem.",
+          "Akdenar Labs partners with hospitals and health systems to deploy secure telemedicine, clinical decision support, and patient engagement solutions that improve access and care quality.",
       },
       {
         id: 2,
         image: "/industries/health2.png",
         title: "Our Approach",
         description:
-          "We deploy AI-powered diagnostics, telemedicine platforms, and data-driven patient management systems to improve accessibility and outcomes.",
+          "We implement interoperable platforms, AI diagnostics, and analytics-driven operational workflows to streamline care delivery, reduce readmissions, and support clinicians with meaningful insights.",
       },
       {
         id: 3,
         image: "/industries/health3.png",
         title: "Impact We Deliver",
         description:
-          "Healthcare providers achieve improved efficiency, reduced costs, and better patient engagement — delivering care that is smarter, faster, and more human.",
+          "Providers benefit from improved patient outcomes, operational efficiency, and data-driven clinical programs that scale across facilities while preserving privacy and compliance.",
       },
     ],
   },
+
   {
     slug: "high-tech",
     title: "High Tech",
     tagline:
-      "We help high-tech organizations accelerate innovation with automation, cloud engineering, and intelligent product development.",
-
+      "Platform engineering, scalable cloud solutions, and rapid prototyping for high-tech companies building next-generation products.",
+    frequentlySearched: [
+      "high tech product engineering services",
+      "cloud engineering for startups",
+      "scalable platform development",
+      "R&D automation solutions",
+      "edge computing services",
+      "hardware-software integration partner",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/hightech1.png",
         title: "Innovating at the Speed of Technology",
         description:
-          "Akdenar Labs helps high-tech companies accelerate innovation through automation, scalability, and cloud-driven engineering.",
+          "We accelerate innovation for high-tech firms by building resilient, scalable platforms, automating R&D workflows, and integrating cloud and edge computing for high-performance applications.",
       },
       {
         id: 2,
         image: "/industries/hightech2.png",
         title: "Our Approach",
         description:
-          "We use AI, DevOps, and agile frameworks to streamline product development and enhance R&D efficiency. Our solutions reduce complexity and improve product lifecycle management.",
+          "Using rapid prototyping, microservices, and CI/CD best practices, we shorten development cycles, reduce deployment risk, and enable rapid iteration for product teams.",
       },
       {
         id: 3,
         image: "/industries/hightech3.png",
         title: "Impact We Deliver",
         description:
-          "High-tech enterprises gain faster innovation, reduced operational overhead, and stronger market competitiveness.",
+          "Clients achieve faster time-to-market, better product reliability, and infrastructure that scales with business demand — supporting sustained innovation and growth.",
       },
     ],
   },
+
   {
     slug: "industrial",
     title: "Industrial",
     tagline:
-      "We help industrial enterprises modernize operations through automation, smart systems, and data-driven optimization.",
-
+      "Smart factory solutions, predictive maintenance, and operational analytics to modernize industrial production and supply chains.",
+    frequentlySearched: [
+      "industrial automation services",
+      "smart factory implementation",
+      "plant digitalization solutions",
+      "predictive maintenance industrial",
+      "industrial iot platform provider",
+      "process optimization services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/industrial1.png",
         title: "Transforming Industries Through Smart Operations",
         description:
-          "Akdenar Labs digitizes industrial operations for greater productivity, safety, and sustainability.",
+          "Akdenar Labs digitizes manufacturing operations to increase productivity and safety, combining IoT, analytics, and automation to deliver real-time visibility and control.",
       },
       {
         id: 2,
         image: "/industries/industrial2.png",
         title: "Our Approach",
         description:
-          "We integrate IoT, predictive analytics, and automation to create connected plants and smarter production systems.",
+          "We implement predictive maintenance, automated quality checks, and integrated operations dashboards that reduce downtime and improve yield across complex production lines.",
       },
       {
         id: 3,
         image: "/industries/industrial3.png",
         title: "Impact We Deliver",
         description:
-          "Industries achieve higher uptime, reduced costs, and more efficient, data-driven operations that scale globally.",
+          "Industrial customers enjoy higher uptime, reduced waste, and improved throughput — enabling more predictable production and lower total cost of ownership.",
       },
     ],
   },
+
   {
     slug: "retail",
     title: "Retail",
     tagline:
-      "We help retailers grow with intelligent digital commerce, personalization, and connected omnichannel experiences.",
-
+      "Omnichannel retail platforms, personalization engines, and inventory optimization to improve conversions and customer lifetime value.",
+    frequentlySearched: [
+      "retail analytics provider",
+      "omnichannel retail solutions",
+      "personalization for ecommerce",
+      "inventory optimization retail",
+      "in-store tech solutions",
+      "retail customer engagement platform",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/retail1.png",
         title: "Transforming Retail Through Digital Experiences",
         description:
-          "Akdenar Labs empowers retailers to adapt, innovate, and thrive in the age of connected commerce.",
+          "We help retailers deliver unified shopping experiences across online and physical channels with personalization, optimized checkout flows, and integrated inventory systems.",
       },
       {
         id: 2,
         image: "/industries/retail2.png",
         title: "Our Approach",
         description:
-          "We use AI-driven personalization, omnichannel solutions, and predictive analytics to improve customer experience and sales.",
+          "Combining AI-driven recommendations, fulfillment orchestration, and analytics, we optimize merchandising, pricing, and customer journeys to boost conversion and retention.",
       },
       {
         id: 3,
         image: "/industries/retail3.png",
         title: "Impact We Deliver",
         description:
-          "Retailers achieve stronger customer loyalty, higher conversion rates, and seamless shopping experiences across every channel.",
+          "Retail clients gain higher average order value, improved stock efficiency, and better customer loyalty through data-backed experiences and operational automation.",
       },
     ],
   },
+
   {
     slug: "private-equity",
     title: "Private Equity",
     tagline:
-      "We help private equity firms accelerate value creation with intelligent automation, analytics, and digital transformation.",
-
+      "Technology-led value creation for private equity — from digital due diligence to portfolio modernization and scalable growth programs.",
+    frequentlySearched: [
+      "private equity portfolio transformation",
+      "digital due diligence services",
+      "value creation consulting",
+      "operational improvement for portfolio companies",
+      "analytics for private equity",
+      "post-merger integration technology",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/private1.png",
         title: "Driving Value Through Digital Transformation",
         description:
-          "At Akdenar Labs, we help private equity firms unlock portfolio potential through strategic technology investments and operational transformation.",
+          "We enable PE firms to accelerate value creation by assessing digital maturity, implementing growth-enabling technology, and scaling operational improvements across portfolio companies.",
       },
       {
         id: 2,
         image: "/industries/private2.png",
         title: "Our Approach",
         description:
-          "We deliver digital due diligence, analytics-driven insights, and automation to enhance performance and identify new growth opportunities.",
+          "Our teams deliver rapid diagnostic assessments, target operating models, and execution roadmaps that combine process automation, analytics, and platform consolidation to improve EBITDA.",
       },
       {
         id: 3,
         image: "/industries/private3.png",
         title: "Impact We Deliver",
         description:
-          "Private equity firms gain faster value realization, improved portfolio performance, and scalable growth acceleration powered by technology.",
+          "Firms see faster integration, improved performance tracking, and measurable uplift in portfolio value through focused technology and operational programs.",
       },
     ],
   },
+
   {
     slug: "public-service",
     title: "Public Service",
     tagline:
-      "We help public sector organizations modernize services, strengthen trust, and improve citizen experiences through digital transformation.",
-
+      "Digital services, portals, and data platforms that improve citizen engagement, transparency, and operational efficiency for government agencies.",
+    frequentlySearched: [
+      "government digital services provider",
+      "public sector platform modernization",
+      "citizen service portal development",
+      "e-governance solutions",
+      "digital transformation for government",
+      "smart city platform services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/public1.png",
         title: "Digitally Empowering Government and Citizens",
         description:
-          "Akdenar Labs helps governments modernize public services with digital platforms that improve accessibility, transparency, and engagement.",
+          "Akdenar Labs builds secure, accessible public sector platforms that streamline service delivery, increase transparency, and enhance citizen outcomes across health, transport, and civic services.",
       },
       {
         id: 2,
         image: "/industries/public2.png",
         title: "Our Approach",
         description:
-          "We build cloud-based platforms, digital portals, and AI-driven governance systems to improve service delivery and public trust.",
+          "We implement modular, cloud-first portals, identity management, and data-sharing frameworks that improve service responsiveness while ensuring privacy and regulatory compliance.",
       },
       {
         id: 3,
         image: "/industries/public3.png",
         title: "Impact We Deliver",
         description:
-          "Governments achieve better citizen experiences, faster operations, and smarter, data-led policymaking.",
+          "Agencies achieve faster service resolution, better data-driven policymaking, and higher citizen satisfaction — enabling more effective and modern public services.",
       },
     ],
   },
+
   {
     slug: "natural-resources",
     title: "Natural Resources",
     tagline:
-      "We help natural resource enterprises modernize operations with automation, sustainability intelligence, and smart resource optimization.",
-
+      "Sustainable resource optimization and monitoring solutions for mining, oil & gas, and forestry using IoT, analytics, and environmental controls.",
+    frequentlySearched: [
+      "mining digitalization services",
+      "resource optimization solutions",
+      "environmental monitoring IoT",
+      "predictive maintenance for mining",
+      "sustainable resource management",
+      "oil and gas analytics",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/natural1.png",
         title: "Sustaining Growth with Smart Resource Management",
         description:
-          "At Akdenar Labs, we help natural resource companies digitize operations to improve safety, efficiency, and sustainability.",
+          "We help natural resource companies deploy monitoring systems, predictive models, and automation to improve safety, yield, and environmental stewardship across extraction and processing operations.",
       },
       {
         id: 2,
         image: "/industries/natural2.png",
         title: "Our Approach",
         description:
-          "We use IoT sensors, AI monitoring, and predictive analytics to optimize extraction, processing, and logistics.",
+          "Combining remote sensing, IoT telemetry, and analytics, we provide solutions for equipment reliability, environmental compliance, and optimized logistics that reduce costs and impact.",
       },
       {
         id: 3,
         image: "/industries/natural3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve lower environmental impact, improved resource utilization, and safer, smarter operations.",
+          "Clients benefit from improved resource utilization, stronger safety performance, and measurable reductions in environmental footprint through smarter operations.",
       },
     ],
   },
+
   {
     slug: "life-sciences",
     title: "Life Sciences",
     tagline:
-      "We support life sciences innovation with intelligent automation, research acceleration, and patient-focused digital solutions.",
-
+      "Research acceleration, clinical analytics, and regulatory-ready data platforms that speed innovation and ensure compliance in life sciences.",
+    frequentlySearched: [
+      "clinical trial analytics",
+      "life sciences data platform",
+      "laboratory automation services",
+      "regulatory compliance software for pharma",
+      "drug discovery ai solutions",
+      "healthcare research data management",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/life1.png",
         title: "Accelerating Discovery and Care Through Technology",
         description:
-          "Akdenar Labs partners with life sciences organizations to bring innovation to every stage of research, development, and delivery.",
+          "Akdenar Labs partners with pharma and research institutions to build data platforms, automate lab workflows, and apply AI to accelerate discovery while ensuring traceability and regulatory compliance.",
       },
       {
         id: 2,
         image: "/industries/life2.png",
         title: "Our Approach",
         description:
-          "We leverage AI, cloud computing, and data analytics to optimize clinical trials, streamline compliance, and enhance patient outcomes.",
+          "We integrate secure data lakes, analytics pipelines, and compliance controls to streamline clinical trials, improve reproducibility, and surface insights faster for R&D teams.",
       },
       {
         id: 3,
         image: "/industries/life3.png",
         title: "Impact We Deliver",
         description:
-          "Our solutions shorten time-to-market, improve accuracy, and enable scientific breakthroughs that change lives.",
+          "Researchers and clinicians achieve faster time-to-insight, more efficient trials, and better data governance — empowering breakthroughs that improve patient outcomes.",
       },
     ],
   },
+
   {
     slug: "insurance",
     title: "Insurance",
     tagline:
-      "We help insurers modernize operations with automation, real-time analytics, and customer-first digital platforms.",
-
+      "Claims automation, underwriting intelligence, and fraud detection solutions that modernize insurance operations and enhance customer experience.",
+    frequentlySearched: [
+      "insurance claims automation",
+      "underwriting automation solutions",
+      "policy administration system provider",
+      "insurance analytics platform",
+      "fraud detection for insurers",
+      "digital customer experience insurance",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/insurance1.png",
         title: "Building Trust with Digital-First Insurance Solutions",
         description:
-          "At Akdenar Labs, we help insurers modernize core systems, automate claims, and enhance customer experiences through data and AI.",
+          "We help insurers modernize systems with claims automation, AI underwriting, and customer portals that reduce processing time and improve policyholder satisfaction.",
       },
       {
         id: 2,
         image: "/industries/insurance2.png",
         title: "Our Approach",
         description:
-          "We design smart underwriting systems, AI chatbots, and real-time analytics that reduce manual processes and enhance transparency.",
+          "Our platforms combine predictive analytics, document automation, and secure integrations with core policy systems to streamline operations and detect anomalies that indicate potential fraud.",
       },
       {
         id: 3,
         image: "/industries/insurance3.png",
         title: "Impact We Deliver",
         description:
-          "Insurance providers improve accuracy, customer trust, and operational speed — redefining how insurance works in the digital age.",
+          "Insurers benefit from faster claims resolution, improved risk selection, and lower operational costs while delivering modern digital experiences to customers.",
       },
     ],
   },
+
   {
     slug: "software-and-platforms",
     title: "Software and Platforms",
     tagline:
-      "We help software companies accelerate innovation, scale platforms, and build intelligent digital ecosystems.",
-
+      "Platform engineering, SaaS development, and scalable architecture services to accelerate product delivery and operational reliability.",
+    frequentlySearched: [
+      "platform engineering services",
+      "saas product development company",
+      "cloud native application development",
+      "api-first platform development",
+      "scalable backend engineering",
+      "software modernization services",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/software1.png",
         title: "Building the Future of Digital Ecosystems",
         description:
-          "At Akdenar Labs, we help software companies design, scale, and modernize their platforms with agility and innovation.",
+          "We partner with software companies to design and scale resilient platforms, focusing on performance, security, and cost-effective cloud infrastructure for SaaS and enterprise applications.",
       },
       {
         id: 2,
         image: "/industries/software2.png",
         title: "Our Approach",
         description:
-          "We leverage cloud-native development, DevOps, and AI integration to create resilient, scalable, and intelligent platforms.",
+          "Using API-first design, automated testing, and CI/CD pipelines, we deliver robust, maintainable systems that accelerate development cycles and reduce operational risk.",
       },
       {
         id: 3,
         image: "/industries/software3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve faster development cycles, improved product scalability, and enhanced user satisfaction.",
+          "Clients experience faster deployments, better scalability, and improved developer productivity — enabling them to deliver value to customers more quickly.",
       },
     ],
   },
+
   {
     slug: "travel",
     title: "Travel",
     tagline:
-      "We help travel and hospitality companies build seamless, personalized, and digitally empowered customer journeys.",
-
+      "Personalized booking, mobile-first experiences, and analytics-driven operations to improve traveler satisfaction and operational efficiency.",
+    frequentlySearched: [
+      "travel tech solutions",
+      "booking platform integration",
+      "personalized travel experience platform",
+      "hotel property management integration",
+      "travel analytics provider",
+      "mobile booking app development",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/travel1.png",
         title: "Redefining the Travel Experience with Technology",
         description:
-          "Akdenar Labs helps travel and hospitality brands deliver seamless, personalized, and safe experiences for every traveler.",
+          "We help travel and hospitality brands deliver seamless booking, personalization, and post-booking experiences that increase guest satisfaction and operational efficiency.",
       },
       {
         id: 2,
         image: "/industries/travel2.png",
         title: "Our Approach",
         description:
-          "We integrate AI booking systems, data analytics, and mobile solutions to enhance efficiency and customer engagement.",
+          "Our solutions combine mobile apps, booking engine integrations, and customer analytics to enable tailored offers, real-time updates, and streamlined property operations.",
       },
       {
         id: 3,
         image: "/industries/travel3.png",
         title: "Impact We Deliver",
         description:
-          "Travel companies gain improved loyalty, cost efficiency, and operational excellence in a dynamic global market.",
+          "Operators see higher direct bookings, improved guest loyalty, and more efficient resource planning through smarter pricing and demand forecasting.",
       },
     ],
   },
+
   {
     slug: "utilities",
     title: "Utilities",
     tagline:
-      "We help utility providers modernize energy systems with smart automation, predictive insights, and digital customer experiences.",
-
+      "Smart grid, customer engagement, and asset monitoring solutions that modernize utility operations and improve service reliability.",
+    frequentlySearched: [
+      "utility grid analytics",
+      "smart meter data platform",
+      "predictive maintenance utilities",
+      "customer portal for utilities",
+      "smart grid integration services",
+      "energy distribution optimization",
+    ],
     sections: [
       {
         id: 1,
         image: "/industries/utilities1.png",
         title: "Powering Efficiency Through Digital Innovation",
         description:
-          "Akdenar Labs partners with utility providers to modernize operations and deliver sustainable, customer-focused energy solutions.",
+          "We support utilities with smart grid analytics, outage prediction, and meter data platforms that improve reliability, reduce non-technical losses, and enable better customer service.",
       },
       {
         id: 2,
         image: "/industries/utilities2.png",
         title: "Our Approach",
         description:
-          "We use IoT, smart grids, and real-time analytics to optimize distribution, monitor energy use, and predict system maintenance.",
+          "Our teams implement IoT telemetry, predictive maintenance, and customer-facing portals to balance supply and demand while improving operational visibility and decision-making.",
       },
       {
         id: 3,
         image: "/industries/utilities3.png",
         title: "Impact We Deliver",
         description:
-          "Utilities achieve lower operational costs, improved customer satisfaction, and progress toward clean, connected energy systems.",
+          "Utilities benefit from fewer service interruptions, improved asset utilization, and enhanced customer experiences through proactive monitoring and automated workflows.",
       },
     ],
   },
