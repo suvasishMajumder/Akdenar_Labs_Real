@@ -24,7 +24,7 @@ export default function HeroSection() {
                     mt-6 md:mt-10 
                     tracking-tight leading-snug md:leading-tight lg:leading-[1.3]
                     text-gray-900 
-                    max-w-4xl lg:max-w-5xl mx-auto
+                    max-w-4xl lg:max-w-5xl mx-auto px-2
                 "
             >
                 Revolutionizing industries with innovative <br className="hidden md:block" />
@@ -73,14 +73,16 @@ export default function HeroSection() {
                 transition={{ delay: 0.55, duration: 0.8, ease: "easeOut" }}
                 className="mt-10 w-full max-w-[95%] sm:max-w-[90%] md:max-w-[80%] lg:max-w-[1200px]"
             >
-                <Image
-                    src="/about/HeroWrapper.svg"
-                    width={1200}
-                    height={450}
-                    alt="hero image"
-                    className="w-full h-auto mx-auto rounded-md"
-                    priority
-                />
+                <div className="relative w-full aspect-[16/6] max-w-[1200px] mx-auto rounded-xl overflow-hidden">
+        <Image
+            src="/about/HeroWrapper.webp"
+            fill
+            alt="hero image"
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 80vw"
+        />
+    </div>
             </motion.div>
 
         </motion.section>

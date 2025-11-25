@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Facebook, Linkedin } from 'lucide-react';
+import { XIcon } from '@/components/home/Footer';
 import Image from 'next/image';
 
 interface TeamMember {
@@ -85,7 +86,7 @@ const TeamCarousel: React.FC = () => {
                     <p className="text-gray-500 mb-4">CEO FutureShiners</p>
 
                     <div className="flex justify-center gap-4">
-                        <Twitter className="w-5 h-5 text-blue-400" />
+                        <XIcon className="w-5 h-5 text-blue-600" />
                         <Facebook className="w-5 h-5 text-blue-600" />
                         <Linkedin className="w-5 h-5 text-blue-700" />
                     </div>
