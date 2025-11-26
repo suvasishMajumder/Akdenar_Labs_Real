@@ -6,13 +6,38 @@ import ContactForm from "@/components/Get-In-Touch/ContactForm";
 import Footer from "@/components/home/Footer";
 import ContactModal from "@/components/ui/ContactModal";
 import { servicesInfo } from "@/data/servicesInfo";
+import  {Info} from "lucide-react";
+
+interface PackageTooltip {
+  desc: string;
+  l1: string;
+  l2: string;
+  l3: string;
+}
+
+interface Package {
+  packageName: string;
+  packageDesc: string;
+  price: string;
+  toolTip?: PackageTooltip | string;
+}
 
 export default function Page() {
   const { serviceSlug } = useParams() as { serviceSlug: string };
   const [isContactOpen, setContactOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<any>(null);
+  const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
 
-  const service = servicesInfo.find((item) => item.slug === serviceSlug);
+  // Define the type for the service object from servicesInfo
+  interface ServiceInfo {
+    slug: string;
+    title: string;
+    img: string;
+    description: string;
+    techStack: string[];
+    packages: Package[];
+  }
+
+  const service = servicesInfo.find((item) => item.slug === serviceSlug) as ServiceInfo | undefined;
 
   /* ------------------------------------------------------
      ⭐ 1. Dynamic Title + Meta Description
@@ -139,45 +164,72 @@ export default function Page() {
           <h2 className="text-2xl font-semibold mb-6">Packages</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {service.packages.map((pkg, index) => (
+            {service?.packages?.map((pkg: Package, index: number) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-2xl border bg-white shadow-md hover:shadow-xl transition-shadow"
+                className="relative px-4 py-2 rounded-2xl border bg-white shadow-md hover:shadow-xl transition-shadow"
               >
-                <div className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-lg font-semibold">
-                        {pkg.packageName}
-                      </h3>
-                      <p className="text-sm text-gray-500 mt-1">
+                <div className="">
+               
+                 <h2 className="text-lg font-semibold">{pkg.packageName}</h2>
+                  
+                      <p className="text-xs text-gray-600">
                         {pkg.packageDesc}
                       </p>
-                    </div>
+                </div>
 
-                    <div className="text-right">
+                <div className="border-1 border-gray-200 rounded-xl py-4 px-2 my-3">
+                  <p className="text-xs text-gray-600">Starting from</p>
+                <div className="flex flex-row justify-between items-center">
                       <div className="text-2xl font-bold text-gray-900">
                         {pkg.price}
                       </div>
-                    </div>
-                  </div>
+                
+                  
 
-                  <div className="mt-6 flex items-center justify-between">
+                  <div className="">
                     <button
                       onClick={() => {
                         setSelectedPackage(pkg);
                         setContactOpen(true);
                       }}
-                      className="px-4 py-2 rounded-lg bg-[#7F56D9] text-white text-sm hover:bg-[#6b45cc] transition"
+                      className="px-5 py-2 rounded-lg bg-[#7F56D9] text-white text-sm hover:bg-[#6b45cc] transition"
                     >
-                      Contact
+                      Select
                     </button>
                   </div>
                 </div>
+                </div>                
 
-                <div className="absolute right-4 top-4 text-xs text-gray-400">
-                  Package #{index + 1}
-                </div>
+               
+
+                 <div className="absolute top-3 right-2 group cursor-pointer">
+  <Info className="w-5 h-5 text-primary" />
+
+  {/* Tooltip Box */}
+  <div className="
+    absolute right-[-60px] top-[-100px]
+      hidden group-hover:flex
+      bg-primary/95
+      px-2 py-1 rounded-md
+      shadow-lg min-w-0 w-[305px]
+      z-50 transition-all duration-300 ease-in
+    "
+  >
+   {!pkg.toolTip ? (
+    <p className="text-xs text-white italic">No additional information available</p>
+  ) : typeof pkg.toolTip === 'string' ? (
+    <p className="text-xs text-white italic">{pkg.toolTip}</p>
+  ) : (
+    <div className="text-xs text-white px-[1px] font-medium">
+      <p className="italic mb-[6px]">{pkg.toolTip?.desc || 'More info about this package'}</p>
+      {pkg.toolTip?.l1 && <p className="italic mt-1">• {pkg.toolTip.l1}</p>}
+      {pkg.toolTip?.l2 && <p className="italic mt-[2px]">• {pkg.toolTip.l2}</p>}
+      {pkg.toolTip?.l3 && <p className="italic mt-[2px]">• {pkg.toolTip.l3}</p>}
+    </div>
+  )}
+  </div>
+</div>
               </div>
             ))}
           </div>

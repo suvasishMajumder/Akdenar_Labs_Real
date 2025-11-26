@@ -55,7 +55,7 @@ export default function WhyUsSection() {
 
                     {/* Heading */}
                     <motion.h2
-                        className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight mb-4"
+                        className="text-xl md:text-2xl font-semibold text-gray-900 leading-tight mb-4"
                         variants={itemVariants}
                     >
                         Empowering Businesses Through <br />
@@ -82,7 +82,7 @@ export default function WhyUsSection() {
 
                 {/* RIGHT SIDE IMAGE */}
                 <motion.div className="flex-1 flex justify-center" variants={imageVariants}>
-                    <div className="relative min-w-68 w-full h-[260px] md:h-48 rounded-2xl overflow-hidden shrink-0">
+                    <div className="relative min-w-68 w-full h-[260px] md:h-66 rounded-2xl overflow-hidden shrink-0">
                         <Image
                             src="/home/whyus.svg"
                             alt="Why Us"

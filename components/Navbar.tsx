@@ -185,7 +185,7 @@ export default function Navbar() {
                           setIsSheetOpen(false);
                           router.push("/enquiry-form");
                         }}
-                        className="w-full"
+                        className="w-full bg-primary hover:bg-primary/80"
                       >
                         Enquire Now
                       </Button>
@@ -325,7 +325,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center md:ml-4">
             <Button
               onClick={() => router.push("/enquiry-form")}
-              className="text-white"
+              className="text-white bg-primary hover:bg-[#536bed]"
             >
               Enquire Now
             </Button>
