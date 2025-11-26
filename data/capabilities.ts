@@ -1,9 +1,22 @@
+// 🚀 FINAL: FULLY VALID JS - capabilitiesData
+// Complete, syntactically-correct export. Ready to paste into your project.
+
 export const capabilitiesData = [
   {
     slug: "cloud",
-    title: "Cloud",
+    title: "Cloud Services",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient",
+      "Secure, scalable, and cost-efficient cloud solutions — including cloud migration, modernization, hosting, optimization, automation, and full managed support for growing businesses.",
+
+    frequentlySearched: [
+      "best cloud service near me",
+      "cloud migration service",
+      "cloud setup for business",
+      "cloud hosting company",
+      "affordable cloud service",
+      "cloud optimization help",
+      "cloud support team",
+    ],
 
     sections: [
       {
@@ -11,30 +24,39 @@ export const capabilitiesData = [
         image: "/capabilities/cloud1.png",
         title: "Empowering Businesses Through Cloud Innovation",
         description:
-          "At Akdenar Labs, we help organizations harness the full potential of the cloud to achieve agility, scalability, and cost efficiency. The modern enterprise demands flexibility, and our cloud-first approach enables seamless migration, modernization, and optimization across public, private, and hybrid environments.",
+          "Akdenar Labs enables organizations to modernize their IT ecosystems with intelligent cloud adoption. Whether it’s public, private, or hybrid cloud, we help businesses enhance scalability, stability, and performance. Our cloud-first approach accelerates development, improves infrastructure reliability, and ensures future-ready digital operations.",
       },
       {
         id: 2,
         image: "/capabilities/cloud2.png",
         title: "Our Approach",
         description:
-          "We design end-to-end cloud solutions — from infrastructure setup and security to automation and DevOps integration. Our certified experts work across leading platforms like AWS, Microsoft Azure, and Google Cloud, ensuring each client’s cloud environment is secure, compliant, and future-ready.",
+          "We build future-ready cloud ecosystems across AWS, Azure, and Google Cloud. Our services include cloud setup, migration, modernization, DevOps automation, infrastructure security, and ongoing cloud management — all designed to maximize performance and minimize operational overhead.",
       },
       {
         id: 3,
         image: "/capabilities/cloud3.png",
         title: "Impact We Deliver",
         description:
-          "Through cloud innovation, businesses powered by Akdenar Labs experience improved operational efficiency, reduced IT costs, and accelerated product delivery. We transform infrastructure into a strategic advantage — enabling enterprises to innovate faster, collaborate smarter, and scale globally.",
+          "Organizations experience reduced IT costs, faster deployments, stronger security, and seamless scalability. With Akdenar Labs, the cloud becomes a strategic enabler for long-term digital transformation and business growth.",
       },
     ],
   },
+
   {
     slug: "cybersecurity",
-
-    title: "Cybersecurity",
+    title: "Cybersecurity Services",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient",
+      "Advanced cybersecurity, threat detection, ransomware protection, data privacy, network security, and enterprise-grade digital safety solutions.",
+
+    frequentlySearched: [
+      "cybersecurity service near me",
+      "protect my website",
+      "prevent hacking attacks",
+      "data security for business",
+      "network security company",
+      "cyber attack protection",
+    ],
 
     sections: [
       {
@@ -42,29 +64,39 @@ export const capabilitiesData = [
         image: "/capabilities/cybersecurity1.png",
         title: "Protecting What Matters Most — Your Business and Data",
         description:
-          "At Akdenar Labs, we ensure digital safety across every endpoint. Our cybersecurity solutions proactively identify threats, implement real-time monitoring, and safeguard critical information. We help organizations prevent cyber attacks, protect customer trust, and ensure business continuity.",
+          "We secure organizations with multi-layered cybersecurity frameworks that protect sensitive data, applications, and infrastructure. Our defense systems monitor attacks in real time, mitigate threats before they spread, and safeguard business continuity.",
       },
       {
         id: 2,
         image: "/capabilities/cybersecurity2.png",
         title: "Our Approach",
         description:
-          "Our cybersecurity framework combines AI-driven threat analytics, vulnerability testing, and rapid incident response to maintain a secure environment. We assess risks, build protection strategies, and develop scalable security models for growing businesses. Our goal is to prevent, detect, and mitigate attacks with precision.",
+          "Our cybersecurity strategy includes vulnerability testing, penetration assessments, identity management, SIEM integration, and rapid incident response. We ensure continuous protection against evolving threats with AI-powered monitoring.",
       },
       {
         id: 3,
         image: "/capabilities/cybersecurity3.png",
         title: "Impact We Deliver",
         description:
-          "With Akdenar Labs, clients achieve stronger resilience, improved risk control, compliance readiness, and secure operations. Our solutions enable safe digital transformations, reduce vulnerabilities, and enhance protection for mission-critical systems.",
+          "Businesses gain stronger resilience, zero-day protection, compliance readiness, reduced vulnerabilities, and long-term digital trust.",
       },
     ],
   },
+
   {
     slug: "customer-service",
-    title: "Customer Service",
+    title: "Customer Service Solutions",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient",
+      "AI-powered customer support, omnichannel engagement, chat automation, and smart service workflows that improve satisfaction, retention, and resolution speed.",
+
+    frequentlySearched: [
+      "customer service outsourcing",
+      "chat support for business",
+      "call center outsourcing",
+      "improve customer support",
+      "customer care automation",
+      "AI customer support",
+    ],
 
     sections: [
       {
@@ -72,116 +104,157 @@ export const capabilitiesData = [
         image: "/capabilities/customerService1.png",
         title: "Redefining Customer Experience with Intelligent Support",
         description:
-          "At Akdenar Labs, we transform customer service into a growth engine powered by intelligence, empathy, and automation. In today’s experience-driven world, businesses that deliver fast, personalized, and consistent service gain a lasting competitive edge — and that’s where we come in.",
+          "We transform customer support with AI, automation, and smart workflows that deliver fast, personalized, and consistent experiences. Our solutions help businesses handle customer queries efficiently while improving satisfaction and reducing workload.",
       },
       {
         id: 2,
         image: "/capabilities/customerService2.png",
         title: "Our Approach",
         description:
-          "We integrate AI-driven chatbots, CRM systems, and predictive analytics to streamline customer interactions and enable proactive support. By combining automation with human insight, Akdenar Labs builds omnichannel service ecosystems that deliver real-time solutions and elevate customer satisfaction.",
+          "We integrate chatbots, CRM platforms, helpdesk automation, and predictive analytics to make customer support proactive rather than reactive. Every interaction becomes smarter and more meaningful.",
       },
       {
         id: 3,
         image: "/capabilities/customerService3.png",
         title: "Impact We Deliver",
         description:
-          "Our solutions help brands increase response efficiency, improve retention, and reduce operational costs. With smarter workflows and AI-powered insights, we enable organizations to transform customer service from a cost center into a driver of loyalty and business growth.",
+          "Businesses achieve better customer retention, reduced support costs, faster response times, and improved loyalty through personalized experiences.",
       },
     ],
   },
+
   {
     slug: "data-and-artificial-intelligence",
-    title: "Data and Artificial Intelligence",
+    title: "Data & AI Services",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient.",
+      "AI, machine learning, automation, predictive analytics, BI dashboards, and intelligent decision systems that transform operations and accelerate growth.",
+
+    frequentlySearched: [
+      "AI service for my business",
+      "data analytics solutions",
+      "machine learning automation",
+      "predictive analytics company",
+      "business intelligence dashboards",
+      "AI automation for business",
+    ],
+
     sections: [
       {
         id: 1,
         image: "/capabilities/dataAI1.png",
-        title: "Turning Data into Intelligent Business Decisions",
+        title: "Transforming Data into Intelligent Decisions",
         description:
-          "At Akdenar Labs, we help organizations harness the power of data and AI to drive smarter, faster, and more impactful outcomes. In the era of information overload, turning raw data into actionable insights is key to success — and that’s our expertise.",
+          "We turn raw data into real-time insights using AI and advanced analytics. Our solutions help businesses forecast trends, optimize operations, automate processes, and unlock hidden opportunities. From customer intelligence and marketing analytics to operational reporting and financial forecasting, we enable teams to act with clarity and confidence.",
       },
       {
         id: 2,
         image: "/capabilities/dataAI2.png",
         title: "Our Approach",
         description:
-          "We design AI-driven analytics systems, predictive models, and end-to-end frameworks that convert data into actionable, real-time insights. From data gathering and model development to deployment into cloud platforms, we make intelligence seamless. We help clients uncover patterns, forecast outcomes, and enhance business intelligence across every function.",
+          "We create custom AI models, predictive pipelines, automated analytics systems, and business intelligence dashboards. Our end-to-end framework includes data engineering, model development, validation, deployment, and lifecycle optimization to ensure ongoing value.",
       },
       {
         id: 3,
         image: "/capabilities/dataAI3.png",
         title: "Impact We Deliver",
         description:
-          "Our AI and data solutions unlock innovation, efficiency, and competitive advantage. With intelligent automation and deep-driven insights, Akdenar Labs helps businesses respond to market shifts and make confident, insight-backed decisions.",
+          "Organizations gain better forecasting accuracy, reduced manual workloads, improved productivity, higher revenue potential, and competitive advantage. With intelligent automation and data-backed insights, teams operate smarter and move faster.",
       },
     ],
   },
+
   {
     slug: "digital-engineering-and-manufacturing",
-    title: "Digital Engineering and Manufacturing",
+    title: "Digital Engineering & Smart Manufacturing",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient.",
+      "Industry 4.0 solutions including IoT, automation, digital twins, predictive maintenance, and intelligent production optimization.",
+
+    frequentlySearched: [
+      "manufacturing automation services",
+      "smart factory solutions",
+      "IoT for manufacturing",
+      "predictive maintenance company",
+      "Industry 4.0 implementation",
+    ],
+
     sections: [
       {
         id: 1,
         image: "/capabilities/digitalEng1.png",
         title: "Engineering the Future of Smart Manufacturing",
         description:
-          "Akdenar Labs bridges the gap between physical production and digital innovation. We help manufacturers embrace Industry 4.0 through smart factories, IoT, and advanced analytics — creating agile, efficient, and intelligent operations.",
+          "Akdenar Labs helps manufacturers embrace Industry 4.0 with connected systems, real-time insights, and automation. We bridge the gap between physical operations and digital intelligence, enabling faster, smarter, and more efficient production cycles.",
       },
       {
         id: 2,
         image: "/capabilities/digitalEng2.png",
         title: "Our Approach",
         description:
-          "We develop smart factory ecosystems that integrate IoT sensors, digital twins, and predictive maintenance. Our engineering experts optimize production flows, minimize downtime, and improve operational reliability across the supply chain through data visibility and real-time insights.",
+          "We build IoT-driven ecosystems, implement predictive maintenance, deploy digital twins, and optimize workflows using data insights. Our solutions reduce downtime, improve reliability, and streamline manufacturing operations.",
       },
       {
         id: 3,
         image: "/capabilities/digitalEng3.png",
         title: "Impact We Deliver",
         description:
-          "Manufacturers partnering with Akdenar Labs gain higher productivity, lower operational costs, and faster product innovation. We make factories smarter, sustainable, and future-ready.",
+          "Manufacturers achieve higher productivity, lower operational costs, faster product innovation, and a more resilient supply chain.",
       },
     ],
   },
+
   {
     slug: "ecosystem-partners",
-    title: "Ecosystem Partners",
+    title: "Ecosystem Partnerships",
     tagline:
-      "We design and deploy AI technologies that make your business smarter, faster, and more efficient.",
+      "Collaborations with global technology leaders — including cloud providers, software platforms, and enterprise technology ecosystems.",
+
+    frequentlySearched: [
+      "AWS partner company",
+      "Azure partner services",
+      "Google Cloud partner",
+      "technology integration company",
+      "platform integration service",
+    ],
+
     sections: [
       {
         id: 1,
         image: "/capabilities/ecosystem1.png",
         title: "Collaborating for a Connected Future",
         description:
-          "At Akdenar Labs, collaboration is at the heart of innovation. We partner with the world’s leading technology providers — from AWS and Microsoft to Google Cloud and Adobe — to build powerful, integrated ecosystems that accelerate transformation.",
+          "We partner with leading global platforms to deliver integrated, high-performance digital ecosystems. Our collaborations enable seamless deployment of cloud services, automation tools, marketing platforms, and enterprise technologies.",
       },
       {
         id: 2,
         image: "/capabilities/ecosystem2.png",
         title: "Our Approach",
         description:
-          "Our partnerships enable access to best-in-class technologies, advanced APIs, and scalable infrastructure. By integrating multiple platforms, we deliver unified solutions that maximize value, speed, and efficiency for every client.",
+          "We integrate APIs, cloud platforms, analytics tools, and software systems to create unified technology environments tailored for business scalability.",
       },
       {
         id: 3,
         image: "/capabilities/ecosystem3.png",
         title: "Impact We Deliver",
         description:
-          "Clients benefit from faster deployment, higher reliability, and seamless innovation. With Akdenar Labs’ ecosystem partnerships, businesses gain the agility and reach needed to thrive in the digital economy.",
+          "Businesses gain improved reliability, smoother integrations, better performance, faster deployment cycles, and access to modern innovation ecosystems.",
       },
     ],
   },
+
   {
     slug: "marketing-and-experience",
-    title: "Marketing and Experience",
+    title: "Marketing & Experience",
     tagline:
-      "We create intelligent marketing experiences that drive engagement, growth, and brand impact.",
+      "Creative, data-driven marketing solutions including branding, social media engagement, performance marketing, UI/UX design, and customer experience optimization.",
+
+    frequentlySearched: [
+      "digital marketing service",
+      "branding company",
+      "social media marketing",
+      "performance marketing agency",
+      "UX design service",
+      "content marketing service",
+    ],
 
     sections: [
       {
@@ -189,29 +262,38 @@ export const capabilitiesData = [
         image: "/capabilities/marketing1.png",
         title: "Creating Experiences That Inspire and Convert",
         description:
-          "Akdenar Labs helps brands connect with people through creativity, strategy, and technology. We blend design, content, and data-driven marketing to build meaningful digital experiences that engage audiences and drive measurable business growth.",
+          "Akdenar Labs delivers creative and strategic marketing experiences that help businesses grow their digital presence. We combine storytelling, data-driven insights, and modern design to create experiences that attract, convert, and delight audiences.",
       },
       {
         id: 2,
         image: "/capabilities/marketing2.png",
         title: "Our Approach",
         description:
-          "From performance campaigns and branding to UX design and social media engagement, we use analytics and automation to personalize every customer touchpoint. Our integrated marketing solutions transform visibility into loyalty.",
+          "Our team blends brand strategy, targeted campaigns, UI/UX design, SEO optimization, and automation to drive visibility and engagement. Every touchpoint is optimized to improve user experience and increase conversions.",
       },
       {
         id: 3,
         image: "/capabilities/marketing3.png",
         title: "Impact We Deliver",
         description:
-          "We help businesses build stronger brand identities, improve conversions, and create emotional connections that last. With Akdenar Labs, every experience is designed to make an impact.",
+          "Businesses see stronger brand identity, higher engagement, improved conversion rates, and deeper customer loyalty through optimized end-to-end experiences.",
       },
     ],
   },
+
   {
     slug: "managed-services",
     title: "Managed Services",
     tagline:
-      "Delivering reliable, secure, and scalable managed services that keep your business running seamlessly.",
+      "Reliable IT management, cloud operations, monitoring, automation, DevOps support, and end-to-end infrastructure maintenance for uninterrupted business performance.",
+
+    frequentlySearched: [
+      "IT support service",
+      "managed IT provider",
+      "server management service",
+      "IT monitoring company",
+      "infrastructure maintenance service",
+    ],
 
     sections: [
       {
@@ -219,29 +301,38 @@ export const capabilitiesData = [
         image: "/capabilities/managedService1.png",
         title: "Simplifying Operations, Maximizing Efficiency",
         description:
-          "At Akdenar Labs, our Managed Services enable organizations to focus on their core business while we take care of the technology backbone. We deliver proactive monitoring, 24/7 support, and performance optimization across IT systems, applications, and infrastructure.",
+          "Our managed services allow businesses to focus on growth while we handle technology operations. We provide continuous monitoring, issue resolution, cloud management, automation, and IT support tailored to your needs.",
       },
       {
         id: 2,
         image: "/capabilities/managedService2.png",
         title: "Our Approach",
         description:
-          "We combine automation, AI, and cloud management to create intelligent service frameworks. Our experts monitor and manage systems in real time, reducing downtime and enhancing reliability. From DevOps pipelines to SaaS platforms, we ensure seamless performance and cost efficiency.",
+          "We leverage automation, AI, and cloud observability to monitor performance, reduce downtime, and enhance reliability. Our team manages infrastructure, DevOps pipelines, environments, and SaaS applications end-to-end.",
       },
       {
         id: 3,
         image: "/capabilities/managedService3.png",
         title: "Impact We Deliver",
         description:
-          "Clients experience reduced operational costs, faster issue resolution, and improved service continuity. With Akdenar Labs, you gain a trusted partner that ensures your digital ecosystem runs securely and efficiently, every second of every day.",
+          "Clients experience lower operational costs, reduced outages, faster resolutions, and secure, stable IT systems running round the clock.",
       },
     ],
   },
+
   {
     slug: "learning",
-    title: "Learning",
+    title: "Learning & Skill Development",
     tagline:
-      "Empowering people with AI-driven learning experiences that inspire growth and future-ready skills.",
+      "AI-powered learning platforms, digital training programs, virtual classrooms, and upskilling solutions that help teams grow with confidence.",
+
+    frequentlySearched: [
+      "online training service",
+      "corporate learning program",
+      "digital skills training",
+      "employee upskilling service",
+      "AI learning platform",
+    ],
 
     sections: [
       {
@@ -249,29 +340,38 @@ export const capabilitiesData = [
         image: "/capabilities/learning1.png",
         title: "Empowering Growth Through Continuous Learning",
         description:
-          "At Akdenar Labs, we believe learning fuels innovation. Our learning solutions combine technology, mentorship, and personalization to help teams continuously evolve in a fast-changing digital world.",
+          "We build digital learning systems that prepare teams for the future. Our experience-driven tools and interactive content make learning accessible, personalized, and effective for professionals at every level.",
       },
       {
         id: 2,
         image: "/capabilities/learning2.png",
         title: "Our Approach",
         description:
-          "We design AI-powered learning platforms, virtual classrooms, and upskilling programs that keep teams ahead of technological shifts. Our focus is on building digital-first mindsets that drive innovation and adaptability.",
+          "We develop AI-driven learning paths, virtual classrooms, upskilling journeys, and performance-based training modules that help teams stay ahead of emerging technologies.",
       },
       {
         id: 3,
         image: "/capabilities/learning3.png",
         title: "Impact We Deliver",
         description:
-          "Organizations that learn faster grow faster. With Akdenar Labs, teams gain the skills, confidence, and creativity to shape the future.",
+          "Teams become more adaptable, confident, and prepared for innovation — driving progress, creativity, and growth inside the organization.",
       },
     ],
   },
+
   {
     slug: "infrastructure-and-capital-projects",
-    title: "Infrastructure and Capital Projects",
+    title: "Infrastructure & Capital Projects",
     tagline:
-      "We build digitally enabled, data-driven infrastructure that improves efficiency, transparency, and long-term value.",
+      "Digitally enabled infrastructure planning, monitoring, and optimization using analytics, digital twins, automation, and smart project management.",
+
+    frequentlySearched: [
+      "infrastructure consulting",
+      "project management services",
+      "capital project monitoring",
+      "construction technology solutions",
+      "digital twin solutions",
+    ],
 
     sections: [
       {
@@ -279,29 +379,38 @@ export const capabilitiesData = [
         image: "/capabilities/infrastructure1.png",
         title: "Building Intelligent Infrastructure for Tomorrow",
         description:
-          "Akdenar Labs supports organizations in designing, managing, and optimizing large-scale infrastructure and capital projects through digital transformation. We combine technology, data, and automation to improve accuracy, efficiency, and sustainability.",
+          "We support large-scale infrastructure and capital projects with digital tools that improve transparency, accuracy, and performance. Our solutions streamline planning, reduce delays, and enhance decision-making across teams.",
       },
       {
         id: 2,
         image: "/capabilities/infrastructure2.png",
         title: "Our Approach",
         description:
-          "Using digital twins, IoT, and predictive analytics, we help track project performance in real time. Our integrated dashboards and smart tools minimize delays, control costs, and enhance collaboration between stakeholders.",
+          "We use digital twins, IoT tracking, real-time dashboards, and predictive analytics to monitor projects end-to-end. These tools minimize overruns and strengthen stakeholder alignment.",
       },
       {
         id: 3,
         image: "/capabilities/infrastructure3.png",
         title: "Impact We Deliver",
         description:
-          "We enable organizations to deliver projects on time, on budget, and with complete transparency — building infrastructure that’s not only strong, but smart.",
+          "Organizations achieve faster execution, fewer delays, improved accuracy, reduced costs, and total visibility into the project lifecycle.",
       },
     ],
   },
+
   {
     slug: "finance-and-risk-management",
-    title: "Finance and Risk Management",
+    title: "Finance & Risk Management",
     tagline:
-      "We empower organizations to transform financial operations with intelligent automation, insight, and control.",
+      "Automation, forecasting, governance, compliance, and intelligent financial systems that improve accuracy, control, and strategic decision-making.",
+
+    frequentlySearched: [
+      "financial automation services",
+      "risk management consulting",
+      "compliance solutions",
+      "financial forecasting tools",
+      "governance automation",
+    ],
 
     sections: [
       {
@@ -309,29 +418,38 @@ export const capabilitiesData = [
         image: "/capabilities/finance1.png",
         title: "Driving Financial Agility with Intelligent Risk Control",
         description:
-          "At Akdenar Labs, we empower organizations to manage financial operations and risk with data-driven precision. We build systems that enhance visibility, ensure compliance, and strengthen financial resilience.",
+          "We design financial transformation systems that improve accuracy, transparency, and governance. Using analytics and automation, we help organizations reduce risks and strengthen financial confidence.",
       },
       {
         id: 2,
         image: "/capabilities/finance2.png",
         title: "Our Approach",
         description:
-          "By integrating AI-powered forecasting, automation, and real-time insights, we enhance strategic decision-making across finance functions. Our solutions align technology with governance — turning complexity into clarity.",
+          "Our solutions integrate forecasting models, automated reconciliation, risk scoring, compliance workflows, and performance tracking tools to support better financial decisions.",
       },
       {
         id: 3,
         image: "/capabilities/finance3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain better control, reduced risk exposure, and optimized performance. With Akdenar Labs, financial operations become faster, more transparent, and future-ready.",
+          "Clients gain visibility, lower risk exposure, higher accuracy, and improved operational efficiency across finance functions.",
       },
     ],
   },
+
   {
     slug: "emerging-technology",
-    title: "Emerging Technology",
+    title: "Emerging Technology Solutions",
     tagline:
-      "We enable organizations to explore, adopt, and scale breakthrough technologies that unlock new competitive advantages.",
+      "Next-gen innovations including blockchain, AR/VR, edge computing, advanced automation, and experimental R&D.",
+
+    frequentlySearched: [
+      "blockchain development",
+      "AR VR development",
+      "Web3 services",
+      "edge computing solutions",
+      "next-gen tech consulting",
+    ],
 
     sections: [
       {
@@ -339,7 +457,7 @@ export const capabilitiesData = [
         image: "/capabilities/emerging1.png",
         title: "Leading Innovation with Next-Gen Tech",
         description:
-          "Akdenar Labs constantly explores and adapts to emerging technologies — from blockchain, AR/VR, and quantum computing to edge and Web3. We empower organizations to experiment, evolve, and capitalize on future opportunities before they become mainstream.",
+          "We help organizations explore and adopt cutting-edge technologies — from immersive experiences and decentralized systems to intelligent automation and experimental R&D innovations.",
       },
       {
         id: 2,
@@ -357,11 +475,21 @@ export const capabilitiesData = [
       },
     ],
   },
+
   {
     slug: "metaverse",
-    title: "Metaverse",
+    title: "Metaverse Solutions",
     tagline:
-      "We help organizations build immersive digital ecosystems that unlock new value, engagement, and business models.",
+      "Immersive virtual environments, AR/VR development, digital twins, enterprise metaverse platforms, and interactive 3D experiences designed for modern digital engagement.",
+
+    frequentlySearched: [
+      "metaverse development company",
+      "AR VR service",
+      "virtual world development",
+      "enterprise metaverse platform",
+      "3D experience development",
+      "virtual training solutions",
+    ],
 
     sections: [
       {
@@ -369,29 +497,39 @@ export const capabilitiesData = [
         image: "/capabilities/metaverse1.png",
         title: "Redefining Reality Through Immersive Innovation",
         description:
-          "At Akdenar Labs, we are shaping the future of digital interaction through immersive environments. We design enterprise metaverse solutions, virtual worlds, and simulations that bridge the gap between the physical and digital worlds.",
+          "Akdenar Labs builds immersive, interactive digital worlds that connect users, brands, and businesses in entirely new ways. From virtual collaboration environments to interactive retail experiences and training simulations, our metaverse solutions blend creativity, advanced 3D engineering, and real-time intelligence to unlock the next frontier of digital engagement.",
       },
       {
         id: 2,
         image: "/capabilities/metaverse2.png",
         title: "Our Approach",
         description:
-          "We leverage AR, VR, blockchain, and 3D technologies to create virtual spaces for collaboration, commerce, and community engagement. From virtual training to digital operations, we enable businesses to explore new possibilities in digital presence.",
+          "We combine AR, VR, blockchain, digital twins, and high-fidelity 3D modeling to build scalable virtual ecosystems. Whether you need a training environment, virtual event space, product showroom, or gamified experience, our team ensures seamless functionality, intuitive interaction, and immersive storytelling.",
       },
       {
         id: 3,
         image: "/capabilities/metaverse3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain next-generation engagement, new revenue streams, and immersive ways to connect and operate. With Akdenar Labs, the future of interaction becomes a reality today.",
+          "Businesses benefit from next-generation engagement, deeper customer interaction, new revenue models, enhanced training capabilities, and fully immersive brand presence. With Akdenar Labs, digital experience becomes limitless.",
       },
     ],
   },
+
   {
     slug: "sales-and-commerce",
-    title: "Sales and Commerce",
+    title: "Sales & Commerce Solutions",
     tagline:
-      "We enable businesses to scale digital commerce and modern sales ecosystems with automation, intelligence, and personalization.",
+      "End-to-end digital commerce, sales automation, personalized shopping journeys, product management systems, and AI-driven conversion optimization.",
+
+    frequentlySearched: [
+      "ecommerce development",
+      "online store development",
+      "sales automation tools",
+      "commerce platform development",
+      "product management system",
+      "B2B commerce solutions",
+    ],
 
     sections: [
       {
@@ -399,29 +537,38 @@ export const capabilitiesData = [
         image: "/capabilities/sales1.png",
         title: "Empowering Growth Through Smart Digital Commerce",
         description:
-          "At Akdenar Labs, we build e-commerce and sales ecosystems that deliver seamless, personalized, and scalable customer journeys. Our expertise spans B2B and B2C commerce platforms powered by AI and automation.",
+          "We help brands build scalable and intelligent digital commerce ecosystems that improve customer journeys and maximize revenue. Whether B2B or B2C, our platforms ensure seamless experiences, fast performance, and personalized interactions that drive sales.",
       },
       {
         id: 2,
         image: "/capabilities/sales2.png",
         title: "Our Approach",
         description:
-          "We integrate product management, payment systems, and data analytics into unified platforms that enhance conversion and loyalty. Through personalization and predictive intelligence, we help businesses sell smarter, not harder.",
+          "We integrate product management systems, secure payment gateways, analytics dashboards, customer segmentation tools, and AI-powered recommendations that help businesses sell smarter, faster, and more efficiently.",
       },
       {
         id: 3,
         image: "/capabilities/sales3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve higher sales performance, stronger customer retention, and streamlined operations. Akdenar Labs transforms commerce into a catalyst for growth.",
+          "Organizations achieve higher conversions, better customer retention, increased average order value, and optimized operations — turning commerce into a strategic growth engine.",
       },
     ],
   },
+
   {
     slug: "strategy",
-    title: "Strategy",
+    title: "Digital Strategy & Transformation",
     tagline:
-      "We help organizations shape bold strategies that accelerate digital transformation and long-term value.",
+      "Strategic planning, competitive analysis, digital transformation roadmaps, and growth strategies that align business goals with future-ready innovation.",
+
+    frequentlySearched: [
+      "digital strategy consulting",
+      "business growth strategy",
+      "digital transformation roadmap",
+      "technology strategy services",
+      "business model innovation",
+    ],
 
     sections: [
       {
@@ -429,29 +576,38 @@ export const capabilitiesData = [
         image: "/capabilities/strategy1.png",
         title: "Turning Vision Into Measurable Action",
         description:
-          "Akdenar Labs helps organizations define their digital roadmap with clarity and precision. We align technology, business goals, and innovation to build strategies that deliver long-term value and competitive advantage.",
+          "We help organizations design and execute digital strategies that create long-term value. Our expertise ensures that every initiative — from product innovation to operational transformation — is aligned with business goals and market realities.",
       },
       {
         id: 2,
         image: "/capabilities/strategy2.png",
         title: "Our Approach",
         description:
-          "Our strategy experts combine deep industry insights with data intelligence to uncover growth opportunities. We design scalable frameworks that guide transformation — from idea to execution.",
+          "Our team blends industry insights, data intelligence, customer research, and financial modeling to uncover opportunities and build transformation frameworks. We guide organizations from strategic intent to full-scale execution.",
       },
       {
         id: 3,
         image: "/capabilities/strategy3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain clarity, focus, and measurable results. Akdenar Labs helps turn strategic intent into sustainable business outcomes.",
+          "Organizations gain clarity, alignment, stronger decision-making, improved execution, and sustainable long-term growth.",
       },
     ],
   },
+
   {
     slug: "supply-chain",
-    title: "Supply Chain",
+    title: "Supply Chain & Logistics Optimization",
     tagline:
-      "We help organizations modernize and optimize supply chains with intelligent automation, real-time insights, and seamless connectivity.",
+      "Intelligent supply chain solutions for forecasting, inventory optimization, logistics automation, real-time visibility, and end-to-end operational efficiency.",
+
+    frequentlySearched: [
+      "supply chain optimization",
+      "inventory management service",
+      "logistics automation",
+      "demand forecasting tools",
+      "supply chain analytics",
+    ],
 
     sections: [
       {
@@ -459,29 +615,38 @@ export const capabilitiesData = [
         image: "/capabilities/supply1.png",
         title: "Building Intelligent, Resilient Supply Networks",
         description:
-          "At Akdenar Labs, we revolutionize supply chains with technology that enhances visibility, efficiency, and agility. Our smart supply chain solutions ensure businesses can respond faster to market shifts and disruptions.",
+          "We transform supply chains with systems that offer real-time visibility, predictive analytics, and automated processes. Our solutions help companies respond faster to shifting demand, reduce disruptions, and optimize operations end-to-end.",
       },
       {
         id: 2,
         image: "/capabilities/supply2.png",
         title: "Our Approach",
         description:
-          "We integrate IoT, AI, and real-time analytics to deliver transparent and predictive supply networks. Our systems enable demand forecasting, inventory optimization, and end-to-end tracking.",
+          "We integrate IoT tracking, demand forecasting, warehouse automation, and smart analytics to reduce costs, improve accuracy, and eliminate inefficiencies across the entire supply lifecycle.",
       },
       {
         id: 3,
         image: "/capabilities/supply3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve reduced operational costs, improved logistics, and greater resilience. With Akdenar Labs, your supply chain becomes a strategic asset.",
+          "Organizations experience reduced operational costs, improved logistics, faster fulfillment, and stronger supply chain resilience.",
       },
     ],
   },
+
   {
     slug: "sustainability",
-    title: "Sustainability",
+    title: "Sustainability & ESG Solutions",
     tagline:
-      "We help organizations accelerate sustainability with smart technology, data-driven insights, and responsible innovation.",
+      "Smart sustainability solutions including green cloud adoption, carbon tracking, ESG reporting, renewable integration analytics, and responsible innovation.",
+
+    frequentlySearched: [
+      "sustainability consulting",
+      "ESG services",
+      "carbon footprint reduction",
+      "green technology solutions",
+      "sustainable digital transformation",
+    ],
 
     sections: [
       {
@@ -489,29 +654,38 @@ export const capabilitiesData = [
         image: "/capabilities/sustainabilities1.png",
         title: "Innovating for a Smarter, Greener Future",
         description:
-          "At Akdenar Labs, we believe sustainability and technology go hand in hand. We help organizations build responsible digital ecosystems that reduce environmental impact while driving innovation.",
+          "We help organizations reduce their environmental impact through energy-efficient cloud solutions, sustainable technology adoption, and data-driven ESG strategies. Our goal is to empower companies to innovate responsibly while improving long-term resilience.",
       },
       {
         id: 2,
         image: "/capabilities/sustainabilities2.png",
         title: "Our Approach",
         description:
-          "Through green cloud infrastructure, smart analytics, and energy optimization, we help businesses measure and minimize their carbon footprint. We design digital strategies aligned with ESG goals for long-term impact.",
+          "We implement carbon analytics, renewable energy insights, sustainability dashboards, and green infrastructure strategies to help companies measure, monitor, and improve environmental performance.",
       },
       {
         id: 3,
         image: "/capabilities/sustainabilities3.png",
         title: "Impact We Deliver",
         description:
-          "Clients gain efficiency, compliance, and a stronger brand reputation. With Akdenar Labs, sustainability isn’t a goal — it’s a business advantage.",
+          "Businesses gain regulatory compliance, reduced emissions, improved brand credibility, and long-term cost savings through sustainable operational models.",
       },
     ],
   },
+
   {
     slug: "talent-and-organization",
-    title: "Talent and Organization",
+    title: "Talent & Organization Transformation",
     tagline:
-      "We help organizations build future-ready workforces through digital culture, leadership enablement, and intelligent HR transformation.",
+      "Future-ready workforce development, digital culture building, leadership enablement, HR automation, and end-to-end organizational transformation.",
+
+    frequentlySearched: [
+      "HR transformation services",
+      "leadership development",
+      "corporate training program",
+      "organizational development consulting",
+      "employee performance solutions",
+    ],
 
     sections: [
       {
@@ -519,29 +693,39 @@ export const capabilitiesData = [
         image: "/capabilities/talent1.png",
         title: "Empowering People, Transforming Organizations",
         description:
-          "People are at the heart of every transformation. Akdenar Labs helps businesses create future-ready organizations through talent development, digital culture, and leadership enablement.",
+          "We help businesses build stronger, more adaptable teams by transforming culture, leadership, and collaboration. Our people-first approach ensures that organizations evolve from within and stay ready for rapid change.",
       },
       {
         id: 2,
         image: "/capabilities/talent2.png",
         title: "Our Approach",
         description:
-          "We implement AI-driven HR tools, learning platforms, and performance frameworks that build stronger, more adaptive teams. Our solutions align people strategy with business goals to drive collective success.",
+          "We implement AI-driven HR tools, learning platforms, performance frameworks, and leadership programs that align people strategy with business goals.",
       },
       {
         id: 3,
         image: "/capabilities/talent3.png",
         title: "Impact We Deliver",
         description:
-          "Clients experience improved productivity, reduced attrition, and stronger leadership alignment. Akdenar Labs helps organizations evolve from within — powered by their people.",
+          "Clients experience improved productivity, reduced attrition, stronger leadership alignment, and a culture of continuous learning and innovation.",
       },
     ],
   },
+
   {
     slug: "technology-transformation",
     title: "Technology Transformation",
     tagline:
-      "We enable organizations to modernize their technology landscape with scalable systems, automation, and future-ready digital architecture.",
+      "End-to-end technology modernization including cloud-native architecture, automation, DevOps integration, AI adoption, platform re-engineering, legacy system upgrades, and scalable digital foundations for long-term growth.",
+
+    frequentlySearched: [
+      "digital transformation services",
+      "IT modernization company",
+      "legacy system migration",
+      "DevOps automation services",
+      "technology upgrade consulting",
+      "cloud modernization solutions",
+    ],
 
     sections: [
       {
@@ -549,21 +733,21 @@ export const capabilitiesData = [
         image: "/capabilities/technology1.png",
         title: "Reimagining Business Through Digital Innovation",
         description:
-          "Akdenar Labs drives enterprise-wide technology transformation that unlocks agility, efficiency, and scalable growth. We help organizations adopt next-generation platforms that power connected, resilient businesses.",
+          "Akdenar Labs helps organizations rebuild their technology foundations with modern, scalable, and intelligent systems. We enable businesses to transition from outdated, rigid structures to agile, cloud-powered, automation-driven ecosystems. Through smart architecture design, workflow automation, and platform modernization, we ensure your technology accelerates growth rather than slowing it down.",
       },
       {
         id: 2,
         image: "/capabilities/technology2.png",
         title: "Our Approach",
         description:
-          "We combine cloud modernization, DevOps automation, AI integration, and secure system architecture to redesign IT foundations. Our frameworks ensure seamless adoption, reduced disruption, and measurable transformation outcomes.",
+          "We combine cloud modernization, DevOps pipelines, AI integration, microservices, API-first development, and secure digital architecture to redesign IT ecosystems end-to-end. Our approach ensures seamless adoption, minimal disruption, operational visibility, and scalable performance across applications, infrastructure, and data systems.",
       },
       {
         id: 3,
         image: "/capabilities/technology3.png",
         title: "Impact We Deliver",
         description:
-          "Clients achieve faster innovation cycles, reduced operational costs, and improved business flexibility. With Akdenar Labs, technology becomes a strategic advantage — fueling long-term digital success.",
+          "Organizations experience increased agility, reduced operational costs, faster innovation cycles, stronger product delivery, and future-ready digital resilience. With our transformation blueprint, technology becomes a strategic advantage that powers sustainable long-term success.",
       },
     ],
   },

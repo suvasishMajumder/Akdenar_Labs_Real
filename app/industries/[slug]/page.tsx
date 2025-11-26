@@ -1,34 +1,63 @@
+// app/industries/[slug]/page.tsx
 "use client";
 
-import { useEffect } from "react";
+import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import Footer from "@/components/home/Footer";
-import { industriesData } from "@/data/Industries"; // your industries file
+import { industriesData } from "@/data/Industries"; 
 import { useParams } from "next/navigation";
 
-export default function Page() {
-  const { slug } = useParams();
-
+export default function IndustryPage() {
+  const { slug } = useParams() as { slug?: string };
   const data = industriesData.find((item) => item.slug === slug);
 
-  /* ⭐ ADDED: NOINDEX to hide industries from Google */
-  useEffect(() => {
-    const tag = document.createElement("meta");
-    tag.name = "robots";
-    tag.content = "noindex, nofollow";
-    document.head.appendChild(tag);
-
-    return () => {
-      document.head.removeChild(tag);
-    };
-  }, []);
-
-  if (!data)
+  if (!data) {
     return <div className="p-20 text-center text-xl">Industry not found.</div>;
+  }
+
+  // Build a friendly meta description (keep it short and targeted)
+  const metaDescription = `${data.title} — ${
+    data.tagline
+  } Explore services, use cases and solutions for ${data.title.toLowerCase()}.`;
+
+  // Compose keywords from frequentlySearched if present
+  const keywords = Array.isArray(data.frequentlySearched)
+    ? Array.from(new Set(data.frequentlySearched)).slice(0, 50).join(", ")
+    : data.title;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: data.title,
+    description: data.tagline,
+    provider: {
+      "@type": "Organization",
+      name: "Akdenar Labs",
+      url: "https://labs.akdenar.com",
+    },
+    areaServed: "Worldwide",
+    keywords: keywords,
+  };
 
   return (
     <>
-      <section className="w-full px-5 md:px-10 lg:px-24 py-20 pt-22">
+      <Head>
+        <title>{data.title} | Akdenar Labs</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={keywords} />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href={`https://labs.akdenar.com/industries/${data.slug}`}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+
+      <section className="w-full px-5 md:px-10 lg:px-24 py-20">
         <h1 className="text-3xl md:text-4xl font-bold">{data.title}</h1>
         <p className="text-gray-600 max-w-3xl mt-2">{data.tagline}</p>
 
