@@ -163,7 +163,7 @@ export default function Page() {
         <section className="mt-12">
           <h2 className="text-2xl font-semibold mb-6">Packages</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service?.packages?.map((pkg: Package, index: number) => (
               <div
                 key={index}
@@ -208,11 +208,11 @@ export default function Page() {
 
   {/* Tooltip Box */}
   <div className="
-    absolute right-[-60px] top-[-100px]
+    absolute right-[-4px] top-[-90px] md:right-[-22px] md:top-[-100px]
       hidden group-hover:flex
-      bg-primary/95
+      bg-primary/90
       px-2 py-1 rounded-md
-      shadow-lg min-w-0 w-[305px]
+      shadow-lg  w-[300px] md:w-[305px]
       z-50 transition-all duration-300 ease-in
     "
   >
