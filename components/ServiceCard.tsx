@@ -56,7 +56,7 @@ export default function ServiceCard({ service, i }: ServiceCardProps) {
         {/* ✅ Read More Button (always visible) */}
         <button
           onClick={() => router.push(service.link)}
-          className="  mt-2 px-4 py-2 rounded-full bg-[#F4F1FF] text-[#7F56D9] cursor-pointer 
+          className="mt-2 px-4 py-2 rounded-full bg-[#F4F1FF] text-[#7F56D9] cursor-pointer 
                      text-sm font-semibold hover:bg-[#ede8ff] hover:border-[#7F56D9] hover:border-2 transition-colors"
         >
           Read More →

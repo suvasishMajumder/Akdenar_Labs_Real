@@ -90,7 +90,7 @@ export default function EnquiryPage() {
             Project Enquiry Form
           </h2>
           <p className="text-center text-neutral-600 mt-3 max-w-3xl mx-auto leading-relaxed">
-            Share your project details — We'll get back within 24 hours.
+            Share your project details — We&apos;ll get back within 24 hours.
           </p>
         </div>
 

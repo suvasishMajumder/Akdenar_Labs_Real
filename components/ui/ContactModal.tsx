@@ -102,7 +102,7 @@ export default function ContactModal({
               Contact Us {serviceTitle ? `— ${serviceTitle}` : ""}
             </h3>
             <p className="text-sm text-gray-600 mt-1">
-              Fill this quick form and we'll get back shortly.
+              Fill this quick form and we&apos;ll get back shortly.
             </p>
           </div>
           <button

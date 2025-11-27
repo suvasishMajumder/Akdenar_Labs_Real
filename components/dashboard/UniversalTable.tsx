@@ -64,6 +64,7 @@ export default function UniversalTable({ formType }: { formType: string }) {
       "name",
       "email",
       "message",
+      "services",
       "packageName",
       "packagePrice",
       "createdAt",

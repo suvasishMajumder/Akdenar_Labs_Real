@@ -74,10 +74,10 @@ export default function ProjectsSection() {
             <motion.div className="flex justify-center mt-10" variants={itemVariants}>
                 <button
                     onClick={() => router.push("projects")}
-                    className="flex items-center gap-2 text-[#7F56D9] font-medium hover:opacity-80 transition"
+                    className="flex items-center gap-2 text-[#7F56D9] font-medium hover:opacity-80 border-transparent hover:border-[#7F56D9] border-2 px-4 py-2 rounded-full group"
                 >
                     View All
-                    <span className="text-lg">→</span>
+                    <span className="text-lg group-hover:translate-x-[0.2rem] transition-transform duration-200 ease-in-out">→</span>
                 </button>
             </motion.div>
 
