@@ -7,6 +7,8 @@ import Footer from "@/components/home/Footer";
 import ContactModal from "@/components/ui/ContactModal";
 import { servicesInfo } from "@/data/servicesInfo";
 import  {Info} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface PackageTooltip {
   desc: string;
@@ -136,7 +138,10 @@ export default function Page() {
   ------------------------------------------------------- */
   return (
     <section className="pt-20 bg-bg-primary min-h-screen">
-      <div className="p-3 md:p-6 max-w-6xl mx-auto ">
+        <Link href="/services" className="ml-6 md:ml-13 mt-4 inline-block mb-4 text-sm text-primary hover:underline">
+          &larr; Back to Services
+        </Link>
+      <div className="p-3 md:p-6 max-w-6xl mx-auto">
         <div className="flex items-center justify-between flex-col md:flex-row gap-6 bg-white p-8 rounded-xl shadow-sm">
           {/* Left */}
           <div className="flex-1">
@@ -152,12 +157,15 @@ export default function Page() {
           </div>
 
           {/* Right Image */}
-          <img
+          <Image
             src={service.img}
             alt={service.title}
+            width={420}
+            height={280}
             className="w-[420px] md:block hidden h-auto"
           />
         </div>
+        
 
         {/* PACKAGES */}
         <section className="mt-12">

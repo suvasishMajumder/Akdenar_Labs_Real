@@ -66,8 +66,8 @@ export default function Industries() {
       <motion.div className="text-center mb-10" variants={cardVariants}>
         <h2 className="text-4xl font-bold">Our Industry Expertise</h2>
         <p className="mt-3 text-gray-600 max-w-xl mx-auto">
-          We deliver end-to-end digital solutions tailored to transform industries with
-          modern technology, automation, and innovation.
+          We deliver end-to-end digital solutions tailored to transform
+          industries with modern technology, automation, and innovation.
         </p>
       </motion.div>
 
@@ -77,7 +77,6 @@ export default function Industries() {
         variants={containerVariants}
       >
         <div className="grid grid-cols-3 gap-1">
-
           {/* Row 1 */}
           {[
             {
@@ -102,9 +101,12 @@ export default function Industries() {
               className={`col-span-1 flex md:justify-between flex-col-reverse md:flex-row h-52 md:h-64 ${item.bg} relative`}
               variants={cardVariants}
             >
-              <img
+              <Image
                 src={item.img}
+                alt={item.title}
                 className="absolute right-0 bottom-0 md:h-full object-contain"
+                width={200}
+                height={200}
               />
               <div className="absolute left-4 md:bottom-4 top-3 md:top-auto text-white font-bold">
                 {item.title}
@@ -135,7 +137,10 @@ export default function Industries() {
               className={`col-span-1 flex md:justify-between flex-col-reverse md:flex-row h-52 md:h-64 ${item.bg} relative`}
               variants={cardVariants}
             >
-              <img
+              <Image
+                alt={item.title}
+                width={200}
+                height={200}
                 src={item.img}
                 className="absolute right-0 bottom-0 md:h-full object-contain"
               />
@@ -150,8 +155,11 @@ export default function Industries() {
             className="col-span-1 flex md:justify-between flex-col-reverse md:flex-row h-56 md:h-64 bg-[#90CDF4] relative"
             variants={cardVariants}
           >
-            <img
+            <Image
+              width={200}
+              height={200}
               src="/industries/telecom.png"
+              alt="Telecom & Media"
               className="absolute right-0 md:h-full object-contain"
             />
             <div className="absolute left-4 top-3 md:top-auto md:bottom-4 text-white font-bold">
@@ -163,15 +171,17 @@ export default function Industries() {
             className="col-span-2 flex md:justify-between flex-col-reverse md:flex-row h-56 md:h-64 bg-[#FBB6CE] relative overflow-hidden"
             variants={cardVariants}
           >
-            <img
+            <Image
+              width={200}
+              height={200}
               src="/industries/consumer.png"
+              alt="Consumer Tech"
               className="absolute right-0 -bottom-10 md:h-full object-contain"
             />
             <div className="absolute left-4 md:bottom-4 top-3 md:top-auto text-white font-bold">
               Consumer Tech
             </div>
           </motion.div>
-
         </div>
       </motion.div>
     </motion.section>
