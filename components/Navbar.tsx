@@ -28,9 +28,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={` ${
-        pathname.split("/").includes("dashboard") && "hidden"
-      } w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
+      className={` ${pathname.split("/").includes("admin") && "hidden"
+        } w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-slate-100`}
     >
       <div className="mx-auto w-full container px-4  sm:px-6  lg:px-8">
         <div className="flex w-full items-center justify-between h-16">
@@ -207,23 +206,20 @@ export default function Navbar() {
                   setMegaOpen((s) => !s);
                   e.stopPropagation();
                 }}
-                className={`flex items-center gap-2 py-2 px-3  rounded-md ${
-                  megaOpen ? "bg-gray-100" : "hover:bg-gray-50"
-                }`}
+                className={`flex items-center gap-2 py-2 px-3  rounded-md ${megaOpen ? "bg-gray-100" : "hover:bg-gray-50"
+                  }`}
                 aria-expanded={megaOpen}
               >
                 <span
-                  className={`text-sm ${
-                    isActive("/services") ? "font-semibold" : "font-medium"
-                  }`}
+                  className={`text-sm ${isActive("/services") ? "font-semibold" : "font-medium"
+                    }`}
                 >
                   What We Do
                 </span>
 
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-300 ${
-                    megaOpen ? "rotate-180" : "rotate-0"
-                  }`}
+                  className={`h-4 w-4 transition-transform duration-300 ${megaOpen ? "rotate-180" : "rotate-0"
+                    }`}
                 />
               </button>
 

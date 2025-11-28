@@ -33,6 +33,7 @@ export default function Sidebar() {
     { name: "Project Inquiry", key: "project", icon: FileText },
     { name: "Newsletter", key: "newsletter", icon: Mail },
     { name: "Job Applications", key: "job-application", icon: File },
+    { name: "Blog", key: "blog", icon: File },
     { name: "Settings", key: "settings", icon: SettingsIcon },
   ];
 

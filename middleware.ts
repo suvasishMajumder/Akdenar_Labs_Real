@@ -35,7 +35,7 @@ export function middleware(req: NextRequest) {
     (pathname === "/api/enquiry" && method === "GET"); // admin enquiry list
 
   const pageProtected = pathname.startsWith("/admin");
-
+  console.log(pathname);
   if ((apiProtected || pageProtected) && !token) {
     if (pathname.startsWith("/api/")) {
       return new NextResponse(
