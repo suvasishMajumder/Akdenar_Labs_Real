@@ -1,7 +1,3 @@
-// 🚀 UPDATED: industriesData (full file)
-// All taglines + section descriptions rewritten for balanced SEO,
-// staying close to original meaning while adding relevant keyword phrases.
-
 export const industriesData = [
   {
     slug: "chemicals",
@@ -21,6 +17,7 @@ export const industriesData = [
         id: 1,
         image: "/industries/chemical1.png",
         title: "Reinventing Chemical Manufacturing Through Digital Innovation",
+        alternate: "Digital Transformation in Chemical Manufacturing",
         description:
           "Akdenar Labs helps chemical manufacturers modernize production with IoT sensors, real-time process analytics, and automated control. We capture live plant telemetry and turn it into actionable insights to improve throughput, reduce waste, and keep operations within strict safety and environmental limits.",
       },
@@ -28,6 +25,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/chemical2.png",
         title: "Our Approach",
+        alternate: "Digital Twins, Edge Analytics, and MES/SCADA Integration",
         description:
           "We deploy digital twins, edge analytics, and integrated MES/SCADA solutions for end-to-end process visibility. By combining predictive maintenance, advanced process control, and energy optimization, we reduce downtime and extend asset life while improving compliance.",
       },
@@ -35,6 +33,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/chemical3.png",
         title: "Impact We Deliver",
+        alternate: "Efficiency, Safety, and Sustainability Outcomes",
         description:
           "Customers see higher yield consistency, lower operating costs, and improved safety. Our solutions produce measurable outcomes: fewer incidents, reduced emissions, and faster operational decisions driven by accurate, timely data.",
       },
@@ -59,6 +58,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/capital1.png",
         title: "Accelerating Growth with Data and Digital Intelligence",
+        alternate:
+          "Data-Driven Trading, Risk Management, and Platform Resilience",
         description:
           "We empower trading firms, asset managers, and exchanges with analytics platforms and automated pipelines that improve trade performance, execution, and operational resilience. Our systems surface signals faster and more reliably for competitive advantage.",
       },
@@ -66,6 +67,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/capital2.png",
         title: "Our Approach",
+        alternate:
+          "Algorithmic Trading, Risk Analytics, and Compliance Automation",
         description:
           "We combine low-latency engineering, data warehousing, and AI-driven forecasting to automate reporting, pricing models, and risk controls. Our architecture supports compliance, auditability, and scale across front-to-back workflows.",
       },
@@ -73,6 +76,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/capital3.png",
         title: "Impact We Deliver",
+        alternate: "Portfolio Visibility, Risk Reduction, and Decision Speed",
         description:
           "Clients achieve improved portfolio visibility, reduced operational risk, and faster time-to-insight. We help firms reduce manual reconciliation, streamline regulatory reports, and make data-driven investment decisions.",
       },
@@ -97,6 +101,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/banking1.png",
         title: "Transforming Banking Through Trust and Technology",
+        alternate:
+          "Secure Digital Banking, Customer Onboarding, and Compliance Platforms",
         description:
           "Akdenar Labs helps banks deliver modern, secure digital services with cloud-native architectures, frictionless customer journeys, and intelligent automation that reduce cost-to-serve and increase engagement.",
       },
@@ -104,6 +110,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/banking2.png",
         title: "Our Approach",
+        alternate:
+          "Core System Modernization, API-First Integrations, and AI Chatbots",
         description:
           "We design secure platforms combining core system modernization, API-first integrations, and AI chatbots to streamline customer onboarding, personalize services, and strengthen fraud detection and compliance monitoring.",
       },
@@ -111,6 +119,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/banking3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Faster Onboarding, Operational Efficiency, and Customer Satisfaction",
         description:
           "Banks working with us see faster product launches, improved operational efficiency, stronger risk controls, and higher customer satisfaction through data-driven personalization and automation.",
       },
@@ -135,6 +145,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/automotive1.png",
         title: "Driving the Future of Mobility",
+        alternate:
+          "Connected Vehicles, Telematics, and Smart Factory Solutions",
         description:
           "We partner with OEMs and suppliers to build connected vehicle services, telematics platforms, and smart factory solutions that improve uptime, safety, and customer experience across the vehicle lifecycle.",
       },
@@ -142,6 +154,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/automotive2.png",
         title: "Our Approach",
+        alternate: "IoT Integration, Digital Twins, and Cloud Analytics",
         description:
           "Combining IoT, digital twins, and cloud analytics, we deliver predictive maintenance, fleet optimization, and software-first product development to reduce warranty costs and accelerate feature delivery.",
       },
@@ -149,6 +162,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/automotive3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Reliability Improvement, Time-to-Market Reduction, and Data-Driven Roadmaps",
         description:
           "Automotive clients gain improved reliability, faster time-to-market, and data-driven product roadmaps — enabling safer vehicles and better ownership experiences.",
       },
@@ -173,6 +188,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/aerospace1.png",
         title: "Innovating for Precision, Safety, and Performance",
+        alternate:
+          "Mission-Critical Systems, Predictive Maintenance, and Simulation Platforms",
         description:
           "Akdenar Labs helps aerospace and defense teams modernize engineering and maintenance processes with secure analytics, simulation, and asset-monitoring platforms that improve mission readiness and reduce downtime.",
       },
@@ -180,6 +197,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/aerospace2.png",
         title: "Our Approach",
+        alternate: "Digital Twins, AI Diagnostics, and Regulatory Compliance",
         description:
           "We combine rigorous security, digital twins, and AI-based diagnostics to optimize flight operations, maintenance planning, and logistics while ensuring compliance with strict regulatory standards.",
       },
@@ -187,6 +205,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/aerospace3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Availability Improvement, Safety Enhancement, and Cost Reduction",
         description:
           "Clients achieve higher availability, improved safety margins, faster engineering cycles, and cost savings through predictive analytics and secure, auditable systems.",
       },
@@ -211,6 +231,8 @@ export const industriesData = [
         id: 1,
         image: "/capabilities/technologytransformation1.png",
         title: "Reimagining Business Through Digital Innovation",
+        alternate:
+          "Technology Modernization, Cloud-Native Architecture, and Digital Transformation",
         description:
           "We guide organizations through technology modernization programs that replace brittle legacy systems with scalable, cloud-native platforms designed for speed, resilience, and continuous delivery.",
       },
@@ -218,6 +240,8 @@ export const industriesData = [
         id: 2,
         image: "/capabilities/technologytransformation2.png",
         title: "Our Approach",
+        alternate:
+          "Cloud Modernization, DevOps Integration, and Secure Digital Architecture",
         description:
           "Our teams combine cloud architecture, microservices, DevOps automation, and data-led strategy to deliver measurable improvements in time-to-market, reliability, and operational cost.",
       },
@@ -225,6 +249,8 @@ export const industriesData = [
         id: 3,
         image: "/capabilities/technologytransformation3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Agility Improvement, Cost Reduction, and Innovation Acceleration Benefits",
         description:
           "Enterprises gain faster innovation cycles, reduced technical debt, and stronger delivery pipelines — turning technology into a scalable business enabler.",
       },
@@ -249,6 +275,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/communication1.png",
         title: "Empowering the Connected World",
+        alternate:
+          "Platform Engineering, Audience Personalization, and 5G Solutions",
         description:
           "We help media and telecom firms deliver reliable, personalized digital experiences by combining network analytics, content personalization, and cloud-native streaming infrastructure.",
       },
@@ -256,6 +284,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/communication2.png",
         title: "Our Approach",
+        alternate:
+          "AI-Driven Network Optimization, Content Delivery, and Monetization",
         description:
           "Using AI, edge computing, and automation, we optimize network performance, tailor content delivery, and integrate adtech and monetization platforms to maximize revenue and engagement.",
       },
@@ -263,6 +293,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/communication3.png",
         title: "Impact We Deliver",
+        alternate: "Churn Reduction, QoS Improvement, and Revenue Growth",
         description:
           "Clients see lower churn, improved QoS, faster content distribution, and better ad yield through data-driven personalization and streamlined platform operations.",
       },
@@ -287,6 +318,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/consumer1.png",
         title: "Empowering Consumer Brands with Data and Digital Commerce",
+        alternate:
+          "Omnichannel Commerce, Personalization, and Supply Chain Analytics",
         description:
           "We assist consumer brands in modernizing commerce and operations with personalized storefronts, demand forecasting, and loyalty systems that increase lifetime value and reduce friction.",
       },
@@ -294,6 +327,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/consumer2.png",
         title: "Our Approach",
+        alternate:
+          "AI-Driven Personalization, Headless Commerce, and Inventory Optimization",
         description:
           "By combining AI-driven segmentation, headless commerce, and inventory optimization, we create connected experiences across web, mobile, and physical channels to maximize conversion and retention.",
       },
@@ -301,6 +336,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/consumer3.png",
         title: "Delivering Smarter Experiences for the Modern Consumer",
+        alternate: "Delivering Smarter Experiences for the Modern Consumer",
         description:
           "Businesses achieve faster market adaptation, improved margins, and stronger brand loyalty through data-led merchandising, targeted campaigns, and streamlined fulfillment.",
       },
@@ -325,6 +361,7 @@ export const industriesData = [
         id: 1,
         image: "/industries/Energy1.png",
         title: "Powering a Sustainable and Connected Future",
+        alternate: "Smart Grid Analytics, Renewable Integration, and Predictive Operations",
         description:
           "We help energy providers optimize generation and distribution with IoT-enabled monitoring, real-time analytics, and asset performance management to reduce outages and improve efficiency.",
       },
@@ -332,6 +369,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/Energy2.png",
         title: "Our Approach",
+        alternate: "Grid Telemetry, Predictive Maintenance, and Renewable Integration",
         description:
           "Our solutions include grid telemetry, predictive maintenance, and renewable integration platforms that balance supply and demand while improving asset utilization and lowering carbon footprint.",
       },
@@ -339,6 +377,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/Energy3.png",
         title: "Impact We Deliver",
+        alternate: "Reliability Enhancement, Cost Reduction, and Sustainability Outcomes",
         description:
           "Operators experience fewer disruptions, lower operational costs, and better renewable penetration thanks to smarter forecasting, monitoring, and automated control systems.",
       },
@@ -363,6 +402,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/health1.png",
         title: "Advancing Healthcare Through Digital Intelligence",
+        alternate:
+          "AI-Enabled Clinical Systems, Telehealth Platforms, and Data-Driven Care Management",
         description:
           "Akdenar Labs partners with hospitals and health systems to deploy secure telemedicine, clinical decision support, and patient engagement solutions that improve access and care quality.",
       },
@@ -370,6 +411,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/health2.png",
         title: "Our Approach",
+        alternate:
+          "Interoperable Platforms, AI Diagnostics, and Analytics-Driven Workflows",
         description:
           "We implement interoperable platforms, AI diagnostics, and analytics-driven operational workflows to streamline care delivery, reduce readmissions, and support clinicians with meaningful insights.",
       },
@@ -377,6 +420,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/health3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Improved Patient Outcomes, Operational Efficiency, and Data-Driven Programs",
         description:
           "Providers benefit from improved patient outcomes, operational efficiency, and data-driven clinical programs that scale across facilities while preserving privacy and compliance.",
       },
@@ -401,6 +446,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/hightech1.png",
         title: "Innovating at the Speed of Technology",
+        alternate:
+          "Platform Engineering, Scalable Cloud Solutions, and Rapid Prototyping",
         description:
           "We accelerate innovation for high-tech firms by building resilient, scalable platforms, automating R&D workflows, and integrating cloud and edge computing for high-performance applications.",
       },
@@ -408,6 +455,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/hightech2.png",
         title: "Our Approach",
+        alternate:
+          "Rapid Prototyping, Microservices, and CI/CD Best Practices",
         description:
           "Using rapid prototyping, microservices, and CI/CD best practices, we shorten development cycles, reduce deployment risk, and enable rapid iteration for product teams.",
       },
@@ -415,6 +464,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/hightech3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Faster Time-to-Market, Product Reliability, and Scalable Infrastructure",
         description:
           "Clients achieve faster time-to-market, better product reliability, and infrastructure that scales with business demand — supporting sustained innovation and growth.",
       },
@@ -439,6 +490,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/industrial1.png",
         title: "Transforming Industries Through Smart Operations",
+        alternate:
+          "Smart Factory Solutions, Predictive Maintenance, and Operational Analytics",
         description:
           "Akdenar Labs digitizes manufacturing operations to increase productivity and safety, combining IoT, analytics, and automation to deliver real-time visibility and control.",
       },
@@ -446,6 +499,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/industrial2.png",
         title: "Our Approach",
+        alternate:
+          "IoT Integration, Digital Twins, and Process Automation",
         description:
           "We implement predictive maintenance, automated quality checks, and integrated operations dashboards that reduce downtime and improve yield across complex production lines.",
       },
@@ -453,6 +508,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/industrial3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Uptime Improvement, Waste Reduction, and Throughput Enhancement",
         description:
           "Industrial customers enjoy higher uptime, reduced waste, and improved throughput — enabling more predictable production and lower total cost of ownership.",
       },
@@ -477,6 +534,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/retail1.png",
         title: "Transforming Retail Through Digital Experiences",
+        alternate:
+          "Omnichannel Retail Platforms, Personalization Engines, and Inventory Optimization",
         description:
           "We help retailers deliver unified shopping experiences across online and physical channels with personalization, optimized checkout flows, and integrated inventory systems.",
       },
@@ -484,6 +543,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/retail2.png",
         title: "Our Approach",
+        alternate:
+          "AI-Driven Personalization, Headless Commerce, and Supply Chain Analytics",
         description:
           "Combining AI-driven recommendations, fulfillment orchestration, and analytics, we optimize merchandising, pricing, and customer journeys to boost conversion and retention.",
       },
@@ -491,6 +552,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/retail3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Higher Order Value, Stock Efficiency, and Customer Loyalty",
         description:
           "Retail clients gain higher average order value, improved stock efficiency, and better customer loyalty through data-backed experiences and operational automation.",
       },
@@ -515,6 +578,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/private1.png",
         title: "Driving Value Through Digital Transformation",
+        alternate:
+          "Technology-Led Value Creation, Portfolio Modernization, and Scalable Growth Programs",
         description:
           "We enable PE firms to accelerate value creation by assessing digital maturity, implementing growth-enabling technology, and scaling operational improvements across portfolio companies.",
       },
@@ -522,6 +587,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/private2.png",
         title: "Our Approach",
+        alternate:
+          "Digital Due Diligence, Target Operating Models, and Execution Roadmaps",
         description:
           "Our teams deliver rapid diagnostic assessments, target operating models, and execution roadmaps that combine process automation, analytics, and platform consolidation to improve EBITDA.",
       },
@@ -529,6 +596,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/private3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Digital Due Diligence, Target Operating Models, and Execution Roadmaps",
         description:
           "Firms see faster integration, improved performance tracking, and measurable uplift in portfolio value through focused technology and operational programs.",
       },
@@ -553,6 +622,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/public1.png",
         title: "Digitally Empowering Government and Citizens",
+        alternate:
+          "Digital Services, Portals, and Data Platforms for Government Agencies",
         description:
           "Akdenar Labs builds secure, accessible public sector platforms that streamline service delivery, increase transparency, and enhance citizen outcomes across health, transport, and civic services.",
       },
@@ -560,6 +631,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/public2.png",
         title: "Our Approach",
+        alternate:
+          "Modular, Cloud-First Portals, Identity Management, and Data-Sharing Frameworks",
         description:
           "We implement modular, cloud-first portals, identity management, and data-sharing frameworks that improve service responsiveness while ensuring privacy and regulatory compliance.",
       },
@@ -567,6 +640,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/public3.png",
         title: "Impact We Deliver",
+        alternate: "Faster Service Resolution, Data-Driven Policymaking, and Higher Citizen Satisfaction",
         description:
           "Agencies achieve faster service resolution, better data-driven policymaking, and higher citizen satisfaction — enabling more effective and modern public services.",
       },
@@ -591,6 +665,7 @@ export const industriesData = [
         id: 1,
         image: "/industries/natural1.png",
         title: "Sustaining Growth with Smart Resource Management",
+        alternate: "Smart Resource Management, Predictive Models, and Automation",
         description:
           "We help natural resource companies deploy monitoring systems, predictive models, and automation to improve safety, yield, and environmental stewardship across extraction and processing operations.",
       },
@@ -598,6 +673,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/natural2.png",
         title: "Our Approach",
+        alternate: "IoT Telemetry, Analytics, and Environmental Compliance",
         description:
           "Combining remote sensing, IoT telemetry, and analytics, we provide solutions for equipment reliability, environmental compliance, and optimized logistics that reduce costs and impact.",
       },
@@ -605,6 +681,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/natural3.png",
         title: "Impact We Deliver",
+        alternate: "Efficiency Gains, Safety Improvements, and Sustainability Outcomes",
         description:
           "Clients benefit from improved resource utilization, stronger safety performance, and measurable reductions in environmental footprint through smarter operations.",
       },
@@ -629,6 +706,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/life1.png",
         title: "Accelerating Discovery and Care Through Technology",
+        alternate:
+          "Research Acceleration, Clinical Analytics, and Regulatory-Ready Data Platforms",
         description:
           "Akdenar Labs partners with pharma and research institutions to build data platforms, automate lab workflows, and apply AI to accelerate discovery while ensuring traceability and regulatory compliance.",
       },
@@ -636,6 +715,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/life2.png",
         title: "Our Approach",
+        alternate:
+          "Secure Data Lakes, Analytics Pipelines, and Compliance Controls",
         description:
           "We integrate secure data lakes, analytics pipelines, and compliance controls to streamline clinical trials, improve reproducibility, and surface insights faster for R&D teams.",
       },
@@ -643,6 +724,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/life3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Faster Time-to-Insight, Efficient Trials, and Better Data Governance",
         description:
           "Researchers and clinicians achieve faster time-to-insight, more efficient trials, and better data governance — empowering breakthroughs that improve patient outcomes.",
       },
@@ -667,6 +750,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/insurance1.png",
         title: "Building Trust with Digital-First Insurance Solutions",
+        alternate:
+          "Claims Automation, Underwriting Intelligence, and Fraud Detection Solutions",
         description:
           "We help insurers modernize systems with claims automation, AI underwriting, and customer portals that reduce processing time and improve policyholder satisfaction.",
       },
@@ -674,6 +759,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/insurance2.png",
         title: "Our Approach",
+        alternate:
+          "Predictive Analytics, Document Automation, and Secure Integrations",
         description:
           "Our platforms combine predictive analytics, document automation, and secure integrations with core policy systems to streamline operations and detect anomalies that indicate potential fraud.",
       },
@@ -681,6 +768,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/insurance3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Faster Claims Resolution, Improved Risk Selection, and Lower Operational Costs",
         description:
           "Insurers benefit from faster claims resolution, improved risk selection, and lower operational costs while delivering modern digital experiences to customers.",
       },
@@ -705,6 +794,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/software1.png",
         title: "Building the Future of Digital Ecosystems",
+        alternate:
+          "Platform Engineering, SaaS Development, and Scalable Architecture Services",
         description:
           "We partner with software companies to design and scale resilient platforms, focusing on performance, security, and cost-effective cloud infrastructure for SaaS and enterprise applications.",
       },
@@ -712,6 +803,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/software2.png",
         title: "Our Approach",
+        alternate:
+          "API-First Design, Automated Testing, and CI/CD Best Practices",
         description:
           "Using API-first design, automated testing, and CI/CD pipelines, we deliver robust, maintainable systems that accelerate development cycles and reduce operational risk.",
       },
@@ -719,6 +812,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/software3.png",
         title: "Impact We Deliver",
+        alternate: "Faster Deployments, Better Scalability, and Improved Developer Productivity",
         description:
           "Clients experience faster deployments, better scalability, and improved developer productivity — enabling them to deliver value to customers more quickly.",
       },
@@ -743,6 +837,8 @@ export const industriesData = [
         id: 1,
         image: "/industries/travel1.png",
         title: "Redefining the Travel Experience with Technology",
+        alternate:
+          "Personalized Booking, Mobile-First Experiences, and Analytics-Driven Operations",
         description:
           "We help travel and hospitality brands deliver seamless booking, personalization, and post-booking experiences that increase guest satisfaction and operational efficiency.",
       },
@@ -750,6 +846,8 @@ export const industriesData = [
         id: 2,
         image: "/industries/travel2.png",
         title: "Our Approach",
+        alternate:
+          "Mobile Apps, Booking Engine Integrations, and Customer Analytics",
         description:
           "Our solutions combine mobile apps, booking engine integrations, and customer analytics to enable tailored offers, real-time updates, and streamlined property operations.",
       },
@@ -757,6 +855,8 @@ export const industriesData = [
         id: 3,
         image: "/industries/travel3.png",
         title: "Impact We Deliver",
+        alternate:
+          "Increased Direct Bookings, Enhanced Loyalty, and Optimized Resource Planning",
         description:
           "Operators see higher direct bookings, improved guest loyalty, and more efficient resource planning through smarter pricing and demand forecasting.",
       },
@@ -781,6 +881,7 @@ export const industriesData = [
         id: 1,
         image: "/industries/utilities1.png",
         title: "Powering Efficiency Through Digital Innovation",
+        alternate: "Smart Resource Management, Predictive Models, and Automation",
         description:
           "We support utilities with smart grid analytics, outage prediction, and meter data platforms that improve reliability, reduce non-technical losses, and enable better customer service.",
       },
@@ -788,6 +889,7 @@ export const industriesData = [
         id: 2,
         image: "/industries/utilities2.png",
         title: "Our Approach",
+        alternate: "IoT Telemetry, Analytics, and Environmental Compliance",
         description:
           "Our teams implement IoT telemetry, predictive maintenance, and customer-facing portals to balance supply and demand while improving operational visibility and decision-making.",
       },
@@ -795,6 +897,7 @@ export const industriesData = [
         id: 3,
         image: "/industries/utilities3.png",
         title: "Impact We Deliver",
+        alternate: "Efficiency Gains, Safety Improvements, and Sustainability Outcomes",
         description:
           "Utilities benefit from fewer service interruptions, improved asset utilization, and enhanced customer experiences through proactive monitoring and automated workflows.",
       },
