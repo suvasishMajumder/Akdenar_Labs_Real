@@ -171,6 +171,14 @@ export default function Navbar() {
                     </Link>
 
                     <Link
+                      href="/blogs"
+                      onClick={() => setIsSheetOpen(false)}
+                      className="block text-gray-700 hover:text-primary animate-stagger"
+                    >
+                      Blogs
+                    </Link>
+
+                    <Link
                       href="/career"
                       onClick={() => setIsSheetOpen(false)}
                       className="block text-gray-700 hover:text-primary animate-stagger"
@@ -305,6 +313,17 @@ export default function Navbar() {
             >
               Projects
             </Link>
+            <Link
+              href="/blogs"
+              className={
+                isActive("/blogs")
+                  ? "font-semibold text-primary"
+                  : "text-md text-gray-700 hover:text-gray-900"
+              }
+            >
+              Blogs
+            </Link>
+
             <Link
               href="/career"
               className={

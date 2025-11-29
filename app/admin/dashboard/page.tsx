@@ -1,10 +1,10 @@
 "use client";
 
-import BlogAdminPage from "@/components/dashboard/blog/Blog";
 import DashboardOverview from "@/components/dashboard/DashboardOverview";
 import SettingsPage from "@/components/dashboard/SettingsPage";
 import UniversalTable from "@/components/dashboard/UniversalTable";
 import { useSearchParams } from "next/navigation";
+import BlogListingPage from "../blog/page";
 
 export default function DashboardPage() {
   const tab = useSearchParams().get("tab") || "dashboard";
@@ -14,7 +14,7 @@ export default function DashboardPage() {
       {tab === "dashboard" ? (
         <DashboardOverview />
       ) : tab === "settings" ? <SettingsPage /> :
-        tab === "blog" ? <BlogAdminPage /> :
+        tab === "blog" ? <BlogListingPage /> :
           <UniversalTable formType={tab} />
       }
     </div>

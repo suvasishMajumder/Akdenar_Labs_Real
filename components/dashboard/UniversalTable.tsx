@@ -142,7 +142,6 @@ export default function UniversalTable({ formType }: { formType: string }) {
       }
       if (!res.ok) throw new Error("Failed to fetch data");
       const result = await res.json();
-      console.log(result);
       // Apply row transformation (e.g., extracting package info)
       const transformed = result?.data.map((i: any) => convertRow(i));
 
@@ -167,7 +166,6 @@ export default function UniversalTable({ formType }: { formType: string }) {
   }, [formType, search, order, page]);
 
   const columns = columnMap[formType] || [];
-  console.log(data)
 
   return (
     <div className="bg-white border border-box-border rounded-xl shadow-sm p-6">

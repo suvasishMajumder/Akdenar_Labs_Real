@@ -48,7 +48,6 @@ export default function EnquiryPage() {
 
   // Final Submit Handler
   const onSubmit = async (formData: ProjectEnquiryType) => {
-    // console.log("FORM DATA:", formData);
 
     setResponse("");
 

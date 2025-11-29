@@ -1,17 +1,18 @@
 // components/BlogForm.tsx
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BlogFormData, ProgressStep } from '@/types/blog';
 import ProgressIndicator from '@/components/dashboard/blog/blogFormSteps/ProgressIndicator';
 import BasicInfoStep from '@/components/dashboard/blog/blogFormSteps/BasicInfoStep';
 import ContentStep from '@/components/dashboard/blog/blogFormSteps/ContentStep';
 import SEOStep from '@/components/dashboard/blog/blogFormSteps/SEOStep';
 import { createBlogSchema } from '@/validations/blog';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 const BlogForm = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
+  const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState<BlogFormData>({
     title: '',
     slug: '',
@@ -21,11 +22,40 @@ const BlogForm = () => {
     authorId: '',
     content: '',
     bannerImage: null,
-    status: 'Draft',
     metaTitle: '',
     metaDescription: '',
-    ogImage: null,
+    ogImage: null
   });
+
+  const params = useParams();
+  const slug = params.slug as string;
+
+  useEffect(() => {
+    if (slug) {
+      (
+        async () => {
+          setLoading(true)
+          const res = await fetch(`/api/blogs/${slug}`)
+          const { data } = await res.json();
+
+          setFormData({
+            authorId: data.author._id,
+            category: data.category,
+            content: data.content,
+            metaDescription: data.metaDescription,
+            metaTitle: data.metaTitle,
+            ogImage: data.ogImage,
+            shortDescription: data.shortDescription,
+            slug: data.slug,
+            tags: data.tags,
+            title: data.title,
+            bannerImage: data.bannerImage,
+          })
+          setLoading(false)
+        }
+      )()
+    }
+  }, [])
 
   const router = useRouter();
 
@@ -54,8 +84,8 @@ const BlogForm = () => {
       return;
     }
     try {
-      const res = await fetch("/api/blogs/create", {
-        method: "POST",
+      const res = await fetch(`/api/blogs/${formData.slug}`, {
+        method: "PUT",
         body: JSON.stringify(formData)
       })
       const data = await res.json();
@@ -73,6 +103,14 @@ const BlogForm = () => {
     }
   };
 
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
