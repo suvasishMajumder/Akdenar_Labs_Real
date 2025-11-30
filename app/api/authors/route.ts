@@ -120,9 +120,9 @@ export async function POST(req: NextRequest) {
 // export async function GET(req: NextRequest) {
 //   await connectDB();
 //   const body = {
-//     name: "Ajay Upadhyay",
-//     position: "Software Engineer",
-//     bio: "I am a",
+//     name: "Nitish Mishra",
+//     position: "Software Tester",
+//     bio: "I am a software tester who have 5 year of experience in testing.",
 //   };
 //   let user = await Author.create(body);
 //   return NextResponse.json({ user, message: "Author created successfully" });
