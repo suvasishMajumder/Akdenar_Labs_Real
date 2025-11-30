@@ -1,5 +1,6 @@
 'use client'
 
+import BlogSection from "@/components/home/BlogSection";
 import DevelopmentLifeCycle from "@/components/home/DevelopmentLifeCycle";
 import Footer from "@/components/home/Footer";
 import HeroSection from "@/components/home/HeroSection";
@@ -47,6 +48,9 @@ export default function Home() {
 
       {/* Project section */}
       <ProjectsSection />
+
+      {/* Blog section */}
+      <BlogSection />
 
       {/* News letter section */}
       <NewsletterSection />

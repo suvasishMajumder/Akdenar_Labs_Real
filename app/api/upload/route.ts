@@ -13,23 +13,22 @@ export async function POST(req: Request) {
       );
     }
 
-    // 🔥 Sanitize filename
-    const originalName = file.name || "resume.pdf";
-    const sanitizedName = sanitizeFileName(originalName);
+    // Sanitize filename
+    const originalName = file.name || "upload-file";
+    const sanitizedName = sanitizeFileName(originalName).split(".")[0]; // remove extension safely
 
     // Convert File -> Buffer
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Upload to Cloudinary
+    // Auto-detect upload type: image, video, raw, etc.
     const uploadResponse = await new Promise((resolve, reject) => {
       cloudinary.uploader
         .upload_stream(
           {
             folder: "akdenar-labs",
-            public_id: sanitizedName.replace(".pdf", ""), // remove extension when uploading
-            resource_type: "raw", // PDF is raw type
-            format: "pdf", // ensure extension preserved
+            public_id: sanitizedName,
+            resource_type: "auto", // 👈 KEY FIX: auto detect (image, pdf, video)
           },
           (err, result) => {
             if (err) reject(err);
@@ -38,6 +37,7 @@ export async function POST(req: Request) {
         )
         .end(buffer);
     });
+
     return NextResponse.json(
       { message: "File uploaded successfully", data: uploadResponse },
       { status: 201 }
@@ -52,9 +52,9 @@ function sanitizeFileName(fileName: string): string {
   return fileName
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, "-") // replace spaces with hyphens
-    .replace(/[^a-z0-9.\-]/g, "") // remove special chars except dot & hyphen
-    .replace(/-+/g, "-") // remove multiple hyphens
-    .replace(/\.{2,}/g, ".") // prevent ".." sequences
-    .replace(/^\-+|\-+$/g, ""); // trim hyphens at start/end
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9.\-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/\.{2,}/g, ".")
+    .replace(/^\-+|\-+$/g, "");
 }

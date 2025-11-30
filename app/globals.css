@@ -112,3 +112,9 @@ button {
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
+
+
+/* jodit editor CSS */
+.jodit-wysiwyg {
+  min-height: 300px !important;
+}

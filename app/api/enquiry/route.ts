@@ -31,7 +31,6 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (err) {
-    console.log(err);
     return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 }
@@ -41,8 +40,6 @@ export async function GET(req: Request) {
     await connectDB();
 
     const { searchParams } = new URL(req.url);
-
-    console.log("hello");
 
     const type = searchParams.get("type"); // form type filter
     const search = searchParams.get("search"); // search by name

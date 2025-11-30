@@ -30,7 +30,6 @@ export default function DashboardOverview() {
       let res = await fetch("/api/dashboard-stats");
       let data = await res.json();
       const all = data.recent;
-      console.log(data);
       setStats({
         total: all?.length,
         project: data.stats.projectInquiry,

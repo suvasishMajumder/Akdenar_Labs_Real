@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const token = req.cookies.get("admin_token")?.value;
   const { pathname } = req.nextUrl;
   const method = req.method;
@@ -35,7 +35,6 @@ export function middleware(req: NextRequest) {
     (pathname === "/api/enquiry" && method === "GET"); // admin enquiry list
 
   const pageProtected = pathname.startsWith("/admin");
-
   if ((apiProtected || pageProtected) && !token) {
     if (pathname.startsWith("/api/")) {
       return new NextResponse(
