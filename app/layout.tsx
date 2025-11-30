@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   title: "Akdenar Labs",
   description: "Akdenar Labs - Innovative Solutions for a Digital World",
   icons: {
-    icon: "/globe.svg",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
   }
 };
 

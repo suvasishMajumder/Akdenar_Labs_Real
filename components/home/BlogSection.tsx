@@ -99,7 +99,7 @@ export default function BlogSection() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-white border-b">
+      <section className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Welcome to Our Blog
@@ -142,7 +142,7 @@ export default function BlogSection() {
 // Blog Card Component
 export function BlogCard({ key, blog }: { key: string, blog: Blog }) {
   return (
-    <article key={key} className=" bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-300">
+    <article key={key} className=" bg-white rounded-lg shadow-sm  hover:shadow-md border border-gray-200 transition-shadow duration-300">
       {/* Blog Image */}
       <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
         {blog.bannerImage ? (
