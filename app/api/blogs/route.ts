@@ -85,7 +85,7 @@ export async function GET(req: NextRequest) {
 
     // Get blogs with population and sorting
     const blogs = await Blog.find(query)
-      .populate("author", "name email profileImage")
+      // .populate("author", "name email profileImage")
       .select("-content") // Exclude content for listing
       .sort({ createdAt: -1 }) // Latest first
       .skip(skip)
