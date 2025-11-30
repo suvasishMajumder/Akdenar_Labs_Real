@@ -43,7 +43,7 @@ export default function BlogSection() {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/blogs?limit=6&status=Published');
+      const response = await fetch('/api/blogs?limit=10&status=Published');
 
       if (!response.ok) {
         throw new Error('Failed to fetch blogs');

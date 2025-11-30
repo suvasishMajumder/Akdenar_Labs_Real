@@ -10,12 +10,13 @@ import { formatZodError } from "@/lib/utils/validation";
 // GET single author by ID
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> } // params is Promise
 ) {
   try {
     await connectDB();
+    const { id } = await params;
 
-    const author = await Author.findById(params.id).lean();
+    const author = await Author.findById(id).lean();
 
     if (!author) {
       return Response.json(
@@ -29,7 +30,7 @@ export async function GET(
     }
 
     // Get author's blogs count
-    const blogsCount = await Blog.countDocuments({ author: params.id });
+    const blogsCount = await Blog.countDocuments({ author: id });
 
     return Response.json({
       success: true,
@@ -47,10 +48,12 @@ export async function GET(
 // PATCH update author
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> } // params is Promise
 ) {
   try {
     await connectDB();
+
+    const { id } = await params;
 
     const body = await req.json();
 
@@ -73,7 +76,7 @@ export async function PATCH(
     const { name, position, avatar, bio, socialLinks } = validationResult.data;
 
     // Check if author exists
-    const existingAuthor = await Author.findById(params.id);
+    const existingAuthor = await Author.findById(id);
     if (!existingAuthor) {
       return Response.json(
         {
@@ -89,7 +92,7 @@ export async function PATCH(
     if (name && name !== existingAuthor.name) {
       const duplicateAuthor = await Author.findOne({
         name: { $regex: new RegExp(`^${name}$`, "i") },
-        _id: { $ne: params.id },
+        _id: { $ne: id },
       });
 
       if (duplicateAuthor) {
@@ -106,7 +109,7 @@ export async function PATCH(
 
     // Update author
     const updatedAuthor = await Author.findByIdAndUpdate(
-      params.id,
+      id,
       {
         ...(name && { name: name.trim() }),
         ...(position !== undefined && { position: position?.trim() || "" }),
@@ -132,13 +135,14 @@ export async function PATCH(
 // DELETE author
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> } // params is Promise
 ) {
   try {
     await connectDB();
+    const { id } = await params;
 
     // Check if author exists
-    const author = await Author.findById(params.id);
+    const author = await Author.findById(id);
     if (!author) {
       return Response.json(
         {
@@ -151,7 +155,7 @@ export async function DELETE(
     }
 
     // Check if author has any blogs
-    const authorBlogs = await Blog.countDocuments({ author: params.id });
+    const authorBlogs = await Blog.countDocuments({ author: id });
     if (authorBlogs > 0) {
       return Response.json(
         {
@@ -164,7 +168,7 @@ export async function DELETE(
     }
 
     // Delete author
-    await Author.findByIdAndDelete(params.id);
+    await Author.findByIdAndDelete(id);
 
     return Response.json({
       success: true,
