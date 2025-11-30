@@ -93,7 +93,8 @@ export async function GET(
 
     const { slug } = await params;
 
-    let blog = await Blog.findOne({ slug }).populate("author", "name");
+    let blog = await Blog.findOne({ slug });
+    // .populate("author", "name");
 
     if (!blog) {
       return NextResponse.json({
