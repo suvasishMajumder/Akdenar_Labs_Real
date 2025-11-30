@@ -50,10 +50,10 @@ export default function ClientBlogPage({ blog }: { blog: Blog }) {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                 <User className="h-4 w-4" />
                 <span>{blog.author?.name}</span>
-              </div>
+              </div> */}
 
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />

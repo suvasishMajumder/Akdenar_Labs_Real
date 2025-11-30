@@ -180,8 +180,8 @@ export function BlogCard({ key, blog }: { key: string, blog: Blog }) {
         </p>
 
         {/* Meta Information */}
-        <div className="flex items-center justify-between text-sm text-gray-500">
-          <div className="flex flex-col gap-2">
+        <div className="flex gap-2 flex-col text-sm text-gray-500">
+          <div className="">
             {/* Author
             <div className="flex items-center gap-1">
               <User className="h-4 w-4" />
@@ -195,7 +195,7 @@ export function BlogCard({ key, blog }: { key: string, blog: Blog }) {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex  gap-2">
             {/* Reading Time */}
             <div className="flex items-center gap-1">
               <Clock className="h-4 w-4" />
