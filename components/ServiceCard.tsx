@@ -28,9 +28,9 @@ export default function ServiceCard({ service, i }: ServiceCardProps) {
     >
 
       {/* Glow Border */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
+      <div className="absolute inset-0 rounded-2xl md:opacity-0 group-hover:opacity-100 
                       transition duration-300 pointer-events-none 
-                      bg-gradient-to-br from-[#7F56D9]/20 via-transparent to-[#7F56D9]/20">
+                      bg-linear-to-br from-[#7F56D9]/20 via-transparent to-[#7F56D9]/20">
       </div>
 
       {/* Content */}
