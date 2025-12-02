@@ -194,7 +194,7 @@ export default function PrivacyPolicy() {
           </p>
 
           <div className="mt-3 space-y-1">
-            <p>Email: <span className="font-medium">privacy@akdenarlabs.com</span></p>
+            <p>Email: <span className="font-medium">support@akdenar.com</span></p>
             <p>Company: AKDENAR PRIVATE LIMITED</p>
             <p>
               Address: H/O Rakesh Kumar Devnarayan Mishra, Rachho Pali, Puraina, 
