@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/home/Footer";
-import { ArrowLeft, Calendar, Clock, Eye, User } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Eye } from "lucide-react";
 import Link from "next/link";
 interface Blog {
   _id: string;

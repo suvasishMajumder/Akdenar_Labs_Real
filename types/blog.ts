@@ -1,4 +1,3 @@
-import React from "react";
 
 // types/blog.ts
 export interface BlogFormData {
