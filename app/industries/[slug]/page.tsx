@@ -1,25 +1,64 @@
 // app/industries/[slug]/page.tsx
-"use client";
-
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Footer from "@/components/home/Footer";
-import { industriesData } from "@/data/Industries"; 
-import { useParams } from "next/navigation";
+import { industriesData } from "@/data/Industries";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export default function IndustryPage() {
-  const { slug } = useParams() as { slug?: string };
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const data = industriesData.find((item) => item.slug === slug);
 
   if (!data) {
-    return <div className="p-20 text-center text-xl">Industry not found.</div>;
+    return {
+      title: "Industry Not Found | Akdenar Labs",
+      description: "The requested industry page could not be found.",
+      robots: "noindex, nofollow",
+    };
   }
 
-  // Build a friendly meta description (keep it short and targeted)
+  // Build a friendly meta description
   const metaDescription = `${data.title} — ${
     data.tagline
   } Explore services, use cases and solutions for ${data.title.toLowerCase()}.`;
+
+  // Compose keywords from frequentlySearched if present
+  const keywords = Array.isArray(data.frequentlySearched)
+    ? Array.from(new Set(data.frequentlySearched)).slice(0, 50).join(", ")
+    : data.title;
+
+  return {
+    title: `${data.title} | Akdenar Labs`,
+    description: metaDescription,
+    keywords: keywords,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://labs.akdenar.com/industries/${data.slug}`,
+    },
+    openGraph: {
+      title: `${data.title} | Akdenar Labs`,
+      description: metaDescription,
+      url: `https://labs.akdenar.com/industries/${data.slug}`,
+      type: "website",
+    },
+  };
+}
+
+export default async function IndustryPage({ params }: Props) {
+  const { slug } = await params;
+  const data = industriesData.find((item) => item.slug === slug);
+
+  if (!data) {
+    notFound();
+  }
 
   // Compose keywords from frequentlySearched if present
   const keywords = Array.isArray(data.frequentlySearched)
@@ -42,20 +81,10 @@ export default function IndustryPage() {
 
   return (
     <>
-      <Head>
-        <title>{data.title} | Akdenar Labs</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href={`https://labs.akdenar.com/industries/${data.slug}`}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <section className="w-full px-5 md:px-10 lg:px-24 py-20">
         <h1 className="text-3xl md:text-4xl font-bold">{data.title}</h1>

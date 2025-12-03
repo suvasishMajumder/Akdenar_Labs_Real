@@ -1,23 +1,64 @@
 // app/capabilities/[slug]/page.tsx
-"use client";
-
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Footer from "@/components/home/Footer";
 import { capabilitiesData } from "@/data/capabilities";
-import { useParams } from "next/navigation";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export default function CapabilityPage() {
-  const { slug } = useParams() as { slug?: string };
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const data = capabilitiesData.find((item) => item.slug === slug);
 
   if (!data) {
-    return <div className="p-20 text-center text-xl">Capability not found.</div>;
+    return {
+      title: "Capability Not Found | Akdenar Labs",
+      description: "The requested capability page could not be found.",
+      robots: "noindex, nofollow",
+    };
   }
 
-  // Build a friendly meta description (keep it short and targeted)
-  const metaDescription = `${data.title} — ${data.tagline} Explore solutions, use cases, and expert services for ${data.title.toLowerCase()}.`;
+  // Build a friendly meta description
+  const metaDescription = `${data.title} — ${
+    data.tagline
+  } Explore solutions, use cases, and expert services for ${data.title.toLowerCase()}.`;
+
+  // Compose keywords from frequentlySearched if present
+  const keywords = Array.isArray(data.frequentlySearched)
+    ? Array.from(new Set(data.frequentlySearched)).slice(0, 50).join(", ")
+    : data.title;
+
+  return {
+    title: `${data.title} | Akdenar Labs`,
+    description: metaDescription,
+    keywords: keywords,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://labs.akdenar.com/capabilities/${data.slug}`,
+    },
+    openGraph: {
+      title: `${data.title} | Akdenar Labs`,
+      description: metaDescription,
+      url: `https://labs.akdenar.com/capabilities/${data.slug}`,
+      type: "website",
+    },
+  };
+}
+
+export default async function CapabilityPage({ params }: Props) {
+  const { slug } = await params;
+  const data = capabilitiesData.find((item) => item.slug === slug);
+
+  if (!data) {
+    notFound();
+  }
 
   // Compose keywords from frequentlySearched if present
   const keywords = Array.isArray(data.frequentlySearched)
@@ -40,17 +81,10 @@ export default function CapabilityPage() {
 
   return (
     <>
-      <Head>
-        <title>{data.title} | Akdenar Labs</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://labs.akdenar.com/capabilities/${data.slug}`} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ⭐ UI completely unchanged */}
       <section className="w-full px-5 md:px-10 lg:px-24 py-20 pt-22">
@@ -78,7 +112,6 @@ export default function CapabilityPage() {
                   className="rounded-lg object-cover opacity-95 transition-all duration-300 ease-in-out"
                   loading="eager"
                   priority={true}
-                  
                 />
               </div>
 

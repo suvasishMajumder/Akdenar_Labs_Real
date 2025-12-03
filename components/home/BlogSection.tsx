@@ -1,16 +1,11 @@
 // app/page.tsx
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import {
-  Calendar,
-  Clock,
-  Eye,
-  User,
-  ArrowRight
-} from 'lucide-react';
-import { formatDate } from '@/lib/utils/formateDate';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Calendar, Clock, Eye, ArrowRight } from "lucide-react";
+import { formatDate } from "@/lib/utils/formateDate";
 
 interface Blog {
   _id: string;
@@ -34,7 +29,7 @@ interface Blog {
 export default function BlogSection() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     fetchBlogs();
@@ -43,10 +38,10 @@ export default function BlogSection() {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/blogs?limit=10&status=Published');
+      const response = await fetch("/api/blogs?limit=10&status=Published");
 
       if (!response.ok) {
-        throw new Error('Failed to fetch blogs');
+        throw new Error("Failed to fetch blogs");
       }
 
       const data = await response.json();
@@ -54,22 +49,14 @@ export default function BlogSection() {
       if (data.success) {
         setBlogs(data.data);
       } else {
-        setError(data.message || 'Failed to load blogs');
+        setError(data.message || "Failed to load blogs");
       }
     } catch (err) {
-      setError('Error fetching blogs');
-      console.error('Error:', err);
+      setError("Error fetching blogs");
+      console.error("Error:", err);
     } finally {
       setLoading(false);
     }
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
   };
 
   if (loading) {
@@ -105,7 +92,8 @@ export default function BlogSection() {
             Welcome to Our Blog
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover amazing articles, tutorials, and insights on various topics.
+            Discover amazing articles, tutorials, and insights on various
+            topics.
           </p>
         </div>
       </section>
@@ -140,16 +128,22 @@ export default function BlogSection() {
 }
 
 // Blog Card Component
-export function BlogCard({ key, blog }: { key: string, blog: Blog }) {
+export function BlogCard({ key, blog }: { key: string; blog: Blog }) {
   return (
-    <article key={key} className=" bg-white rounded-lg shadow-sm  hover:shadow-md border border-gray-200 transition-shadow duration-300">
+    <article
+      key={key}
+      className=" bg-white rounded-lg shadow-sm  hover:shadow-md border border-gray-200 transition-shadow duration-300"
+    >
       {/* Blog Image */}
       <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
         {blog.bannerImage ? (
-          <img
+          <Image
             src={blog.bannerImage}
             alt={blog.title}
+            width={800}
+            height={500}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            priority={true}
           />
         ) : (
           <div className="w-full h-full bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center">
@@ -169,9 +163,7 @@ export function BlogCard({ key, blog }: { key: string, blog: Blog }) {
 
         {/* Title */}
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors">
-          <Link href={`/blogs/${blog.slug}`}>
-            {blog.title}
-          </Link>
+          <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
         </h3>
 
         {/* Short Description */}

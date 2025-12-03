@@ -5,50 +5,44 @@ import path from "path";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.labs.akdenar.com";
 
-  function getRoutes(dir: string, parentRoute = ""): string[] {
+  function getRoutes(dir: string, parent = ""): string[] {
     const fullPath = path.join(process.cwd(), dir);
-
     if (!fs.existsSync(fullPath)) return [];
 
-    const entries = fs.readdirSync(fullPath, { withFileTypes: true });
+    const items = fs.readdirSync(fullPath, { withFileTypes: true });
 
-    // eslint-disable-next-line prefer-const
-    let routes: string[] = [];
+    const routes: string[] = [];
 
-    for (const entry of entries) {
-      if (entry.name.startsWith("_") || entry.name.startsWith(".")) continue;
+    for (const item of items) {
+      const name = item.name;
 
-      // Skip folders that are NOT route folders
+      // ❌ Skip hidden, underscore, or dot folders
+      if (name.startsWith("_") || name.startsWith(".")) continue;
+
+      // ❌ Skip unwanted folders inside app
       if (
-        [
-          "components",
-          "lib",
-          "context",
-          "styles",
-          "hooks",
-          "utils",
-          "models",
-          "validations",
-          "data",
-          "public",
-        ].includes(entry.name)
+        ["admin", "api"].includes(name) // skip admin + api
       ) {
         continue;
       }
 
-      const entryPath = path.join(dir, entry.name);
+      // ❌ Skip dynamic folders: [slug], [id], [anything]
+      if (name.startsWith("[") && name.endsWith("]")) continue;
 
-      if (entry.isDirectory()) {
-        const folderRoute =
-          entry.name === "(routes)"
-            ? ""
-            : `/${entry.name === "app" ? "" : entry.name}`;
+      const itemPath = path.join(dir, name);
 
-        routes.push(...getRoutes(entryPath, parentRoute + folderRoute));
+      // 📁 If it's a folder inside app, treat as a route
+      if (item.isDirectory()) {
+        const route = parent + "/" + name;
+        routes.push(route); // add parent route
+
+        // Recursively check inside folder
+        routes.push(...getRoutes(itemPath, route));
       }
 
-      if (entry.isFile() && entry.name === "page.tsx") {
-        const route = parentRoute === "" ? "/" : parentRoute;
+      // 📄 If file is page.tsx → add the current folder as a route
+      if (item.isFile() && name === "page.tsx") {
+        const route = parent === "" ? "/" : parent;
         routes.push(route);
       }
     }
@@ -56,20 +50,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [...new Set(routes)];
   }
 
-  const staticRoutes = getRoutes("app");
+  // ⭐ ONLY scan inside the app folder
+  const pages = getRoutes("app", "");
 
-  /* ⭐ Remove Capabilities & Industries from sitemap */
-  const filteredRoutes = staticRoutes.filter(
-    (route) =>
-      !route.startsWith("/capabilities") && !route.startsWith("/industries")
+  // ❌ Remove capabilities & industries as you said earlier
+  const filtered = pages.filter(
+    (r) => !r.startsWith("/capabilities") && !r.startsWith("/industries")
   );
 
-  const sitemapData: MetadataRoute.Sitemap = filteredRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
+  return filtered.map((route) => ({
+    url: baseUrl + route,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: route === "/" ? 1 : 0.7,
   }));
-
-  return sitemapData;
 }

@@ -14,7 +14,7 @@ export default function PageLoader() {
 
       {/* Inner Gradient Loader */}
       <motion.div
-        className="h-16 w-16 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 shadow-xl"
+        className="h-16 w-16 rounded-full bg-linear-to-tr from-blue-600 to-indigo-500 shadow-xl"
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
       />
