@@ -118,7 +118,7 @@ export default function BlogSection() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogs.map((blog) => (
-              <BlogCard key={blog._id} blog={blog} />
+              <BlogCard blog={blog} />
             ))}
           </div>
         )}
@@ -128,22 +128,19 @@ export default function BlogSection() {
 }
 
 // Blog Card Component
-export function BlogCard({ key, blog }: { key: string; blog: Blog }) {
+export function BlogCard({ blog }: { blog: Blog }) {
   return (
     <article
-      key={key}
+      key={blog._id}
       className=" bg-white rounded-lg shadow-sm  hover:shadow-md border border-gray-200 transition-shadow duration-300"
     >
       {/* Blog Image */}
       <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
         {blog.bannerImage ? (
-          <Image
+          <img
             src={blog.bannerImage}
             alt={blog.title}
-            width={800}
-            height={500}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            priority={true}
           />
         ) : (
           <div className="w-full h-full bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center">
