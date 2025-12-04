@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, Eye, ArrowRight } from "lucide-react";
 import { formatDate } from "@/lib/utils/formateDate";
@@ -137,13 +136,10 @@ export function BlogCard({ key, blog }: { key: string; blog: Blog }) {
       {/* Blog Image */}
       <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
         {blog.bannerImage ? (
-          <Image
+          <img
             src={blog.bannerImage}
             alt={blog.title}
-            width={800}
-            height={500}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            priority={true}
           />
         ) : (
           <div className="w-full h-full bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center">
