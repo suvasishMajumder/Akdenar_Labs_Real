@@ -4,13 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { EyeClosedIcon, EyeIcon } from "lucide-react";
 import Footer from "@/components/home/Footer";
 import { useRouter } from "next/navigation";
 
 // Zod + React Hook Form
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AdminLoginType, AdminLoginSchema } from "@/validations/admin";
 
