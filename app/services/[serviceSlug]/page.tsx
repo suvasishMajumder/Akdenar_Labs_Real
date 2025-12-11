@@ -180,7 +180,7 @@ export default function Page() {
             {service?.packages?.map((pkg: Package, index: number) => (
               <div
                 key={index}
-                className="relative px-4 py-2 rounded-2xl border bg-white shadow-md hover:shadow-xl transition-shadow"
+                className="relative px-4 py-2 rounded-2xl bg-white shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="">
                   <h2 className="text-lg font-semibold">{pkg.packageName}</h2>

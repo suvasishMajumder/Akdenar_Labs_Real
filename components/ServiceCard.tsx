@@ -23,7 +23,7 @@ export default function ServiceCard({ service, i }: ServiceCardProps) {
       key={i}
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="group relative p-4 xl:h-88 lg:h-96 rounded-2xl md:p-3 lg:p-3 xl:p-8 bg-white border border-gray-200
+      className="group relative p-4 xl:h-88 lg:h-96 rounded-2xl md:p-3 lg:p-3 xl:p-8 bg-white border border-gray-500
                  shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
 
