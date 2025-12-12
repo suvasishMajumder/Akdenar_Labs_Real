@@ -2,8 +2,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export const runtime = "edge";
-
 /**
  * Main function Next expects when using "proxy" middleware naming.
  * It also gets exported as default and wrapped by `middleware` for compatibility.
