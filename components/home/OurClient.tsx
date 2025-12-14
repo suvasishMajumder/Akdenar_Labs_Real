@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ClientsSection() {
     const clients = [
-        { name: "Astro Mudra", logo: "/home/client1.svg" },
-        { name: "Baazi Games", logo: "/home/client2.svg" },
+        { name: "Gvelos", logo: "/home/client1.png" },
+        { name: "Deshmitra", logo: "/home/client2.svg" },
         { name: "Gaira", logo: "/home/client3.svg" },
         { name: "Yela", logo: "/home/client4.svg" },
         { name: "Clubmate", logo: "/home/client5.svg" },
@@ -51,9 +51,9 @@ export default function ClientsSection() {
                             key={client.name}
                             src={client.logo}
                             alt={client.name}
-                            width={160}
+                            width={150}
                             height={56}
-                            className="h-14 w-auto object-contain"
+                            className="h-14 object-contain"
                         />
                     ))}
                 </div>

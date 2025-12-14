@@ -236,7 +236,7 @@ export default function Navbar() {
                   className={`absolute top-full 
       left-0 md:left-1/2 md:ml-6 
       md:-translate-x-1/2
-      w-[90vw] md:w-[75vw] lg:w-[60vw] xl:w-[50vw]
+      w-[90vw] md:w-[75vw] lg:w-[60vw] xl:w-[1100px] xl:ml-20
       bg-white p-6 mt-3 shadow-lg z-50 animate-dropdown rounded-b-md`}
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
