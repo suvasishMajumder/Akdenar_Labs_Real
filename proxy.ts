@@ -1,30 +1,45 @@
-// middleware.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function proxy(req: NextRequest) {
   const token = req.cookies.get("admin_token")?.value;
   const { pathname } = req.nextUrl;
-  const isApi = pathname.startsWith("/api/");
-  const isAdminPath = pathname.startsWith("/admin");
+  const method = req.method;
 
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/static") ||
-    pathname === "/favicon.ico"
-  ) {
+  // ⭐ Allow admin login API
+  if (pathname === "/api/admin/login" || pathname === "/admin/login") {
     return NextResponse.next();
   }
 
-  if (pathname === "/admin/login" || pathname === "/api/admin/login") {
+  // ⭐ PUBLIC ROUTES (POST allowed)
+  if (pathname === "/api/enquiry" && method === "POST") {
     return NextResponse.next();
   }
 
-  if ((isApi || isAdminPath) && !token) {
-    if (isApi) {
+  if (pathname === "/api/jobs" && method === "POST") {
+    return NextResponse.next();
+  }
+
+  if (pathname === "/api/upload" && method === "POST") {
+    return NextResponse.next();
+  }
+
+  if (pathname === "/api/newsletter" && method === "POST") {
+    return NextResponse.next();
+  }
+
+  // ⭐ PROTECTED ROUTES (Only Admin)
+  const apiProtected =
+    pathname.startsWith("/api/admin") ||
+    pathname.startsWith("/api/dashboard-stats") ||
+    (pathname === "/api/enquiry" && method === "GET"); // admin enquiry list
+
+  const pageProtected = pathname.startsWith("/admin");
+  if ((apiProtected || pageProtected) && !token) {
+    if (pathname.startsWith("/api/")) {
       return new NextResponse(
         JSON.stringify({ success: false, message: "Unauthorized" }),
-        { status: 401, headers: { "content-type": "application/json" } }
+        { status: 401 }
       );
     }
 
@@ -34,12 +49,6 @@ export function proxy(req: NextRequest) {
   return NextResponse.next();
 }
 
-export default proxy;
-export function middleware(req: NextRequest) {
-  return proxy(req);
-}
-
-// Matcher: only run middleware for API and admin paths (lighter-weight)
 export const config = {
   matcher: ["/api/:path*", "/admin/:path*"],
 };
